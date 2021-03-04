@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="498.0" prefWidth="586.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tableView.AddEventController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <FontAwesomeIconView glyphName="FILE_TEXT" size="26">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Events Details">
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="586.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Title">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Text>
+            <JFXTextField fx:id="titleField" prefHeight="26.0" prefWidth="499.0">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="110.0" prefHeight="48.0" prefWidth="586.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Category">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Text>
+            <JFXTextField fx:id="catField" prefHeight="26.0" prefWidth="499.0">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="158.0" prefHeight="48.0" prefWidth="586.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Text>
+            <JFXTextField fx:id="descriptionField" prefHeight="26.0" prefWidth="499.0">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="206.0" prefHeight="48.0" prefWidth="586.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Text>
+            <JFXTextField fx:id="locField" prefHeight="26.0" prefWidth="499.0">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="254.0" prefHeight="48.0" prefWidth="586.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Starting Date">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Text>
+            <JFXDatePicker fx:id="stdField" prefHeight="28.0" prefWidth="862.0">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </JFXDatePicker>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="302.0" prefHeight="48.0" prefWidth="586.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ending Date">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+            </Text>
+            <JFXDatePicker fx:id="endField" prefHeight="28.0" prefWidth="469.0">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </JFXDatePicker>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <FontAwesomeIconView glyphName="SAVE" size="22">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <JFXButton fx:id="btnSave" onMouseClicked="#save" prefHeight="6.0" prefWidth="61.0" text="Save">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView glyphName="UNDO" size="22" />
+            <JFXButton fx:id="btnClear" layoutX="254.0" layoutY="33.0" onMouseClicked="#clear" prefHeight="39.0" prefWidth="65.0" text="Clear">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</VBox>
