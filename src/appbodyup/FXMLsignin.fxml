@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpane_parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="957.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appbodyup.FXMLsigninController">
+   <children>
+      <Pane fx:id="pane_top" layoutX="4.0" layoutY="2.0" prefHeight="75.0" prefWidth="716.0">
+         <children>
+            <Label fx:id="label" layoutX="14.0" layoutY="8.0" prefHeight="54.0" prefWidth="332.0" text="Welcome" textFill="#378c77">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="anchorpane_center" layoutX="14.0" layoutY="76.0" prefHeight="536.0" prefWidth="916.0">
+         <children>
+            <AnchorPane fx:id="anchorpane_left" layoutX="14.0" layoutY="5.0" prefHeight="575.0" prefWidth="268.0">
+               <children>
+                  <JFXTextField fx:id="apl_email" labelFloat="true" layoutX="37.0" layoutY="70.0" prefHeight="50.0" prefWidth="223.0" promptText="Enter Your Email" unFocusColor="#4d4d4d">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="23.0" />
+                     </font></JFXTextField>
+                  <JFXTextField fx:id="apl_pwd" layoutX="32.0" layoutY="151.0" prefHeight="51.0" prefWidth="223.0" promptText="Enter Your Password">
+                     <font>
+                        <Font size="23.0" />
+                     </font></JFXTextField>
+                  <JFXButton fx:id="btn_confirme" buttonType="RAISED" layoutX="14.0" layoutY="257.0" prefHeight="44.0" prefWidth="129.0" text="Confirme" textFill="#ccd90f">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_signup" buttonType="RAISED" layoutX="167.0" layoutY="257.0" onAction="#SignuppaneShow" text="Singup" textFill="#bf1b1b">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <ComboBox fx:id="apl_role" layoutX="113.0" layoutY="14.0" prefHeight="44.0" prefWidth="141.0" promptText="Chose type" />
+               </children></AnchorPane>
+            <AnchorPane fx:id="anchorpane_right" layoutX="287.0" layoutY="5.0" prefHeight="510.0" prefWidth="616.0">
+               <children>
+                  <ImageView fitHeight="432.0" fitWidth="410.0" layoutX="218.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="278.0" fitWidth="419.0" layoutX="24.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/closeup-of-person-doing-crossfit-strength-training-1296x728-header-1.jpg" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

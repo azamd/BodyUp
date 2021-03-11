@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="appbodyup.FXMLDocumentController">
+    <stylesheets>1
+        <URL value="@signupfxml.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane fx:id="anchorpane_parent" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="957.0">
+         <children>
+            <Pane fx:id="pane_top" layoutX="4.0" layoutY="2.0" prefHeight="75.0" prefWidth="716.0">
+               <children>
+                  <Label fx:id="label" layoutX="14.0" layoutY="8.0" prefHeight="54.0" prefWidth="332.0" text="Inscription" textFill="#378c77">
+                     <font>
+                        <Font size="41.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <AnchorPane fx:id="anchorpane_center" layoutX="8.0" layoutY="67.0" prefHeight="585.0" prefWidth="864.0">
+               <children>
+                  <AnchorPane fx:id="anchorpane_left" layoutX="14.0" layoutY="5.0" prefHeight="575.0" prefWidth="268.0">
+                     <children>
+                        <JFXTextField labelFloat="true" layoutX="32.0" layoutY="14.0" prefHeight="25.0" prefWidth="135.0" promptText="Surname" />
+                        <JFXTextField labelFloat="true" layoutX="33.0" layoutY="138.0" promptText="birthday" />
+                        <JFXTextField layoutX="32.0" layoutY="55.0" promptText="Firstname" />
+                        <JFXTextField layoutX="32.0" layoutY="100.0" promptText="Email" />
+                        <JFXTextField layoutX="33.0" layoutY="180.0" promptText="gender" />
+                        <JFXTextField layoutX="32.0" layoutY="215.0" promptText="weight" />
+                        <JFXTextField layoutX="32.0" layoutY="256.0" promptText="height" />
+                        <JFXTextField layoutX="32.0" layoutY="301.0" promptText="level" />
+                        <JFXTextField layoutX="32.0" layoutY="342.0" promptText="adress" />
+                        <JFXTextField layoutX="33.0" layoutY="382.0" prefHeight="1.0" prefWidth="135.0" promptText="state" />
+                        <JFXTextField layoutX="32.0" layoutY="415.0" promptText="city" />
+                        <JFXTextField layoutX="32.0" layoutY="447.0" promptText="zip" />
+                        <JFXButton fx:id="btn_confirme" buttonType="RAISED" layoutX="47.0" layoutY="536.0" prefHeight="25.0" prefWidth="106.0" text="Confirme" textFill="#ccd90f">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_cancel" buttonType="RAISED" layoutX="167.0" layoutY="537.0" text="Cancel" textFill="#bf1b1b">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField layoutX="32.0" layoutY="484.0" promptText="phone" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anchorpane_right" layoutX="287.0" layoutY="5.0" prefHeight="575.0" prefWidth="563.0">
+                     <children>
+                        <ImageView fitHeight="256.0" fitWidth="476.0" layoutX="1.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../Downloads/closeup-of-person-doing-crossfit-strength-training-1296x728-header-1.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
