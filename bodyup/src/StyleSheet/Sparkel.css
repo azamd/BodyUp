@@ -1,0 +1,32 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3 mars 2021, 02:41:26
+    Author     : aziz
+*/
+
+
+*{
+dark-primary-color     : D32F2F; 
+default-primary-color  : F44336; 
+light-primary-color   : FFCDD2; 
+text-primary-color    : FFFFFF; 
+accent-color          : FF5252; 
+primary-text-color    : 212121; 
+secondary-text-color   : 757575; 
+divider-color          : BDBDBD; 
+}
+.button {
+    
+    -fx-font:25px "Arial";
+    -fx-text-fill:text-primary-color;
+    -fx-padding: 5;
+    -fx-background-color:accent-color;
+    -fx-background-radius: 8; 
+    
+    
+    
+}

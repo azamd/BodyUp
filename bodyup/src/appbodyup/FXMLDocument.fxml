@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1550.0" stylesheets="@../StyleSheet/Styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.FXMLDocumentController">
+   <children>
+      <TextField fx:id="tf_Duration" layoutX="109.0" layoutY="209.0" prefHeight="38.0" prefWidth="359.0" promptText="Exercice's duration" />
+      <TextField fx:id="tf_Label" layoutX="109.0" layoutY="156.0" prefHeight="38.0" prefWidth="359.0" promptText="Exercice's requirement" />
+      <TextField fx:id="tf_Name" layoutX="108.0" layoutY="103.0" prefHeight="38.0" prefWidth="359.0" promptText="Exercice's name" />
+      <Label layoutX="40.0" layoutY="109.0" text="NAME" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="162.0" text="REQUIRE" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="216.0" text="DURATION" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="268.0" text="LEVEL" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tv" layoutX="864.0" layoutY="155.0" prefHeight="573.0" prefWidth="671.0">
+        <columns>
+            <TableColumn fx:id="tc_Name" prefWidth="120.0" text="NAME" />
+            <TableColumn fx:id="tc_img" prefWidth="112.800048828125" text="IMAGE" />
+            <TableColumn fx:id="tc_Label" prefWidth="123.99993896484375" text="REQUIRE" />
+            <TableColumn fx:id="tc_Duration" prefWidth="113.5999755859375" text="DURATION" />
+            <TableColumn fx:id="tc_Level" prefWidth="109.5999755859375" text="LEVEL" />
+            <TableColumn fx:id="tc_price" prefWidth="95.2000732421875" text="PRICE" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAdd" layoutX="106.0" layoutY="607.0" mnemonicParsing="false" onAction="#AddExercice" prefHeight="47.0" prefWidth="165.0" stylesheets="@../StyleSheet/sparkle.css" text="INSERT" textFill="#16e53f">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="300.0" layoutY="607.0" mnemonicParsing="false" onAction="#UpdateExercice" prefHeight="47.0" prefWidth="166.0" stylesheets="@../StyleSheet/glossy.css" text="UPDATE" textFill="#ff8717">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDel" layoutX="106.0" layoutY="681.0" mnemonicParsing="false" onAction="#DeleteExercice" prefHeight="47.0" prefWidth="166.0" stylesheets="@../StyleSheet/Sparkel.css" text="DELETE" textFill="#f80d0d">
+         <font>
+            <Font name="Calibri Bold Italic" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="132.0" layoutY="52.0" prefHeight="40.0" prefWidth="310.0" text="EXERCICES DETAILS" textFill="#fa082c">
+         <font>
+            <Font name="Bauhaus 93" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="992.0" layoutY="52.0" prefHeight="40.0" prefWidth="416.0" text="EXERCICES DATA DISPLAY" textFill="#ff013d">
+         <font>
+            <Font name="Bauhaus 93" size="35.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnShow" layoutX="300.0" layoutY="681.0" mnemonicParsing="false" onAction="#ShowExercice" prefHeight="47.0" prefWidth="166.0" stylesheets="@../StyleSheet/palette.css" text="REFRESH" textFill="#52ac81">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Next" layoutX="1283.0" layoutY="737.0" mnemonicParsing="false" onAction="#goNext" prefHeight="38.0" prefWidth="158.0" text="CATEGORIES" textFill="#230bc5">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tf_search" layoutX="1074.0" layoutY="103.0" prefHeight="38.0" prefWidth="329.0" />
+      <Button fx:id="btn_Search" layoutX="1411.0" layoutY="98.0" mnemonicParsing="false" onAction="#searchExercice" prefHeight="47.0" prefWidth="122.0" stylesheets="@../StyleSheet/palette_1.css" text="SEARCH" />
+      <ComboBox fx:id="comboCat" layoutX="109.0" layoutY="317.0" onAction="#selectComboCat" prefHeight="38.0" prefWidth="359.0" promptText="1.Weight, 2.Cardio, 3.Flexibility " />
+      <ComboBox fx:id="comboPack" layoutX="109.0" layoutY="371.0" onAction="#selectComboPack" prefHeight="38.0" prefWidth="359.0" promptText="Pick from available packages" />
+      <Label layoutX="16.0" layoutY="377.0" text="PACKAGE" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="323.0" text="CATEGORY" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="345.0" layoutY="428.0" mnemonicParsing="false" onAction="#addImageButton" prefHeight="40.0" prefWidth="122.0" stylesheets="@../StyleSheet/palette_1.css" text="BROWSE" />
+      <TextField fx:id="tf_img" layoutX="109.0" layoutY="429.0" prefHeight="38.0" prefWidth="230.0" promptText="Exercice's image's path" />
+      <Label layoutX="35.0" layoutY="442.0" text="IMAGE" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboLevel" layoutX="109.0" layoutY="262.0" onAction="#selectComboLevel" prefHeight="38.0" prefWidth="359.0" promptText="Beginner, Intermediate or Professional" />
+      <ImageView fx:id="ImageView" fitHeight="265.0" fitWidth="359.0" layoutX="492.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true" />
+      <MediaView fx:id="MediaView" fitHeight="250.0" fitWidth="350.0" layoutX="496.0" layoutY="474.0" />
+      <TextField fx:id="tf_Price" layoutX="107.0" layoutY="534.0" prefHeight="38.0" prefWidth="359.0" promptText="Exercice's price" />
+      <Label layoutX="40.0" layoutY="540.0" text="PRICE" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_vid" layoutX="109.0" layoutY="481.0" prefHeight="38.0" prefWidth="230.0" promptText="Exercice's video's path" />
+      <Button layoutX="345.0" layoutY="480.0" mnemonicParsing="false" onAction="#addImageButton" prefHeight="40.0" prefWidth="122.0" stylesheets="@../StyleSheet/palette_1.css" text="BROWSE" />
+      <Label layoutX="40.0" layoutY="487.0" text="VIDEO" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="charts" layoutX="992.0" layoutY="736.0" mnemonicParsing="false" onAction="#goCharts" prefHeight="40.0" prefWidth="122.0" stylesheets="@../StyleSheet/palette2.css" text="CHARTS" />
+      <Button fx:id="excel" layoutX="864.0" layoutY="736.0" mnemonicParsing="false" onAction="#goExcel" prefHeight="40.0" prefWidth="122.0" stylesheets="@../StyleSheet/palette2.css" text="EXCEL" />
+      <Button fx:id="Next1" layoutX="1448.0" layoutY="737.0" mnemonicParsing="false" onAction="#gooNext" prefHeight="38.0" prefWidth="87.0" text="DIETS" textFill="#230bc5">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   
+     
+ 
+   </children>
+  
+</AnchorPane>

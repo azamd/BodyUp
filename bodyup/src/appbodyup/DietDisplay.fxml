@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1268.0" stylesheets="@../StyleSheet/Styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DietDisplayController">
+   <children>
+      <TextField fx:id="tf_Desc" layoutX="155.0" layoutY="175.0" prefHeight="38.0" prefWidth="359.0" promptText="Diet's description" />
+      <TextField fx:id="tf_Name" layoutX="155.0" layoutY="103.0" prefHeight="38.0" prefWidth="359.0" promptText="Diet's name" />
+      <Label layoutX="88.0" layoutY="109.0" text="NAME" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="181.0" text="DESCRIPTION" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tv" layoutX="570.0" layoutY="155.0" prefHeight="573.0" prefWidth="671.0">
+        <columns>
+            <TableColumn fx:id="tc_DietId" prefWidth="120.0" text="Diet_ID" />
+            <TableColumn fx:id="tc_PkgId" prefWidth="112.800048828125" text="Package_ID" />
+            <TableColumn fx:id="tc_Name" prefWidth="123.99993896484375" text="NAME" />
+            <TableColumn fx:id="tc_Desc" prefWidth="113.5999755859375" text="DESCRIPTION" />
+            <TableColumn fx:id="tc_Cal" prefWidth="109.5999755859375" text="CALORIES" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAdd" layoutX="201.0" layoutY="394.0" mnemonicParsing="false" onAction="#AddDiet" prefHeight="47.0" prefWidth="251.0" stylesheets="@../StyleSheet/sparkle.css" text="INSERT" textFill="#16e53f">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="199.0" layoutY="466.0" mnemonicParsing="false" onAction="#UpdateDiet" prefHeight="47.0" prefWidth="251.0" stylesheets="@../StyleSheet/glossy.css" text="UPDATE" textFill="#ff8717">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDel" layoutX="199.0" layoutY="537.0" mnemonicParsing="false" onAction="#DeleteDiet" prefHeight="47.0" prefWidth="251.0" stylesheets="@../StyleSheet/Sparkel.css" text="DELETE" textFill="#f80d0d">
+         <font>
+            <Font name="Calibri Bold Italic" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="218.0" layoutY="43.0" prefHeight="40.0" prefWidth="218.0" text="DIETS DETAILS" textFill="#fa082c">
+         <font>
+            <Font name="Bauhaus 93" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="745.0" layoutY="43.0" prefHeight="40.0" prefWidth="321.0" text="DIETS DATA DISPLAY" textFill="#ff013d">
+         <font>
+            <Font name="Bauhaus 93" size="35.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnShow" layoutX="201.0" layoutY="610.0" mnemonicParsing="false" onAction="#ShowDiet" prefHeight="47.0" prefWidth="251.0" stylesheets="@../StyleSheet/palette.css" text="REFRESH" textFill="#52ac81">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Return" layoutX="13.0" layoutY="747.0" mnemonicParsing="false" onAction="#turnBack" prefHeight="38.0" prefWidth="87.0" text="Return" textFill="#230bc5">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tf_search" layoutX="780.0" layoutY="103.0" prefHeight="38.0" prefWidth="329.0" />
+      <Button fx:id="btn_Search" layoutX="1118.0" layoutY="98.0" mnemonicParsing="false" onAction="#searchDiet" prefHeight="47.0" prefWidth="122.0" stylesheets="@../StyleSheet/palette_1.css" text="SEARCH" />
+      <ComboBox fx:id="comboPack" layoutX="155.0" layoutY="247.0" onAction="#selectComboPack" prefHeight="38.0" prefWidth="359.0" promptText="Pick from available packages" />
+      <Label layoutX="57.0" layoutY="253.0" text="PACKAGE" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_Calories" layoutX="155.0" layoutY="315.0" prefHeight="38.0" prefWidth="359.0" promptText="Diet's calories" />
+      <Label layoutX="57.0" layoutY="321.0" text="CALORIES" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="charts" layoutX="1083.0" layoutY="735.0" mnemonicParsing="false" onAction="#goCharts" prefHeight="40.0" prefWidth="157.0" stylesheets="@../StyleSheet/palette2.css" text="CHARTS" />
+   
+     
+ 
+   </children>
+  
+</AnchorPane>
