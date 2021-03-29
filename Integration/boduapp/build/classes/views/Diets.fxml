@@ -28,14 +28,9 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="110.0" prefWidth="200.0">
                      <children>
-                        <Label prefHeight="50.0" prefWidth="195.0" text="BODYUP" textFill="#077cde">
+                        <Label prefHeight="54.0" prefWidth="302.0" text="Healthy Diets" textFill="#077cde">
                            <font>
                               <Font name="Bauhaus 93" size="48.0" />
-                           </font>
-                        </Label>
-                        <Label prefHeight="50.0" prefWidth="178.0" text="Healthy Diets" textFill="#0b6cde">
-                           <font>
-                              <Font name="Arial Unicode MS" size="29.0" />
                            </font>
                         </Label>
                      </children>
@@ -185,7 +180,7 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="628.0" prefWidth="717.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <ScrollPane fx:id="scroll" prefHeight="618.0" prefWidth="696.0" styleClass="scroll" stylesheets="@../StyleSheet/stylee.css">
+                        <ScrollPane fx:id="scroll" prefHeight="618.0" prefWidth="683.0" styleClass="scroll" stylesheets="@../StyleSheet/stylee.css">
                            <content>
                               <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
                                  <rowConstraints>

@@ -28,14 +28,9 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="110.0" prefWidth="200.0">
                      <children>
-                        <Label prefHeight="50.0" prefWidth="195.0" text="BODYUP" textFill="#077cde">
+                        <Label prefHeight="54.0" prefWidth="221.0" text="Workouts" textFill="#077cde">
                            <font>
                               <Font name="Bauhaus 93" size="48.0" />
-                           </font>
-                        </Label>
-                        <Label prefHeight="50.0" prefWidth="178.0" text="Workouts" textFill="#0b6cde">
-                           <font>
-                              <Font name="Arial Unicode MS" size="29.0" />
                            </font>
                         </Label>
                      </children>

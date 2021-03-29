@@ -44,7 +44,7 @@
     <jar href="lib\xmlbeans-4.0.0.jar" size="2493024" download="eager" />
     <jar href="lib\xmlgraphics-commons-2.4.jar" size="674446" download="eager" />
     <jar href="lib\xmlsec-2.2.1.jar" size="1122253" download="eager" />
-    <jar href="upgradi.jar" size="20558574" download="eager" />
+    <jar href="upgradi.jar" size="20559095" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="upgradi" >
     <param name="requiredFXVersion" value="8.0+"/>
