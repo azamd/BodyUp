@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="443.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.InscriListController">
+   <children>
+      <HBox alignment="CENTER" layoutX="206.0" layoutY="6.0" prefHeight="84.0" prefWidth="600.0" style="-fx-background-color: #0598ff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fx:id="nbrInscri" fill="#f8f3f3" strokeType="OUTSIDE" strokeWidth="0.0" text="30">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <Text fx:id="lesInscris" fill="#f8f3f3" strokeType="OUTSIDE" strokeWidth="0.0" text="La Liste des Inscriptions">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </Text>
+            <TextField fx:id="searchInscri" onAction="#chercherInscription" promptText="Search here">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <TableView fx:id="tableauInscri" layoutX="3.0" layoutY="154.0" prefHeight="271.0" prefWidth="692.0" style="-fx-background-color: grey;">
+        <columns>
+          <TableColumn fx:id="idInscri" prefWidth="75.0" text="id Inscri" />
+          <TableColumn fx:id="idClient" prefWidth="75.0" text="id Client" />
+            <TableColumn fx:id="idEvent" prefWidth="75.0" text="id Event" />
+            <TableColumn fx:id="dateInscri" prefWidth="154.0" text="Date d'inscription" />
+            <TableColumn fx:id="nomClient" prefWidth="107.0" text="Nom du client" />
+            <TableColumn fx:id="mailClient" prefWidth="204.0" text="Mail Client" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

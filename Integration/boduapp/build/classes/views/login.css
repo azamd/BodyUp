@@ -1,0 +1,19 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.root {
+    -fx-background-color: #DDDDDD;
+    
+}
+.cardPane{
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+}
+.topPane{
+    -fx-background-color: #3196DE;
+    -fx-cursor:hand;
+}

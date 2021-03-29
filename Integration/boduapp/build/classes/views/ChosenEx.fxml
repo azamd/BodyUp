@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane fx:id="sceneW" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1250.0" styleClass="anchor" stylesheets="@../StyleSheet/stylee.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ChosenExController">
+   <children>
+      <BorderPane layoutX="6.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="600.0" prefWidth="381.0" styleClass="right-bar" stylesheets="@../StyleSheet/stylee.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="110.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="195.0" text="BODYUP" textFill="#0771de">
+                           <font>
+                              <Font name="Bauhaus 93" size="48.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="50.0" prefWidth="178.0" text="Workouts" textFill="#0b65de">
+                           <font>
+                              <Font name="Arial Unicode MS" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Pane layoutX="10.0" layoutY="476.0" prefHeight="150.0" prefWidth="435.0" />
+                  <VBox fx:id="chosenExCard" alignment="CENTER" prefHeight="436.0" prefWidth="335.0" stylesheets="@../StyleSheet/stylee.css">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox prefHeight="70.0" prefWidth="335.0">
+                           <children>
+                              <Label fx:id="ExNameLabel" prefHeight="54.0" prefWidth="234.0" text="Exercice" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="36.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ExPriceLabel" prefHeight="58.0" prefWidth="126.0" text="Price" textFill="#00fffb">
+                                 <font>
+                                    <Font name="Arial Bold" size="32.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ImageView fx:id="ExImg" fitHeight="180.0" fitWidth="285.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <HBox prefHeight="42.0" prefWidth="243.0">
+                           <children>
+                              <VBox prefHeight="42.0" prefWidth="91.0" />
+                              <Label fx:id="ExLevelLabel" prefHeight="42.0" prefWidth="221.0" text="Level" textAlignment="CENTER" textFill="#01fd06">
+                                 <font>
+                                    <Font name="Arial Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="52.0" prefWidth="335.0">
+                           <children>
+                              <VBox prefHeight="52.0" prefWidth="29.0" />
+                              <Label fx:id="ExDurationLabel" prefHeight="52.0" prefWidth="138.0" text="Duration" textFill="#3175ff">
+                                 <font>
+                                    <Font name="Arial Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ExReqLabel" prefHeight="52.0" prefWidth="166.0" text="Require" textFill="#fffb07">
+                                 <font>
+                                    <Font name="Arial" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <styleClass>
+                        <String fx:value="chosen-ex-card" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </VBox>
+                  <Pane prefHeight="218.0" prefWidth="434.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="Backbtn" layoutX="14.0" layoutY="84.0" mnemonicParsing="false" onAction="#goBack" stylesheets="@../StyleSheet/Styles.css" text="Back" />
+                     </children></Pane>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <WebView fx:id="ExVideo" prefWidth="545.0" BorderPane.alignment="CENTER" />
+         </center>
+         <right>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+              </content>
+            </ScrollPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
