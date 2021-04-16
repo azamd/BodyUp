@@ -1,2 +1,2 @@
-# BodyUp
-an All In One Fitness Platform
+# BODYUP
+ AlO Fitness APP
