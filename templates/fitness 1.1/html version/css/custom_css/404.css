@@ -1,0 +1,110 @@
+/* Fonts Imported from Google */
+/*   Core: General style
+----------------------------*/
+body {
+    height:100%;
+    padding-top:2%;
+    padding-bottom:3%;
+    background: url("../../img/404bg.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+.content{
+    margin: auto;
+    text-align:center;
+}
+.button-alignments{
+    border-radius: 0;
+}
+img{
+    width:450px;
+    height:400px;
+    margin-left:10%;
+}
+h1{
+    font-size: 60px;
+    font-weight:700;
+    color: #143143;
+    margin-top:0;
+}
+h4{
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 18px !important;
+    font-size: 18px;
+}
+.rotate {
+    transition:All 0.493s ease-in;
+    -webkit-transition:All 0.493s ease-in;
+    -moz-transition:All 0.493s ease-in;
+    -o-transition:All 0.493s ease-in;
+    transform: rotate(270deg) scale(0.811) skew(-1deg) translate(-3px);
+    -webkit-transform: rotate(270deg) scale(0.811) skew(-1deg) translate(-3px);
+    -moz-transform: rotate(270deg) scale(0.811) skew(-1deg) translate(-3px);
+    -o-transform: rotate(270deg) scale(0.811) skew(-1deg) translate(-3px);
+    -ms-transform: rotate(270deg) scale(0.811) skew(-1deg) translate(-3px);
+}
+.animated {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes bounceInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-2000px);
+
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateX(30px);
+    }
+    80% {
+        -webkit-transform: translateX(-10px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        -moz-transform: rotate(180deg) translate(40px, 0px);
+
+    }
+}
+
+@keyframes bounceInLeft {
+    0% {
+        opacity: 0;
+
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(30px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+
+    }
+}
+.bounceInLeft {
+    -webkit-animation-name: bounceInLeft;
+    animation-name: bounceInLeft;
+}
+h1{
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 36px;
+    line-height: 20px;
+}
+@media (min-width: 992px){
+    .page_alignment{
+        margin-top: 20%;
+    }
+}

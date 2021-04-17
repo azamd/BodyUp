@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+
+            <trans-unit id="text.welcome">
+                <source>text.welcome</source>
+                <target>Welcome</target>
+            </trans-unit>
+
+            <trans-unit id="activity.created_at">
+                <source>activity.created_at</source>
+                <target>Date</target>
+            </trans-unit>
+            <trans-unit id="activity.address">
+                <source>activity.address</source>
+                <target>IP address</target>
+            </trans-unit>
+            <trans-unit id="activity.user_agent">
+                <source>activity.user_agent</source>
+                <target>User agent</target>
+            </trans-unit>
+            <trans-unit id="activity.user_activity">
+                <source>activity.user_activity</source>
+                <target>Activity</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

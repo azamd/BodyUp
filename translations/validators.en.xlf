@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="user.exist">
+                <source>user.exist</source>
+                <target>Username does exist.</target>
+            </trans-unit>
+            <trans-unit id="email.exist">
+                <source>email.exist</source>
+                <target>This e-mail is currently in use.</target>
+            </trans-unit>
+            <trans-unit id="user.name_no_blank">
+                <source>user.name_no_blank</source>
+                <target>Username cannot be blank.</target>
+            </trans-unit>
+            <trans-unit id="user.name_min_len">
+                <source>user.name_min_len</source>
+                <target>Username is too short.</target>
+            </trans-unit>
+            <trans-unit id="user.password_no_blank">
+                <source>user.password_no_blank</source>
+                <target>Password cannot be empty.</target>
+            </trans-unit>
+            <trans-unit id="user.password_min_len">
+                <source>user.password_min_len</source>
+                <target>Password is too short.</target>
+            </trans-unit>
+            <trans-unit id="user.password_difficulty">
+                <source>user.password_difficulty</source>
+                <target>Password must contain: a-z,A-Z,0-9</target>
+            </trans-unit>
+            <trans-unit id="user.password_mismatch">
+                <source>This value is not valid.</source>
+                <target>Passwords mismatch.</target>
+            </trans-unit>
+            <trans-unit id="email.bad_format">
+                <source>email.bad_format</source>
+                <target>This is not the correct e-mail format</target>
+            </trans-unit>
+            <trans-unit id="wrong.value">
+                <source>Wrong value for your current password</source>
+                <target>Wrong value for your current password</target>
+            </trans-unit>
+
+            <trans-unit id="account.name_no_blank">
+                <source>account.name_no_blank</source>
+                <target>Enter a name of your account.</target>
+            </trans-unit>
+            <trans-unit id="account.name_min_len">
+                <source>account.name_min_len</source>
+                <target>Too short account name. At least 5 characters long.</target>
+            </trans-unit>
+            <trans-unit id="email.not_blank">
+                <source>email.not_blank</source>
+                <target>Insert your e-mail.</target>
+            </trans-unit>
+
+
+        </body>
+    </file>
+</xliff>

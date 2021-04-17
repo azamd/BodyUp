@@ -1,0 +1,64 @@
+security:
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+            cost: 15
+
+    role_hierarchy:
+        ROLE_ADMIN: [ROLE_ALLOWED_TO_SWITCH]
+
+    providers:
+        our_users:
+            entity:
+                class: App\Entity\User
+                property: email
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: ~
+            # from SF4.0 logout_on_user_change is now always true, which will trigger a logout if the user changes between requests.
+            # logout_on_user_change: true
+            guard:
+                authenticators:
+                    - App\Security\LoginFormAuthenticator
+            user_checker: App\Security\UserChecker
+            logout:
+                path: /logout
+                success_handler: App\Security\LogoutSuccessHandler
+                # invalidate_session: false is most important to keep actual locale after logout
+                invalidate_session: false
+
+            switch_user: ~
+
+            remember_me:
+                secret:   '%kernel.secret%'
+                lifetime: 86400 # 1 day in seconds
+                path:     /
+                # by default, the feature is enabled by checking a
+                # checkbox in the login form (see below), uncomment the
+                # following line to always enable it.
+                #always_remember_me: true
+
+            # activate different ways to authenticate
+
+            # http_basic: true
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: true
+            # https://symfony.com/doc/current/security/form_login_setup.html
+        secured_area:
+            # from SF4.0 logout_on_user_change is now always true, which will trigger a logout if the user changes between requests.
+            # logout_on_user_change: true
+            form_login:
+                csrf_token_generator: security.csrf.token_manager
+
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/app, roles: IS_AUTHENTICATED_FULLY }

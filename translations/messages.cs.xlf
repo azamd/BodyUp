@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+
+            <trans-unit id="header.login">
+                <source>header.login</source>
+                <target>Přihlášení</target>
+            </trans-unit>
+            <trans-unit id="header.register">
+                <source>header.register</source>
+                <target>Registrace</target>
+            </trans-unit>
+            <trans-unit id="header.email_confirmation">
+                <source>header.email_confirmation</source>
+                <target>Potvrzení o registraci.</target>
+            </trans-unit>
+            <trans-unit id="header.email_pwd_restore">
+                <source>header.email_pwd_restore</source>
+                <target>Žádost o změnu hesla.</target>
+            </trans-unit>
+
+            <trans-unit id="title.username">
+                <source>title.username</source>
+                <target>Uživatelské jméno</target>
+            </trans-unit>
+            <trans-unit id="title.password">
+                <source>title.password</source>
+                <target>Heslo</target>
+            </trans-unit>
+            <trans-unit id="title.email">
+                <source>title.email</source>
+                <target>Váš e-mail</target>
+            </trans-unit>
+            <trans-unit id="title.new_registration">
+                <source>title.new_registration</source>
+                <target>Nová registrace</target>
+            </trans-unit>
+            <trans-unit id="title.renew_password">
+                <source>title.renew_password</source>
+                <target>Obnovení hesla.</target>
+            </trans-unit>
+            <trans-unit id="title.repeat_password">
+                <source>title.repeat_password</source>
+                <target>Opakujte heslo</target>
+            </trans-unit>
+            <trans-unit id="title.input_new_password">
+                <source>title.input_new_password</source>
+                <target>Zadejte nové heslo</target>
+            </trans-unit>
+            <trans-unit id="title.logout_success">
+                <source>title.logout_success</source>
+                <target>Byli jste odhlášeni.</target>
+            </trans-unit>
+
+            <trans-unit id="text.renew_password">
+                <source>text.renew_password</source>
+                <target>Zadejte e-mail zadaný při registraci.</target>
+            </trans-unit>
+            <trans-unit id="text.email_confirmate">
+                <source>text.email_confirmate</source>
+                <target>Zkontrolujte Váš e-mail a klikněte na odkaz pro aktivaci účtu. Zkontrolujte i adresář s nevyžádanou poštou.</target>
+            </trans-unit>
+            <trans-unit id="text.email_new_confirmate">
+                <source>text.email_new_confirmate</source>
+                <target>Nenašli jste aktivační e-mail? Zadejte váš e-mail použitý při registraci a potvrďte.</target>
+            </trans-unit>
+            <trans-unit id="text.or">
+                <source>text.or</source>
+                <target>nebo</target>
+            </trans-unit>
+            <trans-unit id="text.email_pwd_restore">
+                <source>text.email_pwd_restore</source>
+                <target>Klikněte na odkaz a nastavte si nové heslo.</target>
+            </trans-unit>
+            <trans-unit id="text.email_confirmation">
+                <source>text.email_confirmation</source>
+                <target>Děkujeme za vaši registraci.
+
+                    Účet aktivujte kliknutím na odkaz:
+                </target>
+            </trans-unit>
+            <trans-unit id="text.password_changed">
+                <source>text.password_changed</source>
+                <target>Heslo bylo změněno. Nyní se můžete přihlásit.</target>
+            </trans-unit>
+            <trans-unit id="text.page_expired">
+                <source>text.page_expired</source>
+                <target>Tato stránka již expirovala.</target>
+            </trans-unit>
+            <trans-unit id="text.still_logged">
+                <source>text.still_logged</source>
+                <target>Musíte se nejdříve odhlásit.</target>
+            </trans-unit>
+
+            <trans-unit id="button.register">
+                <source>button.register</source>
+                <target>Registrovat</target>
+            </trans-unit>
+            <trans-unit id="button.login">
+                <source>button.login</source>
+                <target>Přihlásit</target>
+            </trans-unit>
+            <trans-unit id="button.password_change">
+                <source>button.password_change</source>
+                <target>Uložit heslo</target>
+            </trans-unit>
+            <trans-unit id="button.send">
+                <source>button.send</source>
+                <target>Odeslat</target>
+            </trans-unit>
+            <trans-unit id="button.resend">
+                <source>button.resend</source>
+                <target>Odeslat znovu</target>
+            </trans-unit>
+            <trans-unit id="button.home">
+                <source>button.home</source>
+                <target>Domů</target>
+            </trans-unit>
+
+            <trans-unit id="account.no_exist">
+                <source>account.no_exist</source>
+                <target>Účet s tímto e-mailem neexistuje. </target>
+            </trans-unit>
+            <trans-unit id="account.confirmed">
+                <source>account.confirmed</source>
+                <target>Váš účet byl právě aktivován. Můžete se přihlásit.</target>
+            </trans-unit>
+            <trans-unit id="account.error_confirmed">
+                <source>account.error_confirmed</source>
+                <target>Tento účet již byl aktivován.</target>
+            </trans-unit>
+            <trans-unit id="account.confirm_first">
+                <source>account.confirm_first</source>
+                <target>Tento účet je nutné nejříve aktivovat.</target>
+            </trans-unit>
+            <trans-unit id="account.must_activate">
+                <source>account.must_activate</source>
+                <target>Registrace je hotová. Aktivační odkaz byl odeslán na váš e-mail.</target>
+            </trans-unit>
+            <trans-unit id="account.new-activation">
+                <source>account.new-activation</source>
+                <target>Email s odkazem pro aktivaci účtu byl odeslán.</target>
+            </trans-unit>
+
+            <trans-unit id="user.registration_help">
+                <source>user.registration_help</source>
+                <target>Minimální délka uživatelského jména je 5 znaků
+                        Minimální délka hesla je 8 znaků
+                        Heslo musí obsahovat malá/velká písmena a číslo
+                </target>
+            </trans-unit>
+
+            <trans-unit id="password.restoration_sent">
+                <source>password.restoration_sent</source>
+                <target>Žádost o změnu hesla byla odeslána na váš e-mail.</target>
+            </trans-unit>
+
+            <trans-unit id="email.not-confirmed">
+                <source>email.not-confirmed</source>
+                <target>Účet nebyl aktivován!</target>
+            </trans-unit>
+
+            <trans-unit id="subject.email_confirmation">
+                <source>subject.email_confirmation</source>
+                <target>Aktivace účtu</target>
+            </trans-unit>
+            <trans-unit id="subject.email_pwd_restore">
+                <source>subject.email_pwd_restore</source>
+                <target>Obnovení hesla</target>
+            </trans-unit>
+
+            <trans-unit id="link.email_pwd_restore">
+                <source>link.email_pwd_restore</source>
+                <target>Obnovit heslo</target>
+            </trans-unit>
+            <trans-unit id="link.confimation">
+                <source>link.confimation</source>
+                <target>Aktivovat účet</target>
+            </trans-unit>
+
+            <trans-unit id="checkbox.remember_me">
+                <source>checkbox.remember_me</source>
+                <target>Zapamatovat si mě</target>
+            </trans-unit>
+
+
+        </body>
+    </file>
+</xliff>

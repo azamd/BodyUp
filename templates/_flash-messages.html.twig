@@ -1,0 +1,46 @@
+{% import 'macro/flashFormMacro.html.twig' as alertForm %}
+
+{# flash #}
+{% for label, messages in app.flashes(['warning', 'error', 'notice', 'info']) %}
+    {% for message in messages %}
+        {% if label == 'warning' or label == 'error' %}{% set color = 'alert-danger' %}{% endif %}
+        {% if label == 'notice' or label == 'info' %}{% set color = 'alert-warning' %}{% endif %}
+        <div class="alert {{ color }}  alert-dismissible fade show" role="alert">
+        {{ message|trans }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endfor %}
+{% endfor %}
+
+{# login error (AuthenticationUtils) #}
+{% if error is defined and error %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ error.messageKey|trans(error.messageData, 'security') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+{% endif %}
+
+{# form alerts #}
+{% if form is defined %}
+    {% if not form.vars.valid %}
+        {{ alertForm.flashForm(form) }}
+    {% endif %}
+{% endif %}
+
+{# form_email alerts #}
+{% if form_email is defined %}
+    {% if not form_email.vars.valid %}
+        {{ alertForm.flashForm(form_email) }}
+    {% endif %}
+{% endif %}
+
+{# form_pwd alerts #}
+{% if form_pwd is defined %}
+    {% if not form_pwd.vars.valid %}
+        {{ alertForm.flashForm(form_pwd) }}
+    {% endif %}
+{% endif %}

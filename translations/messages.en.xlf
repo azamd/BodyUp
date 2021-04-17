@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+
+            <trans-unit id="header.login">
+                <source>header.login</source>
+                <target>Sign in</target>
+            </trans-unit>
+            <trans-unit id="header.register">
+                <source>header.register</source>
+                <target>Register</target>
+            </trans-unit>
+            <trans-unit id="header.email_pwd_restore">
+                <source>header.email_pwd_restore</source>
+                <target>Request a password change.</target>
+            </trans-unit>
+            <trans-unit id="header.email_confirmation">
+                <source>header.email_confirmation</source>
+                <target>Confirmation</target>
+            </trans-unit>
+
+            <trans-unit id="title.username">
+                <source>title.username</source>
+                <target>Username</target>
+            </trans-unit>
+            <trans-unit id="title.password">
+                <source>title.password</source>
+                <target>Password</target>
+            </trans-unit>
+            <trans-unit id="title.email">
+                <source>title.email</source>
+                <target>Your e-mail</target>
+            </trans-unit>
+            <trans-unit id="title.new_registration">
+                <source>title.new_registration</source>
+                <target>Registration</target>
+            </trans-unit>
+            <trans-unit id="title.renew_password">
+                <source>title.renew_password</source>
+                <target>Lost password ?</target>
+            </trans-unit>
+            <trans-unit id="title.repeat_password">
+                <source>title.repeat_password</source>
+                <target>Password again</target>
+            </trans-unit>
+            <trans-unit id="title.input_new_password">
+                <source>title.input_new_password</source>
+                <target>Enter a new password</target>
+            </trans-unit>
+            <trans-unit id="title.logout_success">
+                <source>title.logout_success</source>
+                <target>You were signed out.</target>
+            </trans-unit>
+
+            <trans-unit id="text.renew_password">
+                <source>text.renew_password</source>
+                <target>Enter the email you entered during registration.</target>
+            </trans-unit>
+            <trans-unit id="text.email_confirmate">
+                <source>text.email_confirmate</source>
+                <target>Check your email and click on the link to activate your account. Check spam as well.</target>
+            </trans-unit>
+            <trans-unit id="text.email_new_confirmate">
+                <source>text.email_new_confirmate</source>
+                <target>Did not find an activation email? Enter your email used at registration and confirm.</target>
+            </trans-unit>
+            <trans-unit id="text.or">
+                <source>text.or</source>
+                <target>or</target>
+            </trans-unit>
+            <trans-unit id="text.email_pwd_restore">
+                <source>text.email_pwd_restore</source>
+                <target>Click the link to set up your new password.</target>
+            </trans-unit>
+            <trans-unit id="text.email_confirmation">
+                <source>text.email_confirmation</source>
+                <target>Thank you for your registration.
+
+                    Activate the account by clicking to the link:
+                </target>
+            </trans-unit>
+            <trans-unit id="text.password_changed">
+                <source>text.password_changed</source>
+                <target>The password has been changed. You can now log in.</target>
+            </trans-unit>
+            <trans-unit id="text.page_expired">
+                <source>text.page_expired</source>
+                <target>This page has expired.</target>
+            </trans-unit>
+            <trans-unit id="text.still_logged">
+                <source>text.still_logged</source>
+                <target>You must logout first.</target>
+            </trans-unit>
+
+            <trans-unit id="button.register">
+                <source>button.register</source>
+                <target>Register</target>
+            </trans-unit>
+            <trans-unit id="button.login">
+                <source>button.login</source>
+                <target>Login</target>
+            </trans-unit>
+            <trans-unit id="button.password_change">
+                <source>button.password_change</source>
+                <target>Save password</target>
+            </trans-unit>
+            <trans-unit id="button.send">
+                <source>button.send</source>
+                <target>Send</target>
+            </trans-unit>
+            <trans-unit id="button.resend">
+                <source>button.resend</source>
+                <target>Resend</target>
+            </trans-unit>
+            <trans-unit id="button.home">
+                <source>button.home</source>
+                <target>Home</target>
+            </trans-unit>
+
+            <trans-unit id="account.no_exist">
+                <source>account.no_exist</source>
+                <target>Account with this email no exist.</target>
+            </trans-unit>
+            <trans-unit id="account.confirmed">
+                <source>account.confirmed</source>
+                <target>Your account has been activated. You can sign in.</target>
+            </trans-unit>
+            <trans-unit id="account.error_confirmed">
+                <source>account.error_confirmed</source>
+                <target>This account has already been activated.</target>
+            </trans-unit>
+            <trans-unit id="account.confirm_first">
+                <source>account.confirm_first</source>
+                <target>You must first activate this account.</target>
+            </trans-unit>
+            <trans-unit id="account.must_activate">
+                <source>account.must_activate</source>
+                <target>Registration is complete. The activation link has been sent to your email.</target>
+            </trans-unit>
+            <trans-unit id="account.new-activation">
+                <source>account.new-activation</source>
+                <target>E-mail with activation link has been sent.</target>
+            </trans-unit>
+
+            <trans-unit id="user.registration_help">
+                <source>user.registration_help</source>
+                <target>Username - minimum length is 5 characters
+                        Password - minimum length is 8 characters
+                        Password must contain a-z,A-Z and 0-9
+                </target>
+            </trans-unit>
+
+            <trans-unit id="password.restoration_sent">
+                <source>password.restoration_sent</source>
+                <target>Your password change request has been sent to your email.</target>
+            </trans-unit>
+
+            <trans-unit id="email.not-confirmed">
+                <source>email.not-confirmed</source>
+                <target>Account still pending for activation!</target>
+            </trans-unit>
+
+            <trans-unit id="subject.email_confirmation">
+                <source>subject.email_confirmation</source>
+                <target>Account confirmation</target>
+            </trans-unit>
+            <trans-unit id="subject.email_pwd_restore">
+                <source>subject.email_pwd_restore</source>
+                <target>Password restoration</target>
+            </trans-unit>
+
+            <trans-unit id="link.email_pwd_restore">
+                <source>link.email_pwd_restore</source>
+                <target>Reset Password</target>
+            </trans-unit>
+            <trans-unit id="link.confimation">
+                <source>link.confimation</source>
+                <target>Activate account</target>
+            </trans-unit>
+
+            <trans-unit id="checkbox.remember_me">
+                <source>checkbox.remember_me</source>
+                <target>Remember me</target>
+            </trans-unit>
+
+
+
+        </body>
+    </file>
+</xliff>

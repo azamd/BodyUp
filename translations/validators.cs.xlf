@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="user.exist">
+                <source>user.exist</source>
+                <target>Uživatelské jméno již existuje.</target>
+            </trans-unit>
+            <trans-unit id="email.exist">
+                <source>email.exist</source>
+                <target>Tento email nelze použít. Zadejte jiný.</target>
+            </trans-unit>
+            <trans-unit id="user.name_no_blank">
+                <source>user.name_no_blank</source>
+                <target>Zadejte uživatelské jméno.</target>
+            </trans-unit>
+            <trans-unit id="user.name_min_len">
+                <source>user.name_min_len</source>
+                <target>Uživatelské jméno je příliš krátké.</target>
+            </trans-unit>
+            <trans-unit id="user.password_no_blank">
+                <source>user.password_no_blank</source>
+                <target>Zadejte heslo.</target>
+            </trans-unit>
+            <trans-unit id="user.password_min_len">
+                <source>user.password_min_len</source>
+                <target>Heslo je příliš krátké.</target>
+            </trans-unit>
+            <trans-unit id="user.password_difficulty">
+                <source>user.password_difficulty</source>
+                <target>Heslo musí tvořit znaky: a-z,A-Z,0-9</target>
+            </trans-unit>
+            <trans-unit id="user.password_mismatch">
+                <source>This value is not valid.</source>
+                <target>Hesla se neshodují.</target>
+            </trans-unit>
+            <trans-unit id="email.bad_format">
+                <source>email.bad_format</source>
+                <target>Špatný formát e-mailu.</target>
+            </trans-unit>
+            <trans-unit id="wrong.value">
+                <source>Wrong value for your current password</source>
+                <target>Původní heslo není správné.</target>
+            </trans-unit>
+            <trans-unit id="email.not_blank">
+                <source>email.not_blank</source>
+                <target>Zadejte váš e-mail.</target>
+            </trans-unit>
+
+
+        </body>
+    </file>
+</xliff>

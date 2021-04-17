@@ -1,0 +1,21 @@
+
+###> symfony/framework-bundle ###
+.env
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/web-server-bundle ###
+.web-server-pid
+###< symfony/web-server-bundle ###
+
+###> symfony/phpunit-bridge ###
+.phpunit
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+/.idea/
+/sf4-login-registration.iml
+/composer.lock
+/diagram.uxf
+/public/googlec20e932f4c4afcb9.html

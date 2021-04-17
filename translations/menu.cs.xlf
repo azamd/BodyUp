@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+
+            <trans-unit id="nav.brand">
+                <source>nav.brand</source>
+                <target>Ukázková stránka</target>
+            </trans-unit>
+            <trans-unit id="nav.home">
+                <source>nav.home</source>
+                <target>Úvodní stránka</target>
+            </trans-unit>
+            <trans-unit id="nav.backend">
+                <source>nav.backend</source>
+                <target>Administrace</target>
+            </trans-unit>
+            <trans-unit id="nav.translate">
+                <source>nav.translate</source>
+                <target>Jazyk</target>
+            </trans-unit>
+            <trans-unit id="nav.logout">
+                <source>nav.logout</source>
+                <target>Odhlásit</target>
+            </trans-unit>
+            <trans-unit id="nav.register">
+                <source>nav.register</source>
+                <target>Registrace</target>
+            </trans-unit>
+            <trans-unit id="nav.login">
+                <source>nav.login</source>
+                <target>Přihlásit</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>
