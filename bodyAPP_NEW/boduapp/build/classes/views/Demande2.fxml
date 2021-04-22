@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" stylesheets="@dashbord.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DemandeController">
+   <top>
+      <HBox style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" maxWidth="-Infinity" prefWidth="153.0" style="-fx-background-color: #0fbcf9;">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="32">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-fill: white;" styleClass="cursor_hand" text="BODYUP">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <TextField promptText="Search" style="-fx-background-color: transparent; -fx-promt-text-fill: #485460;">
+                           <HBox.margin>
+                              <Insets left="5.0" right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <FontAwesomeIconView fill="#485460" glyphName="SEARCH" size="20" styleClass="cursor_hand" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <FontAwesomeIconView fill="#0fbcf9" glyphName="BELL" size="24" styleClass="cursor_hand">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <FontAwesomeIconView fill="#485460" glyphName="USER" size="24" styleClass="cursor_hand">
+                           <HBox.margin>
+                              <Insets left="20.0" right="5.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text fx:id="iconUserDef" fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" styleClass="cursor_hand" text="Simple User">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox maxWidth="-Infinity" prefWidth="154.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="dashbord" alignment="CENTER_LEFT" onMouseClicked="#showDashbord" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/dashbord.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Dashbord">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox fx:id="eventsInEventView" alignment="CENTER_LEFT" onMouseClicked="#eventsView" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <FontAwesomeIconView fill="#485460" glyphName="CALENDAR" size="15" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Events">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cours.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Exercices">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/users.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Utilisateurs">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" onMouseClicked="#reclamation" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/reclamation.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="reclamation" onMouseClicked="#reclamation" strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Reclamations">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/commandes.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Commandes">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/pack.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Packets">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox prefHeight="119.0" prefWidth="154.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" onMouseClicked="#demande" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/reclamation.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="demande" onMouseClicked="#demande" strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Requests" textAlignment="RIGHT" wrappingWidth="61.357421875" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" onMouseClicked="#deconnecter" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <FontAwesomeIconView fill="#485460" glyphName="SIGN_OUT" size="14" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Logout">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <HBox style="-fx-background-color: white; -fx-background-radius: 10px;">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder; -fx-font-size: 0.5cm; -fx-fill: #485460;" text="Requests" />
+                  <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <children>
+                        <FontAwesomeIconView fill="#485460" glyphName="REORDER" onMouseClicked="#trierLesEvents" size="24" styleClass="cursor_hand">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <FontAwesomeIconView fill="#485460" glyphName="REFRESH" onMouseClicked="#refreshPage" size="24" styleClass="cursor_hand">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <FontAwesomeIconView fill="#485460" glyphName="SEARCH" onMouseClicked="#searchByNameAndDesc" size="20" styleClass="cursor_hand" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="devFormateur" mnemonicParsing="false" onAction="#devenirFormateur" style="-fx-background-color: #0fbcf9; -fx-background-radius: 3px; -fx-text-fill: white; -fx-font-family: Quicksand; -fx-font-weight: bold;" styleClass="cursor_hand" text="My reclamations">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="930.0" stylesheets="@dashbord.css">
+                     <left>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="82.0" fitWidth="108.0" layoutX="59.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/events_img.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#f8f3f3" layoutX="29.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Requests">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </left>
+                     <center>
+                        <AnchorPane prefHeight="500.0" prefWidth="592.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TabPane layoutX="1.0" prefHeight="500.0" prefWidth="732.0" tabClosingPolicy="UNAVAILABLE">
+                                 <tabs>
+                                    <Tab text="Add Request">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TextField fx:id="id" layoutX="128.0" layoutY="61.0" prefHeight="27.0" prefWidth="482.0" promptText="User's ID" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                                                <TextField fx:id="objet" layoutX="128.0" layoutY="102.0" prefHeight="27.0" prefWidth="486.0" promptText="Subject" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                                                <TextArea fx:id="description" layoutX="128.0" layoutY="209.0" prefHeight="116.0" prefWidth="486.0" promptText="Description" style="-fx-border-color: #0598ff;" />
+                                                <Button fx:id="attach" layoutX="523.0" layoutY="145.0" mnemonicParsing="false" onMousePressed="#attach" prefHeight="25.0" prefWidth="90.0" text="Choose" />
+                                                <Button fx:id="ajouter3" layoutX="320.0" layoutY="350.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="144.0" style="-fx-background-color: #0598ff;" text="Submit" textFill="#fffdfd">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Button>
+                                                <TextField fx:id="cv" layoutX="128.0" layoutY="144.0" prefHeight="27.0" prefWidth="344.0" promptText="CV Path" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="My Requests">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Button fx:id="modifier" layoutX="104.0" layoutY="406.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="144.0" style="-fx-background-color: #0598ff;" text="Edit" textFill="#fffdfd" AnchorPane.leftAnchor="30.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Button>
+                                                <TableView fx:id="reclaTable" layoutX="38.0" layoutY="66.0" prefHeight="200.0" prefWidth="664.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="idColonne" prefWidth="87.0" text="User's ID" />
+                                                      <TableColumn fx:id="objetColonne" prefWidth="102.0" text="Title" />
+                                                      <TableColumn fx:id="descriptionColonne" prefWidth="154.0" text="Description" />
+                                                      <TableColumn fx:id="cvColonne" prefWidth="100.0" text="CV Path" />
+                                                   </columns>
+                                                </TableView>
+                                                <TextField fx:id="filterField" layoutX="473.0" layoutY="21.0" prefHeight="26.0" prefWidth="523.0" promptText="Search" AnchorPane.rightAnchor="30.0" />
+                                                <Button fx:id="supprimer" layoutX="238.0" layoutY="406.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="144.0" style="-fx-background-color: #878585;" text="Delete" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Button>
+                                                <TextField fx:id="idlab" layoutX="30.0" layoutY="280.0" promptText="User's ID" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" AnchorPane.leftAnchor="30.0" />
+                                                <TextField fx:id="objetlab" layoutX="399.0" layoutY="280.0" prefHeight="27.0" prefWidth="360.0" promptText="Title" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" AnchorPane.rightAnchor="30.0" />
+                                                <TextArea fx:id="objetdes" layoutX="30.0" layoutY="335.0" prefHeight="67.0" prefWidth="416.0" promptText="Description" style="-fx-border-color: #0598ff;" AnchorPane.leftAnchor="30.0" />
+                                                <TextField fx:id="cvlab" layoutX="473.0" layoutY="347.0" promptText="cv" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" AnchorPane.rightAnchor="110.20000000000005" />
+                                                <Button fx:id="attach2" layoutX="636.0" layoutY="348.0" mnemonicParsing="false" onMousePressed="#attach2" prefHeight="25.0" prefWidth="65.0" text="Choisir" AnchorPane.rightAnchor="30.399999999999977" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

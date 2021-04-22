@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@dashbord.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CreateEventController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="108.0" layoutX="59.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/events_img.png" />
+               </image>
+            </ImageView>
+            <Text fill="#f8f3f3" layoutX="29.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Event">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="500.0" prefWidth="592.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="idf" layoutX="71.0" layoutY="39.0" promptText="Coach ID" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="nomE" layoutX="71.0" layoutY="106.0" promptText="Event's Title" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <DatePicker fx:id="dd" layoutX="303.0" layoutY="79.0" promptText="Starting Date" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="heure" layoutX="71.0" layoutY="183.0" promptText="Time" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="duree" layoutX="71.0" layoutY="250.0" promptText="Duration" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextArea fx:id="desc" layoutX="71.0" layoutY="300.0" prefHeight="116.0" prefWidth="358.0" promptText="Description" style="-fx-border-color: #0598ff;" />
+            <Button fx:id="btn_choipic" layoutX="330.0" layoutY="238.0" mnemonicParsing="false" onAction="#choisirImage" prefHeight="27.0" prefWidth="105.0" text="Choose Image" />
+            <Button fx:id="btn_createEvent" layoutX="88.0" layoutY="435.0" mnemonicParsing="false" onAction="#createEvent" prefHeight="50.0" prefWidth="144.0" style="-fx-background-color: #0598ff;" text="Create" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_resetAll" layoutX="273.0" layoutY="435.0" mnemonicParsing="false" onAction="#resretAll" prefHeight="50.0" prefWidth="144.0" style="-fx-background-color: #878585;" text="Reset" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="picPath" layoutX="316.0" layoutY="196.0" promptText="Image Path" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

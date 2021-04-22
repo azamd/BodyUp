@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CategoriesController">
+   <children>
+      <HBox fx:id="Wbox" alignment="CENTER" layoutX="235.0" layoutY="86.0" onMouseClicked="#go2Works" prefHeight="100.0" prefWidth="764.0" styleClass="free-delivery-card" stylesheets="@../StyleSheet/stylee.css">
+         <children>
+            <VBox fx:id="Pbox" alignment="CENTER" prefHeight="100.0" prefWidth="456.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="629.0" text="BODYUP  Workouts " textFill="#1696f2">
+                     <font>
+                        <Font name="Bauhaus 93" size="45.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="20.0" prefWidth="630.0" text="Access to all available workouts here." textFill="#09a9d9">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <ImageView fitHeight="83.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-stepper-96.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="83.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-gymnastics-96.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="83.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-deadlift-96.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="320.0" layoutY="203.0" prefHeight="52.0" prefWidth="626.0" styleClass="shopping-online-card" stylesheets="@../StyleSheet/stylee.css">
+         <children>
+            <VBox alignment="CENTER" prefHeight="52.0" prefWidth="431.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="438.0" text="Choose from workout categories down below :" textFill="#07af61">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="262.0" layoutY="282.0" onMousePressed="#click" prefHeight="234.0" prefWidth="227.0" stylesheets="@../StyleSheet/stylee.css">
+         <children>
+            <VBox fx:id="WTcard" alignment="TOP_CENTER" layoutX="63.0" layoutY="8.0" onMouseClicked="#goWT" prefHeight="346.0" prefWidth="227.0" styleClass="CatCard" stylesheets="@../StyleSheet/glossy.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox prefHeight="56.0" prefWidth="255.0">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="198.0" text="Weight Training" textFill="#fbff00">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ImageView fitHeight="212.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/weight.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+         <styleClass>
+            <String fx:value="ex-item" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </AnchorPane>
+      <AnchorPane layoutX="503.0" layoutY="282.0" onMousePressed="#click" prefHeight="234.0" prefWidth="226.0" stylesheets="@../StyleSheet/stylee.css">
+         <children>
+            <VBox fx:id="CTcard" alignment="TOP_CENTER" layoutX="63.0" layoutY="8.0" onMouseClicked="#goCT" prefHeight="215.0" prefWidth="225.0" styleClass="CatCard" stylesheets="@../StyleSheet/glossy.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox prefHeight="56.0" prefWidth="255.0">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="205.0" text="Cardio Training" textFill="#fbff00">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ImageView fitHeight="212.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/run.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+         <styleClass>
+            <String fx:value="ex-item" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </AnchorPane>
+      <AnchorPane layoutX="745.0" layoutY="282.0" onMousePressed="#click" prefHeight="234.0" prefWidth="226.0" stylesheets="@../StyleSheet/stylee.css">
+         <children>
+            <VBox fx:id="FTcard" alignment="TOP_CENTER" layoutX="63.0" layoutY="8.0" onMouseClicked="#goFT" prefHeight="215.0" prefWidth="225.0" styleClass="CatCard" stylesheets="@../StyleSheet/glossy.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox prefHeight="56.0" prefWidth="223.0">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="217.0" text="Flexibility Training" textFill="#fbff00">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ImageView fitHeight="212.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/yoga.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+         <styleClass>
+            <String fx:value="ex-item" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </AnchorPane>
+      <HBox prefHeight="72.0" prefWidth="1100.0" style="-fx-background-color: white;">
+         <children>
+            <HBox alignment="CENTER" maxWidth="-Infinity" prefWidth="153.0" style="-fx-background-color: #0fbcf9;">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="32">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-fill: white;" styleClass="cursor_hand" text="BODYUP">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <TextField promptText="Search" style="-fx-background-color: transparent; -fx-promt-text-fill: #485460;">
+                           <HBox.margin>
+                              <Insets left="5.0" right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <FontAwesomeIconView fill="#485460" glyphName="SEARCH" size="20" styleClass="cursor_hand" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <FontAwesomeIconView fill="#0fbcf9" glyphName="BELL" size="24" styleClass="cursor_hand">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <FontAwesomeIconView fill="#485460" glyphName="USER" size="24" styleClass="cursor_hand">
+                           <HBox.margin>
+                              <Insets left="20.0" right="5.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text fx:id="iconUserDef" fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" styleClass="cursor_hand" text="Simple User">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <VBox layoutY="73.0" maxWidth="-Infinity" prefHeight="578.0" prefWidth="154.0" style="-fx-background-color: white;">
+         <children>
+            <HBox fx:id="dashbord" alignment="CENTER_LEFT" onMouseClicked="#showDashbord" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/dashbord.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Dashbord">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox fx:id="eventsInEventView" alignment="CENTER_LEFT" onMouseClicked="#eventsView" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <FontAwesomeIconView fill="#485460" glyphName="CALENDAR" size="15" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Events">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="AllExercices" alignment="CENTER_LEFT" onMouseClicked="#exercices" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cours.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Exercices">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/users.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Users">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/reclamation.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Reclamations">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/commandes.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Commandes">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" onMouseClicked="#deconnecter" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <FontAwesomeIconView fill="#485460" glyphName="SIGN_OUT" size="14" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Logout">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <HBox layoutX="167.0" layoutY="529.0" prefHeight="100.0" prefWidth="832.0">
+         <children>
+            <Pane prefHeight="100.0" prefWidth="74.0" />
+            <HBox fx:id="Pbox1" alignment="CENTER" onMouseClicked="#go2Packs" prefHeight="100.0" prefWidth="380.0" styleClass="free-delivery-card" stylesheets="@../StyleSheet/stylee.css">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="260.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="258.0" text="Our Workout Packages" textFill="#878787">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="20.0" prefWidth="257.0" text="offering the finest workout plans here." textFill="#878787">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="49.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/pack.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Pane prefHeight="100.0" prefWidth="38.0" HBox.hgrow="ALWAYS" />
+            <HBox fx:id="Dbox1" alignment="CENTER" onMouseClicked="#go2Diets" prefHeight="100.0" prefWidth="379.0" styleClass="shopping-online-card" stylesheets="@../StyleSheet/stylee.css">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="276.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="279.0" text="Our Healthy Diets" textFill="#878787">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="20.0" prefWidth="285.0" text="check our healthy diets suggestions here." textFill="#878787">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="49.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/apple.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Pane prefHeight="100.0" prefWidth="1.0" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

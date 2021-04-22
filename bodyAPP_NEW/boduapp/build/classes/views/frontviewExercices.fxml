@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="804.0" prefWidth="1808.0" stylesheets="@../StyleSheet/Styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FrontviewExercicesController">
+   <children>
+      <Pane layoutY="-2.0" prefHeight="834.0" prefWidth="546.0" styleClass="right-bar" stylesheets="@../StyleSheet/stylee.css">
+         <children>
+            <Button fx:id="btnDel" layoutX="108.0" layoutY="728.0" mnemonicParsing="false" onAction="#DeleteExercice" prefHeight="72.0" prefWidth="170.0" stylesheets="@../StyleSheet/Sparkel.css" textFill="#f80d0d">
+               <font>
+                  <Font name="Calibri Bold Italic" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-delete-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnAdd" layoutX="108.0" layoutY="641.0" mnemonicParsing="false" onAction="#AddExercice" prefHeight="74.0" prefWidth="170.0" stylesheets="@../StyleSheet/sparkle.css" textFill="#16e53f">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="56.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-plus-480.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnShow" layoutX="296.0" layoutY="728.0" mnemonicParsing="false" onAction="#ShowExercice" prefHeight="74.0" prefWidth="170.0" stylesheets="@../StyleSheet/palette2.css" textFill="#52ac81">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="56.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/reload.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnUpdate" layoutX="296.0" layoutY="639.0" mnemonicParsing="false" onAction="#UpdateExercice" prefHeight="74.0" prefWidth="170.0" stylesheets="@../StyleSheet/glossy.css" textFill="#ff8717">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-update-96.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField fx:id="tf_Rate" layoutX="107.0" layoutY="583.0" prefHeight="38.0" prefWidth="359.0" promptText="Exercice's rating" />
+            <Label layoutX="40.0" layoutY="589.0" prefHeight="26.0" prefWidth="58.0" text="RATE" textFill="#ffffff">
+               <font>
+                  <Font name="Calibri Bold" size="22.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="50.0" prefWidth="1808.0" style="-fx-background-color: white;">
+               <children>
+                  <HBox alignment="CENTER" maxWidth="-Infinity" prefWidth="153.0" style="-fx-background-color: #0fbcf9;">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="32">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-fill: white;" styleClass="cursor_hand" text="BODYUP">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="72.0" prefWidth="223.0">
+                           <children>
+                              <TextField promptText="Search" style="-fx-background-color: transparent; -fx-promt-text-fill: #485460;">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <FontAwesomeIconView fill="#485460" glyphName="SEARCH" size="20" styleClass="cursor_hand" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                           <children>
+                              <FontAwesomeIconView fill="#0fbcf9" glyphName="BELL" size="24" styleClass="cursor_hand">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <FontAwesomeIconView fill="#485460" glyphName="USER" size="24" styleClass="cursor_hand">
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="5.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Text fx:id="iconUserDef" fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" styleClass="cursor_hand" text="Administrateur">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <Label layoutX="193.0" layoutY="75.0" prefHeight="32.0" prefWidth="212.0" text="EXERCICES DETAILS" textFill="#0a7cfa">
+               <font>
+                  <Font name="Bauhaus 93" size="24.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <TextField fx:id="tf_Duration" layoutX="109.0" layoutY="209.0" prefHeight="38.0" prefWidth="359.0" promptText="Exercice's duration" />
+      <TextField fx:id="tf_Label" layoutX="109.0" layoutY="156.0" prefHeight="38.0" prefWidth="359.0" promptText="Exercice's requirement" />
+      <TextField fx:id="tf_Name" layoutX="108.0" layoutY="103.0" prefHeight="38.0" prefWidth="359.0" promptText="Exercice's name" />
+      <Label layoutX="40.0" layoutY="109.0" text="NAME" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="162.0" text="REQUIRE" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="216.0" text="DURATION" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="268.0" text="LEVEL" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tv" layoutX="750.0" layoutY="155.0" prefHeight="574.0" prefWidth="866.0">
+        <columns>
+            <TableColumn fx:id="tc_Name" prefWidth="120.0" text="NAME" />
+            <TableColumn fx:id="tc_img" prefWidth="112.800048828125" text="IMAGE" />
+            <TableColumn fx:id="tc_Label" prefWidth="123.99993896484375" text="REQUIRE" />
+            <TableColumn fx:id="tc_Duration" prefWidth="139.199951171875" text="DURATION" />
+            <TableColumn fx:id="tc_Level" prefWidth="133.5999755859375" text="LEVEL" />
+            <TableColumn fx:id="tc_price" prefWidth="120.800048828125" text="PRICE" />
+            <TableColumn fx:id="tc_rate" prefWidth="120.800048828125" text="RATE" />
+        </columns>
+      </TableView>
+      <Button fx:id="Next" layoutX="1357.0" layoutY="735.0" mnemonicParsing="false" onAction="#goNext" prefHeight="38.0" prefWidth="158.0" text="CATEGORIES" textFill="#230bc5">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tf_search" layoutX="1086.0" layoutY="102.0" prefHeight="38.0" prefWidth="398.0" />
+      <Button fx:id="btn_Search" layoutX="1491.0" layoutY="98.0" mnemonicParsing="false" onAction="#searchExercice" prefHeight="47.0" prefWidth="122.0" stylesheets="@../StyleSheet/palette_1.css" text="SEARCH" />
+      <ComboBox fx:id="comboCat" layoutX="109.0" layoutY="317.0" onAction="#selectComboCat" prefHeight="38.0" prefWidth="359.0" promptText="1.Weight, 2.Cardio, 3.Flexibility " />
+      <ComboBox fx:id="comboPack" layoutX="109.0" layoutY="371.0" onAction="#selectComboPack" prefHeight="38.0" prefWidth="359.0" promptText="Pick from available packages" />
+      <Label layoutX="16.0" layoutY="377.0" text="PACKAGE" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="323.0" text="CATEGORY" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="345.0" layoutY="428.0" mnemonicParsing="false" onAction="#addImageButton" prefHeight="40.0" prefWidth="122.0" stylesheets="@../StyleSheet/palette_1.css" text="BROWSE" />
+      <TextField fx:id="tf_img" layoutX="109.0" layoutY="429.0" prefHeight="38.0" prefWidth="230.0" promptText="Exercice's image's path" />
+      <Label layoutX="35.0" layoutY="442.0" text="IMAGE" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboLevel" layoutX="109.0" layoutY="262.0" onAction="#selectComboLevel" prefHeight="38.0" prefWidth="359.0" promptText="Beginner, Intermediate or Professional" />
+      <ImageView fx:id="ImageView" fitHeight="291.0" fitWidth="262.0" layoutX="479.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="tf_Price" layoutX="107.0" layoutY="534.0" prefHeight="38.0" prefWidth="359.0" promptText="Exercice's price" />
+      <Label layoutX="40.0" layoutY="540.0" text="PRICE" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_vid" layoutX="109.0" layoutY="481.0" prefHeight="38.0" prefWidth="359.0" promptText="Exercice's video's URL here" />
+      <Label layoutX="40.0" layoutY="487.0" text="VIDEO" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="charts" layoutX="880.0" layoutY="734.0" mnemonicParsing="false" onAction="#goCharts" prefHeight="40.0" prefWidth="122.0" stylesheets="@../StyleSheet/palette2.css" text="CHARTS" />
+      <Button fx:id="excel" layoutX="750.0" layoutY="734.0" mnemonicParsing="false" onAction="#goExcel" prefHeight="40.0" prefWidth="125.0" stylesheets="@../StyleSheet/palette2.css" text="EXCEL" />
+      <Button fx:id="Next1" layoutX="1523.0" layoutY="735.0" mnemonicParsing="false" onAction="#gooNext" prefHeight="38.0" prefWidth="96.0" text="DIETS" textFill="#230bc5">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="Mail" layoutX="1006.0" layoutY="734.0" mnemonicParsing="false" onAction="#goMail" prefHeight="40.0" prefWidth="131.0" stylesheets="@../StyleSheet/palette2.css" text="MAIL" />
+      <Button fx:id="goPaksbtn" layoutX="1262.0" layoutY="735.0" mnemonicParsing="false" onAction="#gooPacks" prefHeight="38.0" prefWidth="87.0" text="PACKS" textFill="#230bc5">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <VBox layoutX="1648.0" layoutY="73.0" maxWidth="-Infinity" prefHeight="758.0" prefWidth="160.0" style="-fx-background-color: white;">
+         <children>
+            <HBox fx:id="dashbord" alignment="CENTER_LEFT" onMouseClicked="#showDashbord" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/dashbord.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Dashbord">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox fx:id="eventsInEventView" alignment="CENTER_LEFT" onMouseClicked="#eventsView" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <FontAwesomeIconView fill="#485460" glyphName="CALENDAR" size="15" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Events">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="AllExercices" alignment="CENTER_LEFT" onMouseClicked="#exercices" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cours.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="All Exercices">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/users.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Users">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/reclamation.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Reclamations">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/commandes.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Commandes">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" onMouseClicked="#deconnecter" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <FontAwesomeIconView fill="#485460" glyphName="SIGN_OUT" size="14" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Logout">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   
+     
+ 
+   </children>
+  
+</AnchorPane>

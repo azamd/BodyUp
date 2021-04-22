@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Reclamation1Controller">
+    <stylesheets>
+        <URL value="@StyleSheet.css" />
+    </stylesheets>
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1110.0" stylesheets="@dashbord.css">
+         <top>
+            <HBox style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" maxWidth="-Infinity" prefWidth="153.0" style="-fx-background-color: #0fbcf9;">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="32">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bold; -fx-fill: white;" styleClass="cursor_hand" text="BODYUP">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <TextField promptText="Search" style="-fx-background-color: transparent; -fx-promt-text-fill: #485460;">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <FontAwesomeIconView fill="#485460" glyphName="SEARCH" size="20" styleClass="cursor_hand" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                           <children>
+                              <FontAwesomeIconView fill="#0fbcf9" glyphName="BELL" size="24" styleClass="cursor_hand">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <FontAwesomeIconView fill="#485460" glyphName="USER" size="24" styleClass="cursor_hand">
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="5.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Text fx:id="iconUserDef" fill="#485460" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder;" styleClass="cursor_hand" text="Administrator">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox maxWidth="-Infinity" prefWidth="154.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox fx:id="dashbord" alignment="CENTER_LEFT" onMouseClicked="#showDashbord" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/dashbord.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Dashbord">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="eventsInEventView" alignment="CENTER_LEFT" onMouseClicked="#eventsView" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <FontAwesomeIconView fill="#485460" glyphName="CALENDAR" size="15" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Events">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/cours.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Exercices">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/users.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Users">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/reclamation.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="reclamation" onMouseClicked="#reclamation" strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Reclamations">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/commandes.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Commands">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/pack.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Packets">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <VBox prefHeight="119.0" prefWidth="154.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/reclamation.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="demande" onMouseClicked="#demande" strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Requests" textAlignment="RIGHT" wrappingWidth="61.357421875" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#deconnecter" style="-fx-background-radius: 10px;" styleClass="hover-border-color">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <FontAwesomeIconView fill="#485460" glyphName="SIGN_OUT" size="14" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="&lt;font-style&gt;: Quicksand; -fx-font-weight: bold; -fx-fill: #485460;" text="Logout">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <HBox style="-fx-background-color: white; -fx-background-radius: 10px;">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksand; -fx-font-weight: bolder; -fx-font-size: 0.5cm; -fx-fill: #485460;" text="Reclamation " />
+                        <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                           <children>
+                              <FontAwesomeIconView fill="#485460" glyphName="REORDER" onMouseClicked="#trierLesEvents" size="24" styleClass="cursor_hand">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <FontAwesomeIconView fill="#485460" glyphName="REFRESH" onMouseClicked="#refreshPage" size="24" styleClass="cursor_hand">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <FontAwesomeIconView fill="#485460" glyphName="SEARCH" onMouseClicked="#searchByNameAndDesc" size="20" styleClass="cursor_hand" />
+                                 </children>
+                              </HBox>
+                              <Button fx:id="devFormateur" mnemonicParsing="false" onAction="#devenirFormateur" style="-fx-background-color: #0fbcf9; -fx-background-radius: 3px; -fx-text-fill: white; -fx-font-family: Quicksand; -fx-font-weight: bold;" styleClass="cursor_hand" text="My reclamations">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <AnchorPane id="AnchorPane" prefHeight="495.0" prefWidth="916.0" styleClass="mainFxmlClass">
+                           <stylesheets>
+                              <URL value="@StyleSheet.css" />
+                           </stylesheets>
+                           <children>
+                              <AnchorPane layoutX="-1.0" layoutY="-3.0" prefHeight="504.0" prefWidth="209.0" style="-fx-background-color: #0598ff;">
+                                 <children>
+                                    <ImageView fitHeight="82.0" fitWidth="108.0" layoutX="59.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/events_img.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#f8f3f3" layoutX="31.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reclamations" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <TextField fx:id="filterField" layoutX="687.0" layoutY="28.0" prefHeight="26.0" prefWidth="431.0" promptText="Search" AnchorPane.rightAnchor="30.0" />
+                              <Button fx:id="supprimer" layoutX="440.0" layoutY="421.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #878585;" text="Delete" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="sms" layoutX="620.0" layoutY="421.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #878585;" text="Send SMS" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="mail" layoutX="321.0" layoutY="421.0" mnemonicParsing="false" onAction="#mail" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #0598ff;" text="Reply" textFill="#fffdfd" AnchorPane.leftAnchor="236.0">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <TableView fx:id="reclaTable" layoutX="218.0" layoutY="93.0" prefHeight="150.0" prefWidth="693.0" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="30.0">
+                                 <columns>
+                                    <TableColumn fx:id="idColonne" prefWidth="87.0" text="ID" />
+                                    <TableColumn fx:id="objetColonne" prefWidth="102.0" text="Title" />
+                                    <TableColumn fx:id="descriptionColonne" prefWidth="266.0" text="Description" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="idlab" layoutX="218.0" layoutY="259.0" promptText="Identifiant Utilisateur" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" AnchorPane.leftAnchor="236.0" />
+                              <TextField fx:id="objetlab" layoutX="388.0" layoutY="259.0" prefHeight="27.0" prefWidth="475.0" promptText="Objet" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" AnchorPane.leftAnchor="440.0" AnchorPane.rightAnchor="30.0" />
+                              <TextArea fx:id="objetdes" layoutX="224.0" layoutY="304.0" prefHeight="99.0" prefWidth="646.0" promptText="Description" style="-fx-border-color: #0598ff;" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="30.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
