@@ -7,9 +7,12 @@
     <!-- SubHeader =============================================== -->
     <section class="parallax_window_in" data-parallax="scroll" data-image-src="img/sub_header_general.jpg" data-natural-width="1400" data-natural-height="470">
         <div id="sub_content_in">
-            <h1>LoveFit Workout Videos</h1>
-            <p>"Usu habeo equidem sanctus no ex melius labitur conceptam eos"</p>
+            <h1>BODYUP Workout Videos</h1>
+            <p>"Check our finest Workouts here"</p>
         </div>
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
     </section>
     <!-- End section -->
     <!-- End SubHeader ============================================ -->
@@ -19,6 +22,21 @@
             <div class="row">
 
                 <aside class="col-md-3 col-md-push-9" id="sidebar">
+
+                    <div  class="sidebar-search">
+
+                        <div class="input-group custom-search-form">
+
+
+                        <input type="text" id="finder" class="form-control" placeholder="search now" >
+
+                        </div>
+
+                    </div>
+
+                    <h3></h3>
+
+
                     <div class="theiaStickySidebar">
                         <div id="filters_col">
                             <a data-toggle="collapse" href="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters" id="filters_col_bt">Filters </a>
@@ -28,44 +46,30 @@
                                     <input type="text" id="range" name="range" value="">
                                 </div>
                                 <div class="filter_type">
-                                    <h6>Type</h6>
+                                    <h6>Category</h6>
                                     <ul>
+                                        {% for cat in categories %}
                                         <li>
-                                            <label>All (277)</label>
+                                            <label>{{ cat.catName }}</label>
                                             <input type="checkbox" class="js-switch" checked>
                                         </li>
-                                        <li>
-                                            <label>Yoga (77)</label>
-                                            <input type="checkbox" class="js-switch">
-                                        </li>
-                                        <li>
-                                            <label>Cardio (552)</label>
-                                            <input type="checkbox" class="js-switch">
-                                        </li>
-                                        <li>
-                                            <label>Strenght (909)</label>
-                                            <input type="checkbox" class="js-switch">
-                                        </li>
-                                        <li>
-                                            <label>Pilates (1196)</label>
-                                            <input type="checkbox" class="js-switch">
-                                        </li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
                                 <div class="filter_type">
-                                    <h6>Body Focus</h6>
+                                    <h6>Level</h6>
                                     <ul>
                                         <li>
-                                            <label>Total Body (77)</label>
+                                            <label>Beginner</label>
                                             <input type="checkbox" class="js-switch" checked>
                                         </li>
                                         <li>
-                                            <label>Upper Body (552)</label>
-                                            <input type="checkbox" class="js-switch">
+                                            <label>Intermediate</label>
+                                            <input type="checkbox" class="js-switch" checked>
                                         </li>
                                         <li>
-                                            <label>Lower Body (909)</label>
-                                            <input type="checkbox" class="js-switch">
+                                            <label>Professional</label>
+                                            <input type="checkbox" class="js-switch" checked>
                                         </li>
                                     </ul>
                                 </div>
@@ -80,176 +84,74 @@
                 <!--End aside -->
 
                 <div class="col-md-9 col-md-pull-3">
-                    <div class="row">
+                    {% for exercice in exercices %}
+                    <div class="row" id="row">
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                            <div class="course_container">
-                                <div class="ribbon top"><span>Top Sell</span></div>
+                            <div class="course_container" id="cc">
+                                {% if exercice.price == 0 %}
+                                <div class="ribbon top"><span>get now</span></div>
+                                 {% endif %}
                                 <figure>
-                                    <a href="{{ path('single_exercice') }}">
-                                        <img src="{{ asset('front/img/course_1.jpg') }}" width="800" height="533" class="img-responsive" alt="Image">
-                                        <div class="short_info"><i class="icon-clock-1"></i>2 hr 56 min</div>
+                                    <a href="/se/{{ exercice.Exid }}">
+                                        <img src="{{ asset('front/img/'~ exercice.image) }}" width="800" height="533" class="img-responsive" alt="Image">
+                                        <div class="short_info"><i class="icon-clock-1"></i>{{exercice.duration}} min</div>
                                     </a>
                                 </figure>
-                                <div class="course_title"><div class="type"><span>Yoga</span></div>
-                                    <h3><a href="{{ path('single_exercice') }}">Yoga Fundamentals</a></h3>
-                                    <div class="info_2 clearfix"><span class="price">39.90<sup>$</sup></span><span class="users">450</span></div>
+                                <div class="course_title"><div class="type"><span>{{exercice.level}}</span></div>
+                                    <h3><a href="/se/{{ exercice.Exid }}">{{exercice.name}}</a></h3>
+                                    {% if exercice.price == 0 %}
+                                    <div class="info_2 clearfix"><span class="price">free<sup></sup></span><span class="pull-right">{{exercice.label}}</span></div>
+                                    {% else %}
+                                    <div class="info_2 clearfix"><span class="price">{{ exercice.price }}<sup>TND</sup></span><span class="pull-right">{{exercice.label}}</span></div>
+                                    {% endif %}
+                                    {% for i in 1..exercice.rate| round %}
+                                    <i class="icon-star"></i>
+                                    {% endfor %}
                                 </div>
-                            </div>
-                            <!-- End box course_container -->
-                        </div>
-                        <!-- End col-md-6 -->
+                                <div class="col-lg-5 ml-auto pl-lg-5 text-center">
 
-                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
-                            <div class="course_container">
-                                <div class="ribbon top"><span>Top sell</span></div>
-                                <figure>
-                                    <a href="{{ path('single_exercice') }}">
-                                        <img src="{{ asset('front/img/course_2.jpg') }}" width="800" height="533" class="img-responsive" alt="Image">
-                                        <div class="short_info"><i class="icon-clock-1"></i>2 hr 56 min</div>
-                                    </a>
-                                </figure>
-                                <div class="course_title">
-                                    <div class="type"><span>Yoga</span></div>
-                                    <h3><a href="{{ path('single_exercice') }}">Total Body Stretching </a></h3>
-                                    <div class="info_2 clearfix"><span class="price">39.90<sup>$</sup></span><span class="users">450</span></div>
                                 </div>
                             </div>
+
                             <!-- End box course_container -->
                         </div>
                         <!-- End col-md-6 -->
+                        {% endfor %}
+
+                        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+                        <script>
+                            $(document).ready(function(){
+                                $('#finder').keyup(function(){
+                                    search_table($(this).val());
+                                });
+                                function search_table(value){
+                                    $('#row #cc').each(function(){
+                                        var found = 'false';
+                                        $(this).each(function(){
+                                            if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                                            {
+                                                found = 'true';
+                                            }
+                                        });
+                                        if(found === 'true')
+                                        {
+                                            $(this).show();
+
+                                        }
+                                        else
+                                        {
+                                            $(this).hide();
+
+                                        }
+                                    });
+                                }
+                            });
+                        </script>
                     </div>
                     <!-- End row -->
-                    <div class="row">
-                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                            <div class="course_container">
-                                <div class="ribbon"><span>Popular</span>
-                                </div>
-                                <figure>
-                                    <a href="{{ path('single_exercice') }}">
-                                        <img src="{{ asset('front/img/course_3.jpg') }}" width="800" height="533" class="img-responsive" alt="Image">
-                                        <div class="short_info"><i class="icon-clock-1"></i>2 hr 56 min</div>
-                                    </a>
-                                </figure>
-                                <div class="course_title">
-                                    <div class="type"><span>Yoga</span>
-                                    </div>
-                                    <h3><a href="{{ path('single_exercice') }}">Flexibility and Toning</a></h3>
-                                    <div class="info_2 clearfix"><span class="price">39.90<sup>$</sup></span><span class="users">450</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End box course_container -->
-                        </div>
-                        <!-- End col-md-6 -->
-                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
-                            <div class="course_container">
-                                <div class="ribbon"><span>Popular</span>
-                                </div>
-                                <figure>
-                                    <a href="{{ path('single_exercice') }}">
-                                        <img src="{{ asset('front/img/course_4.jpg') }}" width="800" height="533" class="img-responsive" alt="Image">
-                                        <div class="short_info"><i class="icon-clock-1"></i>2 hr 56 min</div>
-                                    </a>
-                                </figure>
-                                <div class="course_title">
-                                    <div class="type"><span>Strength</span>
-                                    </div>
-                                    <h3><a href="{{ path('single_exercice') }}">Strength Upper Body</a></h3>
-                                    <div class="info_2 clearfix"><span class="price">39.90<sup>$</sup></span><span class="users">450</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End box course_container -->
-                        </div>
-                        <!-- End col-md-6 -->
-                    </div>
-                    <!-- End row -->
-                    <div class="row">
-                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                            <div class="course_container">
-                                <div class="ribbon"><span>Popular</span>
-                                </div>
-                                <figure>
-                                    <a href="{{ path('single_exercice') }}">
-                                        <img src="{{ asset('front/img/course_5.jpg') }}" width="800" height="533" class="img-responsive" alt="Image">
-                                        <div class="short_info"><i class="icon-clock-1"></i>2 hr 56 min</div>
-                                    </a>
-                                </figure>
-                                <div class="course_title">
-                                    <div class="type"><span>Strength</span>
-                                    </div>
-                                    <h3><a href="{{ path('single_exercice') }}">Fat Burning Butt and Thigh </a></h3>
-                                    <div class="info_2 clearfix"><span class="price">39.90<sup>$</sup></span><span class="users">450</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End box course_container -->
-                        </div>
-                        <!-- End col-md-6 -->
-                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.6s">
-                            <div class="course_container">
-                                <div class="ribbon"><span>Popular</span>
-                                </div>
-                                <figure>
-                                    <a href="{{ path('single_exercice') }}">
-                                        <img src="{{ asset('front/img/course_6.jpg') }}" width="800" height="533" class="img-responsive" alt="Image">
-                                        <div class="short_info"><i class="icon-clock-1"></i>2 hr 56 min</div>
-                                    </a>
-                                </figure>
-                                <div class="course_title">
-                                    <div class="type"><span>Cardio</span>
-                                    </div>
-                                    <h3><a href="{{ path('single_exercice') }}">1000 Calorie Workout Video</a></h3>
-                                    <div class="info_2 clearfix"><span class="price">39.90<sup>$</sup></span><span class="users">450</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End box course_container -->
-                        </div>
-                        <!-- End col-md-6 -->
-                    </div>
-                    <!-- End row -->
-                    <div class="row">
-                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
-                            <div class="course_container">
-                                <figure>
-                                    <a href="{{ path('single_exercice') }}">
-                                        <img src="{{ asset('front/img/course_7.jpg') }}" width="800" height="533" class="img-responsive" alt="Image">
-                                        <div class="short_info"><i class="icon-clock-1"></i>2 hr 56 min</div>
-                                    </a>
-                                </figure>
-                                <div class="course_title">
-                                    <div class="type"><span>Cardio</span>
-                                    </div>
-                                    <h3><a href="{{ path('single_exercice') }}">Fat Burning Cardio</a></h3>
-                                    <div class="info_2 clearfix"><span class="price">39.90<sup>$</sup></span><span class="users">450</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End box course_container -->
-                        </div>
-                        <!-- End col-md-6 -->
-                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.8s">
-                            <div class="course_container">
-                                <figure>
-                                    <a href="{{ path('single_exercice') }}">
-                                        <img src="{{ asset('front/img/course_8.jpg') }}" width="800" height="533" class="img-responsive" alt="Image">
-                                        <div class="short_info"><i class="icon-clock-1"></i>2 hr 56 min</div>
-                                    </a>
-                                </figure>
-                                <div class="course_title">
-                                    <div class="type"><span>Pilates</span>
-                                    </div>
-                                    <h3><a href="{{ path('single_exercice') }}">Lower Body Pilates</a></h3>
-                                    <div class="info_2 clearfix"><span class="price">39.90<sup>$</sup></span><span class="users">450</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End box course_container -->
-                        </div>
-                        <!-- End col-md-6 -->
-                    </div>
-                    <!-- End row -->
+
                     <nav>
                         <ul class="pagination">
                             <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
@@ -279,18 +181,19 @@
         <!-- End container -->
     </div>
     <!-- End container_styled_1 -->
-
+    <script src="{{ asset('front/js/ion.rangeSlider.min.js') }}"></script>
+    <script src="{{ asset('front/js/switchery.min.js') }}"></script>
     <script>
         $("#range").ionRangeSlider({
             hide_min_max: true,
             keyboard: true,
-            min: 30,
-            max: 180,
-            from: 40,
-            to: 90,
+            min: 0,
+            max: 10,
+            from: 0,
+            to: 5,
             type: 'double',
             step: 1,
-            prefix: "$",
+            prefix: "TND",
             grid: false
         });
         var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
@@ -300,4 +203,11 @@
             });
         });
     </script>
+
+
+
+
+
+
+
 {% endblock %}
