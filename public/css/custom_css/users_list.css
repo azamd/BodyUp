@@ -1,0 +1,40 @@
+.table-toolbar {
+    margin-bottom: 15px;
+}
+
+.input-inline {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+.dataTables_filter .form-control {
+    margin-left: 5px;
+}
+
+#fitness-table>tbody>tr:before {
+    animation-delay: 25s;
+}
+
+.flotChart1 {
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    margin-left: 10px !important;
+    min-height: 100px !important;
+    max-height: 250px !important;
+    font-size: 14px;
+}
+
+.flotChart1 canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.flot-x-axis div.flot-tick-label {
+    margin-top: 10px;
+}
+
+.flot-y-axis div.flot-tick-label {
+    margin-right: 10px;
+}

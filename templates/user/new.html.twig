@@ -1,0 +1,205 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Packages | Fit2Go Admin Template</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- global css -->
+    <link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet" />
+    <link type="text/css" href="../../css/custom_css/fitness.css" rel="stylesheet" />
+    <link type="text/css" href="../../css/custom_css/metisMenu.css" rel="stylesheet" />
+
+    <link type="text/css" href="../../css/custom_css/panel.css" rel="stylesheet" />
+    <link type="text/css" href="../../css/custom_css/coupon.css" rel="stylesheet">
+    <!-- end of global css -->
+    <!--page level css -->
+    <link type="text/css" href="../../vendors/summernote/summernote.css" rel="stylesheet" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../vendors/jasny-bootstrap/css/jasny-bootstrap.css">
+    <link type="text/css" href="../../vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link type="text/css" href="../../vendors/bootstrapvalidator/dist/css/bootstrapValidator.css" rel="stylesheet" />
+    <link type="text/css" href="../../vendors/datatables/css/dataTables.bootstrap.css" rel="stylesheet" />
+    <link type="text/css" href="../../vendors/fancyBox/source/jquery.fancybox.css?v=2.1.5" media="screen" rel="stylesheet" />
+    <link type="text/css" href="../../vendors/sweetalert/dist/sweetalert2.css" rel="stylesheet" />
+    <link type="text/css" href="../../css/custom_css/timings.css" rel="stylesheet" />
+    <!--end of page level css-->
+</head>
+
+<body>
+    <div class="se-pre-con"></div>
+    <!-- header logo: style can be found in header-->
+    <header class="header">
+        <nav class="navbar navbar-static-top">
+            <a href="{{path('dashboard')}}" class="logo">
+                <!-- Add the class icon to your logo image or logo icon to add the margining -->
+                <img src="../../img/logo.png" alt="image not found">
+            </a>
+            <!-- Header Navbar: style can be found in header-->
+            <!-- Sidebar toggle button-->
+            <!-- Sidebar toggle button-->
+            <div>
+                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button"> <i class="fa fa-fw fa-navicon"></i>
+                </a>
+            </div>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    
+                   
+                    
+                    <!-- User Account: style can be found in dropdown-->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle padding-user" data-toggle="dropdown">
+                            <img src="../../img/authors/avatar1.jpg" width="35" class="img-circle img-responsive pull-left" height="35" alt="User Image">
+                            <div class="riot">
+                                <div>
+                                    Natali
+                                    <span>
+                                        <i class="caret"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <img src="../../img/authors/avatar1.jpg" class="img-circle" alt="User Image">
+                                <p>Nataliapery</p>
+                            </li>
+                            <!-- Menu Body -->
+                            <li class="pad-3">
+                                <a href="#">
+                                    <i class="fa fa-fw fa-user"></i> My Profile
+                                </a>
+                            </li>
+                            <li role="presentation"></li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-fw fa-gear"></i> Account Settings
+                                </a>
+                            </li>
+                            <li role="presentation" class="divider"></li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#">
+                                        <i class="fa fa-fw fa-lock"></i> Lock
+                                    </a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="login.html">
+                                        <i class="fa fa-fw fa-sign-out"></i> Logout
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="left-side sidebar-offcanvas">
+            <!-- sidebar: style can be found in sidebar-->
+            <section class="sidebar">
+                <div id="menu" role="navigation">
+                    <div class="nav_profile">
+                        <div class="media profile-left">
+                            <a class="pull-left profile-thumb" href="#">
+                                <img src="../../img/authors/avatar1.jpg" class="img-circle" alt="User Image">
+                            </a>
+                            <div class="content-profile">
+                                <h4 class="media-heading">Nataliapery</h4>
+                                <span class="text-default">User</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="navigation">
+                        <li>
+                            <a href="user_index.html">
+                                <i class="text-primary menu-icon fa fa-fw fa-dashboard"></i>
+                                <span class="mm-text">Dashboard</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    <!-- / .navigation -->
+                </div>
+                <!-- menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <aside class="right-side right-padding">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <!--section starts-->
+                <h2>User Packages</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="/dashboard">
+                            <i class="fa fa-fw fa-home"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">User Packages</a>
+                    </li>
+                </ol>
+            </section>
+            <!--section ends-->
+          <div class="container-fluid">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="panel-title">User Profile</div>
+                    </div>
+                    <div class="panel-body">
+                        <!--main content-->
+                        <div class="row">
+                            
+                            <div class="col-md-9">
+    {{ include('user/_form.html.twig') }}
+
+    <a href="{{ path('dashboard') }}">back to list</a>
+ </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content -->
+        </aside>
+        <!-- /.right-side -->
+    </div>
+    <!-- /.right-side -->
+    <!-- ./wrapper -->
+    <!-- global js -->
+    <script src="../../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../../js/custom_js/app.js" type="text/javascript"></script>
+    <script src="../../js/custom_js/metisMenu.js" type="text/javascript"></script>
+    <script src="../../vendors/holder/holder.js" type="text/javascript"></script>
+    <!-- end of page level js -->
+    <!-- begining of page level js -->
+    <script src="../../vendors/summernote/summernote.min.js" type="text/javascript"></script>
+    <script src="../../vendors/jasny-bootstrap/js/jasny-bootstrap.js" type="text/javascript"></script>
+    <script src="../../vendors/moment/moment.js" type="text/javascript"></script>
+    <script src="../../vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    <script src="../../vendors/bootstrapvalidator/dist/js/bootstrapValidator.js" type="text/javascript"></script>
+    <script src="../../vendors/fancyBox/source/jquery.fancybox.js?v=2.1.5" type="text/javascript"></script>
+    <script src="../../vendors/datatables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="../../vendors/datatables/js/dataTables.bootstrap.js" type="text/javascript"></script>
+    <script src="../../vendors/sweetalert/dist/sweetalert2.js" type="text/javascript"></script>
+    <script src="../../js/custom_js/timings.js" type="text/javascript"></script>
+    <!-- end of page level js -->
+</body>
+
+</html>
+

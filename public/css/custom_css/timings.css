@@ -1,0 +1,124 @@
+table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting, table.dataTable thead > tr > td.sorting_asc, table.dataTable thead > tr > td.sorting_desc, table.dataTable thead > tr > td.sorting{
+    padding-right:24px;
+}
+.timings-tab tbody td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #48CFAD;
+    height: 50px;
+}
+td a:focus{
+    outline:none;
+}
+.timings-tab thead th {
+    padding: 5px 10px 5px 10px;
+    background-color: #65a800;
+    color: #ffffff;
+    text-align: center;
+    width: 100px;
+}
+
+.timings-tab tbody td:hover {
+    background-color: #f9f9f9;
+    color: #ffffff;
+}
+
+.row2 {
+    background-color: #d7eefc;
+}
+
+.timings-tab tbody td a {
+    text-decoration: none;    
+}
+
+.panel-default1 {
+    border-color: #ddd;
+}
+
+.panel-default1 > .panel-heading {
+    color: #000;
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.panel-default1 > .panel-heading + .panel-collapse .panel-body {
+    border-top-color: #ddd;
+}
+
+.panel-default1 > .panel-footer + .panel-collapse .panel-body {
+    border-bottom-color: #ddd;
+}
+
+.table-scrollable {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 1px solid #dddddd;
+    margin: 10px 0 !important;
+}
+
+.table-scrollable > .table {
+    width: 100% !important;
+    margin: 0 !important;
+    margin-bottom: 0;
+    background-color: #fff;
+}
+
+.table-scrollable > .table > thead > tr > th,
+.table-scrollable > .table > tbody > tr > th,
+.table-scrollable > .table > tfoot > tr > th,
+.table-scrollable > .table > tfoot > tr > th,
+.table-scrollable > .table > tfoot > tr > td {
+    white-space: nowrap;
+}
+
+.table-scrollable > .table-bordered {
+    border: 0;
+}
+
+.table-scrollable > .table-bordered > thead > tr > th:first-child,
+.table-scrollable > .table-bordered > tbody > tr > th:first-child,
+.table-scrollable > .table-bordered > tfoot > tr > th:first-child,
+.table-scrollable > .table-bordered > thead > tr > td:first-child,
+.table-scrollable > .table-bordered > tbody > tr > td:first-child,
+.table-scrollable > .table-bordered > tfoot > tr > td:first-child {
+    border-left: 0;
+}
+
+.table-scrollable > .table-bordered > thead > tr > th:last-child,
+.table-scrollable > .table-bordered > tbody > tr > th:last-child,
+.table-scrollable > .table-bordered > tfoot > tr > th:last-child,
+.table-scrollable > .table-bordered > thead > tr > td:last-child,
+.table-scrollable > .table-bordered > tbody > tr > td:last-child,
+.table-scrollable > .table-bordered > tfoot > tr > td:last-child {
+    border-right: 0;
+}
+
+.table-scrollable > .table-bordered > thead > tr:last-child > th,
+.table-scrollable > .table-bordered > tbody > tr:last-child > th,
+.table-scrollable > .table-bordered > tfoot > tr:last-child > th,
+.table-scrollable > .table-bordered > thead > tr:last-child > td,
+.table-scrollable > .table-bordered > tbody > tr:last-child > td,
+.table-scrollable > .table-bordered > tfoot > tr:last-child > td {
+    border-bottom: 0;
+}
+
+.input-inline {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+.dataTables_filter .form-control {
+    margin-left: 5px;
+}
+
+.timings_button_align {
+    text-align: center;
+}
+.note-editor .note-statusbar .note-resizebar{
+   resize: vertical;
+}
+.btn, a{
+    cursor: pointer;
+}
