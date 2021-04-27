@@ -11,17 +11,17 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/product")
+ * @Route("/Product")
  */
 class ProductController extends AbstractController
 {
     /**
-     * @Route("/", name="product_index", methods={"GET"})
+     * @Route("/",name="product_index", methods={"GET"})
      */
     public function index(ProductRepository $productRepository): Response
     {
-        return $this->render('product/index.html.twig', [
-            'products' => $productRepository->findAll(),
+        return $this->render('Product/index.html.twig', [
+            'Products' => $productRepository->findAll(),
         ]);
     }
 
@@ -49,7 +49,7 @@ class ProductController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="product_show", methods={"GET"})
+     * @Route("/{IdProd}", name="product_show", methods={"GET"})
      */
     public function show(Product $product): Response
     {
@@ -59,7 +59,7 @@ class ProductController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="product_edit", methods={"GET","POST"})
+     * @Route("/{IdProd}/edit", name="product_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Product $product): Response
     {
@@ -79,7 +79,7 @@ class ProductController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="product_delete", methods={"POST"})
+     * @Route("/{IdProd}", name="product_delete", methods={"POST"})
      */
     public function delete(Request $request, Product $product): Response
     {
