@@ -5,10 +5,10 @@
 {% block body %}
 
     <!-- SubHeader =============================================== -->
-    <section class="parallax_window_in" data-parallax="scroll" data-image-src="{{ asset('front/img/sub_header_short.jpg') }}" data-natural-width="1400" data-natural-height="470">
+    <section class="parallax_window_in" data-parallax="scroll" data-image-src="{{ asset('front/img/'~ exercices.image) }}" data-natural-width="1400" data-natural-height="470">
         <div id="sub_content_in">
-            <h1>Yoga Fundamentals</h1>
-            <p>"Usu habeo equidem sanctus no ex melius labitur conceptam eos"</p>
+            <h1>{{ exercices.name }}</h1>
+            <p>{{ exercices.level }}</p>
         </div>
     </section>
     <!-- End section -->
@@ -17,116 +17,53 @@
     <div class="container margin_60">
         <div class="row">
             <div class="col-md-8 ">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/PknU1QEV4Zo" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="{{ exercices.video }}" allowfullscreen></iframe>
                 <ul id="course_info">
-                    <li><i class="icon-clock"></i> 2 hr 56 min </li>
-                    <li><i class=" icon-chart-bar-5"></i> Mediul level</li>
-                    <li><i class="icon-users-3"></i> 144 Partecipants</li>
+                    <li><i class="icon-clock"></i> {{ exercices.duration }} min</li>
+                    <li><i class=" icon-chart-bar-5"></i> {{ exercices.level }}</li>
+                    <li><i class="icon-workout"></i> {{ exercices.label }}</li>
                 </ul>
-                <h2>Description</h2>
-                <p> Lorem ipsum dolor sit amet, vel illud semper definitionem et, ad <strong>cum verear corpora</strong> detracto. Cu ornatus suavitate est. Eum iudico volumus et, eros modus mei in. Probatus nominati mel an. At vim laudem oporteat partiendo, enim hendrerit scriptorem duo eu.</p>
 
-                <p>Choro lobortis euripidis cu qui, ex melius labitur conceptam eos, sumo possim sea in. Te platonem ullamcorper per. Te causae <strong>virtute sit</strong>, ex has tale aeterno reprimique. Vel ex velit nemore, his no phaedrum interesset, in malis bonorum dissentiunt quo.</p>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="box_style_3">
-                            <img src="{{ asset('front/img/top_body.png') }}" width="69" height="200" alt="Image">
-                            <h4>Body Focus</h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="box_style_3">
-                            <div id="count_calories">140-280
-                                <div class="calculate_link"><a id="modal_calc" href="#animatedModal" class="btn_1">Daily Calorie Calculator</a></div>
-                            </div>
-                            <h4>Calories Burned</h4>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- End row -->
                 <hr class="add_bottom_30">
 
-                <div class="workoutlist">
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <figure><a href="https://www.youtube.com/watch?v=oX6I6vs1EFs" class="video"><i class="arrow_triangle-right_alt2"></i><img src="{{ asset('front/img/workout_1.jpg') }}" width="780" height="420"  alt="Image" class="img-responsive"></a><span>0:35</span><em></em>
-                            </figure>
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><a href="https://www.youtube.com/watch?v=oX6I6vs1EFs" class="video">Yoga Fundamentals (Youtube modal)</a></h4>
-                            <p>Vel ex velit nemore, his no phaedrum interesset, in malis bonorum dissentiunt quo.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End workoutlist -->
-
-                <div class="workoutlist">
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <figure><a href="https://player.vimeo.com/video/12434588" class="video"><i class="arrow_triangle-right_alt2"></i><img src="{{ asset('front/img/workout_2.jpg') }}" width="780" height="420" alt="Image" class="img-responsive"></a><span>0:35</span><em></em>
-                            </figure>
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><a href="https://player.vimeo.com/video/12434588" class="video">Flexibility and Toning (Vimeo modal)</a></h4>
-                            <p>Vel ex velit nemore, his no phaedrum interesset, in malis bonorum dissentiunt quo.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End workoutlist -->
-
-                <div class="workoutlist">
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <figure><a href="https://www.youtube.com/watch?v=oX6I6vs1EFs" class="video"><i class="arrow_triangle-right_alt2"></i><img src="{{ asset('front/img/workout_3.jpg') }}" width="780" height="420" alt="Image" class="img-responsive"></a><span>0:35</span>
-                            </figure>
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><a href="https://www.youtube.com/watch?v=oX6I6vs1EFs" class="video">Total Body Stretching</a></h4>
-                            <p>Vel ex velit nemore, his no phaedrum interesset, in malis bonorum dissentiunt quo.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End workoutlist -->
-
-                <div class="workoutlist last">
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <figure><a href="https://www.youtube.com/watch?v=oX6I6vs1EFs" class="video"><i class="arrow_triangle-right_alt2"></i><img src="{{ asset('front/img/workout_3.jpg') }}" width="780" height="420" alt="Image" class="img-responsive"></a><span>0:35</span>
-                            </figure>
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><a href="https://www.youtube.com/watch?v=oX6I6vs1EFs" class="video">Fat Burning Thigh</a></h4>
-                            <p>Vel ex velit nemore, his no phaedrum interesset, in malis bonorum dissentiunt quo.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End workoutlist -->
 
             </div>
             <!-- End col -->
             <div class="col-md-4" id="sidebar">
                 <div class="theiaStickySidebar">
                     <div class="box_style_2">
+                        {% if exercices.price ==0 %}
                         <div id="price_in">
-                            39.90<sup>$</sup> <span class="orginal_price">49.90$</span>
+                            FREE<sup></sup>
                         </div>
+                        {% else%}
+                        <div id="price_in">
+                            {{ exercices.price }}<sup>TND</sup>
+                        </div>
+                        {% endif %}
                         <div id="features">
-                            <h4>What you get</h4>
+                            <h4>We offer you :</h4>
                             <ul>
-                                <li><a href="#0" class="tooltip-1" data-placement="right" title="" data-original-title="Default tooltip"><i class="icon_film"></i>12 Workout videos</a>
+                                <li><a href="#0" class="tooltip-1" data-placement="right" title="" data-original-title="Default tooltip"><i class="icon_film"></i>A highly demonstrative video by one of our finest trainers and workout experts about : {{ exercices.name }}</a>
                                 </li>
-                                <li><a href="#0" class="tooltip-1" data-placement="right" title="" data-original-title="Default tooltip">Tool<i class="icon_tablet"></i>Tablets &amp; mobiles access</a>
-                                </li>
+
                                 <li><a href="#0" class="tooltip-1" data-placement="right" title="" data-original-title="Default tooltip"><i class="icon_lock-open_alt"></i>Lifetime access</a>
                                 </li>
-                                <li><a href="#0" class="tooltip-1" data-placement="right" title="" data-original-title="Default tooltip"><i class="icon_chat_alt"></i>Discuss with coach</a>
+                                <li><a href="#0" class="tooltip-1" data-placement="right" title="" data-original-title="Default tooltip"><i class="icon_chat_alt"></i>Contact coach</a>
                                 </li>
                             </ul>
+
                         </div>
-                        <p><small style="line-height:10px">Choro lobortis euripidis cu qui, ex melius labitur conceptam eos, sumo possim sea in. Te platonem ullamcorper per.</small>
-                        </p>
+
                         <hr>
-                        <a href="cart-page-1.html" class="btn_full">Purchase</a>
+                        {% if exercices.price ==0 %}
+                        <a href="cart-page-1.html" class="btn_full">GET NOW FOR FREE</a>
+
+                        {% else%}
+                        <a href="cart-page-1.html" class="btn_outline">BUY TO OWN</a>
+                        {% endif %}
                         <a class="btn_outline" href="#"><i class=" icon-heart"></i> Add to whislist</a>
                     </div>
                     <!-- End box_style -->
@@ -164,4 +101,8 @@
             color:'#4088DA'
         });
     </script>
+
+
+
+
 {% endblock %}
