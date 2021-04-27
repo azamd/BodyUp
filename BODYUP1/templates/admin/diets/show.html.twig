@@ -1,0 +1,10 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}{{ diet.name }}{% endblock %}
+
+{% block body %}
+ <h1>{{ diet.name }}</h1>
+ <p>{{ diet.calories }}</p>
+ <hr>
+ <a href="/">Retour</a>
+{% endblock %}
