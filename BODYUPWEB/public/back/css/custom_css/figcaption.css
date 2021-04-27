@@ -1,0 +1,119 @@
+figure:hover > figcaption {
+    opacity: 1;
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+figcaption:hover {
+    filter: alpha(opacity=0);
+    opacity: 0;
+    position: absolute;
+    z-index: 9999;
+    cursor: default;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+figcaption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.post3-main-div:hover .btn-h {
+    opacity: 1;
+}
+
+.btn-h {
+    opacity: 0;
+}
+
+.hover-btn1 {
+    background-color: #00bff3;
+    width: 40px;
+    height: 40px;
+    margin-left: -4px;
+    margin-top: 28%;
+}
+
+.hover-btn2 {
+    background-color: #07b6e6;
+    width: 40px;
+    height: 40px;
+    margin-left: -4px;
+    margin-top: 28%;
+}
+
+.hover-btn3 {
+    background-color: #00afdf;
+    width: 40px;
+    height: 40px;
+    margin-left: -4px;
+    margin-top: 28%;
+}
+
+.post3-main-div:hover .meet-img-hover {
+    background-color: rgba(70, 75, 79, 0.82);
+}
+
+.post3-main-div:hover .fancy-img {
+    opacity: 0.4;
+}
+
+.post3-text-box {
+    padding: 28px;
+}
+
+.post3-text {
+    color: #9699a6;
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.post3-main-div:hover .post1-btn {
+    background-color: #00bff3 !important;
+}
+
+.post4-main-div {
+    background-color: #ffffff;
+    margin-top: 40px;
+}
+
+.post4-main-div:hover {
+    -webkit-box-shadow: -1px 4px 15px -1px rgba(140, 138, 140, 1);
+    -moz-box-shadow: -1px 4px 15px -1px rgba(140, 138, 140, 1);
+    box-shadow: -1px 4px 15px -1px rgba(140, 138, 140, 1);
+}
+
+.post4-main-div:hover .post1-btn {
+    background-color: #00bff3 !important;
+}
+
+.post4-main-div:hover .post3-h {
+    color: #00bff3 !important;
+}
+
+.hover-btn {
+    padding-top: 20px;
+}
+
+.fa-eye, .fa-heart-o, .fa-file-text-o {
+    padding-top: 7px;
+}
+
+.btn-success.active.focus, .btn-success.active:focus, .btn-success.active:hover, .btn-success:active.focus, .btn-success:active:focus, .btn-success:active:hover, .open > .dropdown-toggle.btn-success.focus, .open > .dropdown-toggle.btn-success:focus, .open > .dropdown-toggle.btn-success:hover{
+    background-color: #65a800;
+    border-color: #65a800;
+}
+.btn-success.active, .btn-success:active, .open>.dropdown-toggle.btn-success {
+    color: #fff;
+    background-color: #65a800;
+    border-color: #65a800;
+}

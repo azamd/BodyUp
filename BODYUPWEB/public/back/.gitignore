@@ -1,0 +1,11 @@
+
+Thumbs.db### Example user template template
+### Fitness template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+node_modules/
+src/vendors

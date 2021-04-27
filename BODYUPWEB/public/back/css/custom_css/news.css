@@ -1,0 +1,34 @@
+table.dataTable thead .sorting_asc:after {
+    opacity: 0.2;
+    content: "\e150";
+}
+
+.dataTables_filter .form-control {
+    margin-left: 5px;
+}
+.fa-tint {
+    font-size: 60px;
+}
+.fa-pencil,
+.fa-heart,
+.fa-times {
+    font-size: 17px;
+    margin: 2px;
+}
+
+.fa-times {
+    color: #fc7070;
+}
+
+.fa-pencil {
+    color: #65a800;
+}
+
+.fa-heart {
+    color: #ffa31d;
+}
+
+.text_edit2_third_child {
+    width: 100%;
+    text-align: left;
+}

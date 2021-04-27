@@ -1,0 +1,30 @@
+.mr10 {
+    margin-right: 10px !important
+}
+
+.mb10 {
+    margin-bottom: 10px !important
+}
+
+.mix {
+    position: relative;
+    display: none;
+    font-weight: 400;
+    color: #777;
+    height: auto;
+    overflow: visible
+}
+
+.btn-img {
+    display: inline-block;
+    padding: 0 !important;
+}
+
+.btn-group {
+    margin-right: 1.5%;
+}
+
+.fancy-img {
+    margin-top: 20px;
+    width: 100%;
+}

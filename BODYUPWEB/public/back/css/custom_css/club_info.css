@@ -1,0 +1,76 @@
+.pad-top {
+    padding-top: 15px;
+}
+
+.fileinput {
+    display: inline-block;
+    margin-bottom: -7px;
+}
+
+.nav-custom {
+    background: none;
+    border: 0;
+    margin-bottom: 20px;
+    -moz-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.nav-custom > li.active > a,
+.nav-custom > li.active > a:hover,
+.nav-custom > li.active > a:active,
+.nav-custom > li.active > a:focus {
+    border-color: transparent;
+    border-bottom: 3px solid #33a4d8;
+    margin-bottom: -2px;
+}
+
+.edi-css {
+    width: 100%;
+    height: 200px;
+    font-size: 13px;
+    border: 1px solid #dddddd;
+    padding: 10px;
+}
+
+.terms ul>li>a {
+    color: #33a4d8;
+}
+
+.image-alignment {
+    text-align: center;
+}
+
+.buttons_align {
+    text-align: center;
+}
+
+.fa-stack {
+    font-size: 17px;
+}
+
+.circle-fb {
+    color: #2E4D72;
+}
+
+.circle-ggl-plus {
+    color: #CC3731;
+}
+
+.circle-twitter {
+    color: #13B3CA;
+}
+
+.circle-youtube {
+    color: #D42428;
+}
+
+.thumbnail {
+    max-width: 200px;
+    max-height: 150px;
+}
+
+strong {
+    font-size: 14px;
+    line-height: 20px;
+}

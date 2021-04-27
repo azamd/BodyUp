@@ -1,0 +1,77 @@
+<aside class="right-side right-padding">
+    <section class="content-header">
+        <!--section starts-->
+        <h2>News</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-fw fa-home"></i> Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="#">News</a>
+            </li>
+            <li>
+                <a href="news.html">News</a>
+            </li>
+        </ol>
+    </section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Basic charts strats here-->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <i class="fa fa-newspaper-o" aria-hidden="true"></i> Reports
+                        </h4>
+                        <span class="pull-right">
+                                    <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
+                                    <i class="glyphicon glyphicon-remove removepanel"></i>
+                                </span>
+                    </div>
+                    <div class="panel-body table-responsive">
+                        <table class="table table-bordered text-center" id="fitness-table">
+                            <thead>
+                            <tr>
+                                <th class="text-center">Date</th>
+                                <th class="text-center">Name</th>
+                                <th class="text-center">Content</th>
+                                <th class="text-center">Action</th>
+                                <th class="text-center">Delete/Cancel</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for reclamation in reclamations %}
+
+                            <tr>
+                                <td>{{ reclamation.date }}</td>
+                                <td>{{ reclamation.user.firstName }}</td>
+                                <td>{{ reclamation.content }}</td>
+                                <td>
+                                    {% if reclamation.reply is null %}
+                                    <a class="edit btn btn-primary" href="{{ path('single_reclamation', {'id': reclamation.id}) }}">
+                                        <i class="fa fa-fw fa-edit"></i> Reply
+                                    </a>
+                            {% else %}
+                                <a class="edit btn btn-default" href="#">
+                                    <i class="fa fa-fw fa-check" disabled></i>Replied
+                                </a>
+                            {% endif %}
+                                </td>
+                                <td>
+                                    <a class="delete btn btn-danger" href="{{ path('single_delete', {'id': reclamation.id}) }}">
+                                        <i class="fa fa-trash-o"></i> Delete
+                                    </a>
+                                </td>
+                            </tr>
+
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>

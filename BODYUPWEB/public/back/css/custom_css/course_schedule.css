@@ -1,0 +1,62 @@
+/*  this is for custom tab*/
+
+.nav-custom {
+    background: none;
+    border: 0;
+    margin-bottom: 20px;
+    -moz-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.nav-custom > li.active > a,
+.nav-custom > li.active > a:hover,
+.nav-custom > li.active > a:active,
+.nav-custom > li.active > a:focus {
+    border-color: transparent;
+    border-bottom: 3px solid #33a4d8;
+    margin-bottom: -2px;
+}
+
+.panel-body ul>li>a>strong {
+    color: #33a4d8;
+}
+
+.panel-body ul>li>a>strong:hover {
+    color: #33a4d8;
+}
+
+.panel-body ul>li.active>a>strong {
+    color: #000;
+}
+.form-inline .form-control{
+    width:100%;
+}
+
+.input-inline {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+.dataTables_filter .form-control {
+    margin-left: 5px;
+}
+
+.course_schedule_btn_align {
+    text-align: center;
+}
+
+.pagination>.active>a:hover {
+    background-color: #33a4d8;
+    border-color: #33a4d8;
+}
+
+.social-check-box-icon {
+    margin-top: 6px;
+}
+
+strong {
+    font-size: 14px;
+    line-height: 20px;
+}

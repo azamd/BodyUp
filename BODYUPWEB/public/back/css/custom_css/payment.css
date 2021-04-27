@@ -1,0 +1,40 @@
+.form-container.active {
+    margin: 20px auto;
+}
+
+.box-model {
+    background-color: #fff;
+    padding: 10px;
+    -webkit-box-shadow: 2px 4px 7px 0 rgba(149, 149, 149, 0.61);
+    -moz-box-shadow: 2px 4px 7px 0 rgba(149, 149, 149, 0.61);
+    box-shadow: 2px 4px 7px 0 rgba(149, 149, 149, 0.61);
+    margin-bottom: 15px;
+}
+
+.flotChart1 {
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    margin-left: 10px !important;
+    min-height: 100px !important;
+    max-height: 250px !important;
+}
+
+.flotChart1 canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.flot-x-axis div.flot-tick-label {
+    margin-top: 10px;
+}
+
+.flot-y-axis div.flot-tick-label {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .table-responsive {
+        border: none;
+    }
+}

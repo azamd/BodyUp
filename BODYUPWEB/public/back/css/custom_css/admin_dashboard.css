@@ -1,0 +1,626 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+body {
+    color: #070e17;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+
+/* ----- Background-color ----- */
+
+.bg-color {
+    background-color: #faf6f6;
+}
+
+
+/* ----- Background-color ----- */
+
+.right-side {
+    padding-bottom: 10px;
+}
+
+
+/* ----- Box-model ----- */
+
+.box-model {
+    background-color: #fff;
+    margin-top: 16px;
+    border: none;
+    padding: 10px 10px;
+    border: 1px solid #ffffff;
+}
+
+.box-model h4 {
+    letter-spacing: 0.03em;
+}
+
+
+/* ----- Box-model end ----- */
+
+
+/* ----- Earning Section ----- */
+
+
+/* ----- headning ----- */
+
+h4 {
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-right: 5px;
+    font-weight: 500;
+    color: #070e17;
+    padding-bottom: 8px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+/* ----- headning end ----- */
+
+
+/* ----- dollor img ----- */
+
+.dollor {
+    margin: 80% 0 0 0;
+}
+
+
+/* ----- dollor img end ----- */
+
+
+/* ----- pending amount ----- */
+
+.amount {
+    padding-top: 5%;
+    padding-left: 9%;
+}
+
+.progress {
+    height: 12px;
+}
+
+#pending.progress-bar {
+    background-color: #33a4d8;
+}
+
+#users.progress-bar {
+    background-color: #65a800;
+}
+
+
+/* ----- pending amount end ----- */
+
+
+/* ----- Earning section end----- */
+
+
+/* ----- users section ----- */
+
+.registered {
+    color: #fff;
+    text-align: center;
+    margin: 15px 0 5px 0;
+    padding-left: 5px;
+    padding-right: 15px;
+}
+
+.registered h3 {
+    font-weight: bold;
+    border: none;
+    color: #ffffff;
+    padding: 0 5px;
+}
+
+.registered h5 {
+    padding: 16px 5px;
+}
+
+
+/* ----- users section end ----- */
+
+
+/* ----- recent users & events section ----- */
+
+.recent-user-img {
+    width: 35px;
+    margin-right: 10px;
+    margin-top: 10px;
+    float: left;
+    border-radius: 50%;
+}
+
+.recent-user-img ~ h5 {
+    margin-bottom: 5px;
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.modal-title i {
+    font-size: inherit;
+}
+
+
+/* ----- recent users & events section end ----- */
+
+
+/* ----- trainers ----- */
+
+.trainer {
+    max-width: 98.5%;
+    border-collapse: collapse;
+}
+
+.trainer tbody>tr>th {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+
+.trainer tbody>tr>td,
+.trainer thead>tr>th {
+    text-align: center;
+}
+
+
+/* ----- trainers end ----- */
+
+
+/* ----- user growth chart section ----- */
+
+#chart,
+#chart2 {
+    height: 325px;
+}
+
+#chart6 .nv-group.nv-series-2 {
+    fill-opacity: 0.7 !important;
+}
+
+@media screen and (max-width: 425px) {
+    .nv-controlsWrap {
+        display: none;
+    }
+}
+
+
+/* ----- user growth chart section end ----- */
+
+
+/* ------ Profit growth analytics chart ----- */
+
+
+/* ------ Profit growth analytics chat end ----- */
+
+.c3-line {
+    stroke-width: 2px;
+    shape-rendering: optimizeSpeed;
+}
+
+
+/* select button */
+
+.btn-default,
+.default,
+.tags a.default {
+    background: #fff !important;
+    border-radius: 5px !important;
+}
+
+.btn-default:hover,
+.default:hover,
+.tags a.default:hover {
+    background: #fff !important;
+    border-radius: 5px !important;
+    width: 100%;
+}
+
+.bootstrap-select {
+    width: 100% !important;
+}
+
+.select3 {
+    width: 20% !important;
+}
+
+
+/* select button  end*/
+
+.pad-left {
+    padding-left: 0;
+}
+
+small {
+    color: #939393;
+}
+
+.box-model .recent {
+    width: 100%;
+}
+
+.box-model .recent .row {
+    padding: 7px 15px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+
+/*events list start*/
+.input-group {
+    width: 100%;
+}
+
+.date-picker-wrapper {
+    z-index: 1500;
+}
+
+.delete_event,
+.edit_event {
+    padding: 0 6px;
+    font-size: 13px;
+}
+
+
+/*events list end*/
+
+.box-model.event .row:hover small {
+    color: #fff;
+}
+
+.box-model.event .row {
+    color: #33a4d8;
+    font-size: 16px;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 5px 15px;
+}
+
+.box-model.event .row small {
+    color: #959595;
+}
+
+.light-color {
+    color: #959595;
+}
+
+.calender-content-style {
+    margin-top: 25px;
+}
+
+.box-model.event .row:hover {
+    color: #fff;
+    background-color: #33a4d8;
+}
+
+.box-model .recent .row img {
+    margin-top: 12px;
+}
+
+
+/* anchor link */
+a:focus{
+    outline: none;
+}
+.nopadmar a {
+    font-size: 16px;
+}
+
+
+/* unvisited link */
+
+.nopadmar a:link {
+    color: #33A4D8;
+}
+
+
+/* visited link */
+
+.nopadmar a:visited {
+    color: #33A4D8;
+}
+
+
+/* mouse over link */
+
+.nopadmar a:hover {
+    color: #4FC1E9;
+}
+
+
+/* selected link 
+
+/* line chart */
+
+th {
+    font-weight: normal;
+}
+
+.panel {
+    margin-top: 16px;
+    border-color: #f6f6f6;
+}
+
+.panel-title {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.panel-primary > .panel-heading {
+    background-color: #304d8a;
+    border-color: #304d8a;
+}
+
+#fb {
+    color: #304d8a;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+#tw {
+    color: #33a4d8;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.panel h5 {
+    color: #a7aaab;
+}
+
+.panel-info > .panel-heading {
+    background-color: #33a4d8;
+    border-color: #33a4d8;
+}
+
+
+/* calendar */
+
+#calendar {
+    margin-top: 5px;
+}
+
+.fc th,
+.fc td {
+    vertical-align: bottom;
+    margin: auto;
+}
+
+.fc-unthemed th,
+.fc-unthemed td,
+.fc-unthemed thead,
+.fc-unthemed tbody,
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-row,
+.fc-unthemed .fc-popover {
+    border-color: transparent;
+}
+
+.fc-unthemed .fc-popover {
+    background-color: transparent;
+}
+
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-popover .fc-header {
+    background: transparent;
+}
+
+.fc-unthemed .fc-popover .fc-header .fc-close {
+    color: transparent;
+}
+
+.fc-unthemed .fc-today {
+    background: #33a4d8;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.fc-highlight {
+    /* when user is selecting cells */
+    background: #bce8f1;
+}
+
+.fc-bgevent {
+    /* default look for background events */
+    background: rgb(143, 223, 130);
+    opacity: .3;
+    filter: alpha(opacity=30);
+    /* for IE */
+}
+
+.fc-nonbusiness {
+    /* default look for non-business-hours areas */
+    /* will inherit .fc-bgevent's styles */
+    background: transparent;
+}
+
+.fc-ltr .fc-basic-view .fc-day-number {
+    text-align: center;
+}
+
+.fc-row.fc-widget-header {
+    height: 3em;
+}
+
+.fc-row.fc-week.fc-widget-content {
+    height: 3em !important;
+}
+
+.fc-agenda-view .fc-day-grid .fc-row {
+    min-height: 1em;
+    /* all-day section will never get shorter than this */
+}
+
+.fc-left h4 {
+    color: #33a4d8;
+    border-bottom: none;
+}
+
+.fc-toolbar {
+    border-bottom: 1px solid #ddd;
+}
+
+.fc-button {
+    width: 34px !important;
+}
+
+.fc button .fc-icon {
+    right: 10px;
+    border-radius: 50%;
+    border: 2px solid #33A4D8;
+    padding: 13px;
+}
+
+.fc-icon {
+    line-height: 0;
+}
+
+.fc-next-button.fc-button.fc-state-default.fc-corner-right,
+.fc-prev-button.fc-button.fc-state-default.fc-corner-left,
+.fc-today-button.fc-button.fc-state-default.fc-corner-left.fc-corner-right.fc-state-disabled,
+.fc-month-button.fc-button.fc-state-default.fc-corner-left.fc-corner-right.fc-state-active,
+.fc-today-button.fc-button.fc-state-default.fc-corner-left.fc-corner-right {
+    border: none !important;
+    outline: none;
+}
+
+.fc-basic-view td.fc-week-number span,
+.fc-basic-view td.fc-day-number {
+    padding-top: 11px;
+    height: 1em !important;
+}
+
+.fc-basic-view .fc-body .fc-row {
+    min-width: 1em;
+    min-height: 1em;
+}
+
+
+/* calendar end */
+
+.amount h5 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+
+/* circle slider */
+
+#myStat2 canvas,
+#myStat3 canvas {
+    width: 100% !important;
+    min-width: 40px;
+    max-width: 250px;
+    margin: auto !important;
+}
+
+#myStat2,
+#myStat3 {
+    min-width: 40px;
+    max-width: 250px;
+    width: 100% !important;
+    margin: auto !important;
+}
+
+#myStat2 .circle-text,
+#myStat3 .circle-text {
+    font-weight: bold;
+    vertical-align: middle;
+    line-height: 0 !important;
+    margin-top: 50%;
+    font-family: 'Hind', sans-serif;
+}
+
+
+/* circle slider end */
+
+.registered h3 {
+    font-size: 20px;
+}
+
+@media(min-width:1200px) and (max-width: 1500px) {
+    .registered h3 {
+        margin-top: 21px;
+    }
+    .registered .col-lg-7 {
+        text-align: left;
+        padding-left: 8px;
+    }
+    .registered h5 {
+        font-size: 14px;
+        padding: 7px 15px;
+        padding-top: 12px;
+    }
+}
+
+@media(min-width: 1500px) {
+    #myStat2 .circle-text,
+    #myStat3 .circle-text {
+        font-size: 40px !important;
+        left: 4px;
+    }
+}
+
+
+/*date picker*/
+
+.datepicker {
+    width: 100%;
+}
+
+.dp-note {
+    background: #ff931d;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    left: 50%;
+    bottom: 3px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.dp-note {
+    position: absolute;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+.events_hover a:hover {
+    background-color: red !important;
+}
+
+.datepicker--cell.-selected-,
+.datepicker--cell.-selected-.-current- {
+    color: #fff;
+    background-color: #33a4d8;
+}
+
+.datepicker--day-name {
+    color: #ff931d;
+}
+
+.example,
+.datepicker--nav-title,
+.datepicker--day-name,
+.datepicker--cell-day {
+    font-family: 'Hind', sans-serif;
+    line-height: 20px;
+}
+
+
+/* Growth Analytics */
+
+.equired-user-alignment {
+    padding: 0 10px 0 3px;
+    font-size: 14px;
+    color: #070e17;
+}

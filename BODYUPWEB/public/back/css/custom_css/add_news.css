@@ -1,0 +1,20 @@
+.bootstrap-tagsinput,
+.label {
+    border-radius: 0px;
+}
+
+.label-info {
+    background-color: #33a4d8;
+}
+
+.edi-css {
+    width: 100%;
+    height: 200px;
+    font-size: 13px;
+    border: 1px solid #dddddd;
+    padding: 10px;
+}
+
+.bootstrap-tagsinput {
+    width: 100%;
+}

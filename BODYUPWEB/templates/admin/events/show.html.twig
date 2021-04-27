@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <i class="fa fa-fw fa-list"></i> Events List
+                </h4>
+                <span class="pull-right">
+                                    <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
+                                    <i class="glyphicon glyphicon-remove removepanel"></i>
+                                </span>
+            </div>
+            <div class="panel-body">
+                {% if events is not null %}
+
+                <div class="mart">
+
+
+                    <div class="row">
+                        {% for event in events %}
+                        <div class="col-sm-6">
+
+                            <div class="row">
+
+                                <div class="col-sm-4 col-lg-2">
+                                    <img src="{{ asset('image/' ~ event.image) }}" class="img-responsive img-thumbnail img-circle" alt="image not found">
+                                </div>
+                                <div class="col-sm-8 col-lg-10">
+                                    <h4>
+                                        <a href="/admin/event/{{ event.id }}">{{ event.title }}</a>
+                                    </h4>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="/admin/event/modify={{ event.id }}"> <i class="fa fa-edit"></i></a>
+                                            <a href="/admin/event/delete/{{ event.id }}"> <i class="fa fa-trash"></i></a>
+                                        </li>
+                                    </ul>
+
+                                    {{ event.description|raw  }}
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <i class="fa fa-calendar"></i> {{ event.datestart }} - {{ event.dateend }}
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        {% endfor %}
+                    </div>
+
+
+
+                </div>
+
+                {% else %}
+                    <p>Empty !</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
