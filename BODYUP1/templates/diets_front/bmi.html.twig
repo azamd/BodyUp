@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ExercicesFrontController!{% endblock %}
+
+{% block body %}
+
+<!-- SubHeader =============================================== -->
+<section class="parallax_window_in" data-parallax="scroll" data-image-src="img/sub_header_general.jpg" data-natural-width="1400" data-natural-height="470">
+    <div id="sub_content_in">
+        <h1>BMI CALCULATOR</h1>
+
+    </div>
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+
+    <script language="JavaScript">
+
+        function calculateBmi() {
+            var weight = document.bmiForm.weight.value
+            var height = document.bmiForm.height.value
+
+            if(weight < 0 && height < 0 ) {
+                alert("weight and height can't have negative values")
+            }else if(weight < 0 || height < 0 ) {
+                    alert("weight or height can't have negative values")
+            }else if(weight > 263.5 || height > 2.7){
+                alert("Please Fill with correct weight and height values.")
+            }
+            else if(weight > 263.5 && height > 2.7) {
+                alert("Please Fill with correct weight and height values.")
+            }else if( weight < 263.5 && height < 2.7){
+                var finalBmi = weight/(height*height)
+                document.bmiForm.bmi.value = finalBmi
+                if(finalBmi < 18.5){
+                    document.bmiForm.meaning.value = "Under-Weight"
+                }
+                if(finalBmi > 18.5 && finalBmi < 25){
+                    document.bmiForm.meaning.value = "Regular Healthy Weight"
+                }
+                if(finalBmi > 25){
+                    document.bmiForm.meaning.value = "Over-Weight"
+                }
+                if(finalBmi > 40){
+                    document.bmiForm.meaning.value = "Severely Over-Weight"
+                }
+
+
+        }}
+
+    </script>
+</section>
+<!-- End section -->
+<!-- End SubHeader ============================================ -->
+
+<div class="container_styled_1">
+    <div class="container margin_60_35">
+        <form name="bmiForm">
+            <h4>First, place your weight and height values : </h4>
+            <label>Your Weight:</label>
+             <input type="text" name="weight"  class="form-control styled" placeholder="weight in kg" size="20"><br />
+            <label>Your Height:</label>
+            <input type="text" name="height"  class="form-control styled" placeholder="height in m" size="20"><br />
+
+            <input type="button" class="btn-success btn"value="COMPUTE" onClick="calculateBmi()"><br />
+            <h4>Now, check your BMI result down below :</h4>
+            <label>BMI =</label> <input type="text" class="form-control styled" name="bmi" placeholder="BMI result shows here." size="20"><br />
+            <label>BMI Status:</label> <input type="text" name="meaning" class="form-control styled" placeholder="notes show here." size="25"><br />
+            <input type="reset" class="btn-primary btn"value="RESET" />
+        </form>
+
+    </div>
+</div>
+        <!-- End container_styled_1 -->
+        {% endblock %}

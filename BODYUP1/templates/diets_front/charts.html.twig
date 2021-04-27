@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ExercicesFrontController!{% endblock %}
+
+{% block body %}
+
+    <!-- SubHeader =============================================== -->
+    <section class="parallax_window_in" data-parallax="scroll" data-image-src="img/sub_header_general.jpg" data-natural-width="1400" data-natural-height="470">
+        <div id="sub_content_in">
+            <h1>ENERGY VALUE</h1>
+            <p>"learn more about this diet's calories, carbs, fat and protein dispatching"</p>
+        </div>
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+    </section>
+    <!-- End section -->
+    <!-- End SubHeader ============================================ -->
+
+    <div class="robust-content content container-fluid">
+        <div class="content-wrapper">
+            <div id="div_chart"></div>
+
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
+                {{ gc_draw(piechart, 'div_chart') }}
+            </script>
+
+        </div>
+    </div>
+
+{% endblock %}

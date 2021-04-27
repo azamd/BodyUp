@@ -1,0 +1,124 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ExercicesFrontController!{% endblock %}
+
+{% block body %}
+
+    <!-- SubHeader =============================================== -->
+    <section class="parallax_window_in" data-parallax="scroll" data-image-src="img/sub_header_general.jpg" data-natural-width="1400" data-natural-height="470">
+        <div id="sub_content_in">
+            <h1>{{ diet.name }}</h1>
+
+        </div>
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+    </section>
+    <!-- End section -->
+    <!-- End SubHeader ============================================ -->
+
+    <div class="container_styled_1">
+        <div class="container margin_60_35">
+
+            <div class="row">
+
+                <div class="col-md-9">
+                    <div class="post">
+                        <img src="{{ asset('front/img/'~ diet.image) }}"  class="img-responsive">
+
+                        <h2>Description:</h2>
+                        <p>
+                             {{ diet.description }}
+                        </p>
+                        <div class="profile">
+                        <div id="social_teacher">
+                            <ul>
+
+                                    <a  id="fb" class="icon-facebook"></a>
+                                    <a  id="tw" class="icon-twitter"></a>
+                                    <a  id="lkdn" class="icon-linkedin"></a>
+                                    <a  id="mix" class="icon-stumbleupon"></a>
+
+
+
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- end post -->
+
+
+        </div>
+        <!-- End container -->
+    </div>
+    <!-- End container_styled_1 -->
+        </div>
+        <!--share-->
+
+
+
+        <script src={{ asset('front/jsSocials/jquery.js') }}></script>
+        <script src={{ asset('front/jsSocials/jssocials.min.js') }}></script>
+        <script type= "text/javascript">
+
+            $(function() {
+                var linkurl ='https://excellenceinfitness.com/blog/nutrition-for-fitness-training-the-facts-you-need-to-know/#:~:text=Minimally%20processed%20foods%20are%20the,build%20muscle%20and%20stay%20full.';
+                $("#fb").jsSocials({
+                    url : linkurl,
+                    text : "check these useful healthy diet tips for your fitness & workout plan !!",
+                    showLabel : true,
+                    showCount : "inside",
+                    shareIn : "popup",
+                    shares: ["facebook"]
+                });
+
+            });
+        </script>
+        <script type= "text/javascript">
+
+            $(function() {
+                var linkurl ='https://excellenceinfitness.com/blog/nutrition-for-fitness-training-the-facts-you-need-to-know/#:~:text=Minimally%20processed%20foods%20are%20the,build%20muscle%20and%20stay%20full.';
+                $("#tw").jsSocials({
+                    url : linkurl,
+                    text : "check these useful healthy diet tips for your fitness/workout plan !!",
+                    showLabel : true,
+                    showCount : "inside",
+                    shareIn : "popup",
+                    shares: ["twitter"]
+                });
+
+            });
+        </script>
+        <script type= "text/javascript">
+
+            $(function() {
+                var linkurl ='https://excellenceinfitness.com/blog/nutrition-for-fitness-training-the-facts-you-need-to-know/#:~:text=Minimally%20processed%20foods%20are%20the,build%20muscle%20and%20stay%20full.';
+                $("#lkdn").jsSocials({
+                    url : linkurl,
+                    text : "check these useful healthy diettips for your fitness/workout plan !!",
+                    showLabel : true,
+                    showCount : "inside",
+                    shareIn : "popup",
+                    shares: ["linkedin"]
+                });
+
+            });
+        </script>
+        <script type= "text/javascript">
+
+            $(function() {
+                var linkurl ='https://excellenceinfitness.com/blog/nutrition-for-fitness-training-the-facts-you-need-to-know/#:~:text=Minimally%20processed%20foods%20are%20the,build%20muscle%20and%20stay%20full.';
+                $("#mix").jsSocials({
+                    url : linkurl,
+                    text : "check these useful healthy diet tips for your fitness & workout plan !!",
+                    showLabel : true,
+                    showCount : "hide",
+                    shareIn : "popup",
+                    shares: ["stumbleupon"]
+                });
+
+            });
+        </script>
+        <!--end share-->
+    </div>
+{% endblock %}

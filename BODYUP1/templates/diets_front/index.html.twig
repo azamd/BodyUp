@@ -1,0 +1,198 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ExercicesFrontController!{% endblock %}
+
+{% block body %}
+
+    <!-- SubHeader =============================================== -->
+    <section class="parallax_window_in" data-parallax="scroll" data-image-src="img/sub_header_general.jpg" data-natural-width="1400" data-natural-height="470">
+        <div id="sub_content_in">
+            <h1>BODYUP Healthy Diets</h1>
+            <p>"Check our best diets suggestions"</p>
+        </div>
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+    </section>
+    <!-- End section -->
+    <!-- End SubHeader ============================================ -->
+
+    <div class="container_styled_1">
+        <div class="container margin_60_35">
+            <div class="row">
+
+                <aside class="col-md-3 col-md-push-9" id="sidebar">
+
+                    <div  class="sidebar-search">
+
+                        <div class="input-group custom-search-form">
+
+
+                            <input type="text" id="finder" class="form-control"  placeholder="search now" >
+
+                        </div>
+
+                    </div>
+                      <h3> </h3>
+
+                    <div class="theiaStickySidebar">
+                        <div id="filters_col">
+                            <a data-toggle="collapse" href="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters" id="filters_col_bt">Filters </a>
+                            <div class="collapse" id="collapseFilters">
+
+                                <div class="filter_type">
+                                    <h6>Target</h6>
+                                    <ul>
+                                        <li>
+                                            <label>Regular-Weight</label>
+                                            <input type="checkbox" class="js-switch" checked>
+                                        </li>
+                                        <li>
+                                            <label>Under-Weight</label>
+                                            <input type="checkbox" class="js-switch" checked>
+                                        </li>
+                                        <li>
+                                            <label>Over-Weight / Obese</label>
+                                            <input type="checkbox" class="js-switch" checked>
+                                        </li>
+                                    </ul>
+                                    <h6>check my bmi</h6>
+                                    <ul>
+                                    <span>
+                                    <a href="/diets/bmi" data-toggle="modal" data-target="" class="btn-primary btn">BMI CALCULATOR</a>
+                                    </span>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <!--End collapse -->
+                        </div>
+                        <!--End filters col-->
+                    </div>
+                    <!--End Sticky -->
+                </aside>
+                <!--End aside -->
+
+                <div class="col-md-9 col-md-pull-3">
+                    {% for diet in diet %}
+                    <div class="row" id="row">
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="course_container" id="cc">
+
+                                <figure >
+                                    <a href="/diets/desc/{{ diet.dtId }}">
+                                        <img src="{{ asset('front/img/'~ diet.image) }}" width="800" height="533" class="img-responsive" alt="Image">
+
+                                    </a>
+                                </figure>
+                                <div class="course_title"><div class="type"><span>{{diet.bmi}}</span></div>
+                                    <div class="pull-right">
+                                        <span>
+                                    <a href="/diets/desc/{{ diet.dtId }}" data-toggle="modal" data-target="" class="btn-info btn">LEARN MORE</a>
+                                    </span>
+                                        <span>
+                                    <a href="/diets/chart/{{ diet.dtId }}" data-toggle="modal" data-target="" class="btn-success btn">ENERGY VALUE</a>
+                                    </span>
+                                    </div>
+                                    <h3><a href="/diets/desc/{{ diet.dtId }}">{{diet.name}}</a></h3>
+
+                                </div>
+                            </div>
+
+                            <!-- End box course_container -->
+                        </div>
+                        <!-- End col-md-6 -->
+                        {% endfor %}
+                        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+                        <script>
+                            $(document).ready(function(){
+                                $('#finder').keyup(function(){
+                                    search_table($(this).val());
+                                });
+                                function search_table(value){
+                                    $('#row #cc').each(function(){
+                                        var found = 'false';
+                                        $(this).each(function(){
+                                            if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                                            {
+                                                found = 'true';
+                                            }
+                                        });
+                                        if(found === 'true')
+                                        {
+                                            $(this).show();
+
+                                        }
+                                        else
+                                        {
+                                            $(this).hide();
+
+                                        }
+                                    });
+                                }
+                            });
+                        </script>
+                    </div>
+                    <!-- End row -->
+
+
+
+
+                    <nav>
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+                            </li>
+                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li><a href="#">2</a>
+                            </li>
+                            <li><a href="#">3</a>
+                            </li>
+                            <li><a href="#">4</a>
+                            </li>
+                            <li><a href="#">5</a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- End col -->
+            </div>
+            <!-- End Row -->
+        </div>
+        <!-- End container -->
+    </div>
+    <!-- End container_styled_1 -->
+    <script src="{{ asset('front/js/ion.rangeSlider.min.js') }}"></script>
+    <script src="{{ asset('front/js/switchery.min.js') }}"></script>
+    <script>
+        $("#range").ionRangeSlider({
+            hide_min_max: true,
+            keyboard: true,
+            min: 0,
+            max: 10,
+            from: 0,
+            to: 5,
+            type: 'double',
+            step: 1,
+            prefix: "TND",
+            grid: false
+        });
+        var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+        elems.forEach(function (html) {
+            var switchery = new Switchery(html, {
+                size: 'small'
+            });
+        });
+    </script>
+
+
+
+
+{% endblock %}
