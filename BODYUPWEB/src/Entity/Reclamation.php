@@ -87,13 +87,6 @@ class Reclamation
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Length(
-     *      min = "2",
-     *      max = "50",
-     *      minMessage = "Votre commentaire doit faire au moins {{ limit }} caractères",
-     *      maxMessage = "Votre commentaire ne peut pas être plus long que {{ limit }} caractères"
-     * )
-     * *@Assert\NotBlank(message="Field is required")
      */
     private $reply;
 

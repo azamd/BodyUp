@@ -10,22 +10,22 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20210422045829 extends AbstractMigration
+final class Version20210428042628 extends AbstractMigration
 {
-    public function getDescription() : string
+    public function getDescription(): string
     {
         return '';
     }
 
-    public function up(Schema $schema) : void
+    public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE reclamation ADD reply VARCHAR(255) DEFAULT NULL');
+        $this->addSql('ALTER TABLE comment ADD score INT NOT NULL');
     }
 
-    public function down(Schema $schema) : void
+    public function down(Schema $schema): void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE reclamation DROP reply');
+        $this->addSql('ALTER TABLE comment DROP score');
     }
 }

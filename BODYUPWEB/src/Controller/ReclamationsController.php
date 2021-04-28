@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Reclamation;
 use App\Entity\User;
 use App\Form\ReclamationType;
+use PHPMailer\PHPMailer\PHPMailer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,6 +15,7 @@ class ReclamationsController extends AbstractController
 {
     /**
      * @Route("/reclamations/user/{id}", name="reclamations")
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function index(Request $request,int $id): Response
     {
@@ -38,6 +40,22 @@ class ReclamationsController extends AbstractController
             $entityManager->persist($data);
 
             $entityManager->flush();
+
+            $mail = new PHPMailer();
+            $mail->isSMTP();
+            $mail->SMTPAuth = true;
+            $mail->SMTPSecure = 'ssl';
+            $mail->Host = 'smtp.gmail.com';
+            $mail->Port = '465';
+            $mail->isHTML();
+            $mail->Username = 'bodyupworkouts@gmail.com';
+            $mail->Password = 'bodyup.123';
+            $mail->SetFrom('no-reply@bodyup.tn');
+            $mail->Subject = 'BODYUP client service';
+            $mail->Body = 'reclalmation submitted!!';
+            $mail->addAddress('mohammed.nasri@esprit.tn');
+            $mail->send();
+
             return $this->redirectToRoute('home');
         }
 
@@ -48,4 +66,8 @@ class ReclamationsController extends AbstractController
             ]
        );
     }
+    /**
+     * @Route("/events/success", name="success")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
 }

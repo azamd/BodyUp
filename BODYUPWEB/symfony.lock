@@ -88,6 +88,41 @@
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.3"
     },
+    "friendsofsymfony/comment-bundle": {
+        "version": "v3.0.0"
+    },
+    "friendsofsymfony/rest-bundle": {
+        "version": "2.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.2",
+            "ref": "cad41ef93d6150067ae2bb3c7fd729492dff6f0a"
+        },
+        "files": [
+            "config/packages/fos_rest.yaml"
+        ]
+    },
+    "jms/metadata": {
+        "version": "2.5.0"
+    },
+    "jms/serializer": {
+        "version": "3.12.3"
+    },
+    "jms/serializer-bundle": {
+        "version": "3.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "3.0",
+            "ref": "384cec52df45f3bfd46a09930d6960a58872b268"
+        },
+        "files": [
+            "config/packages/dev/jms_serializer.yaml",
+            "config/packages/jms_serializer.yaml",
+            "config/packages/prod/jms_serializer.yaml"
+        ]
+    },
     "laminas/laminas-code": {
         "version": "4.1.0"
     },
@@ -111,6 +146,15 @@
     },
     "phpdocumentor/type-resolver": {
         "version": "1.4.0"
+    },
+    "phpmailer/phpmailer": {
+        "version": "v6.4.0"
+    },
+    "phpoption/phpoption": {
+        "version": "1.7.5"
+    },
+    "phpstan/phpdoc-parser": {
+        "version": "0.5.4"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -516,5 +560,11 @@
     },
     "webmozart/assert": {
         "version": "1.10.0"
+    },
+    "willdurand/jsonp-callback-validator": {
+        "version": "v1.1.0"
+    },
+    "willdurand/negotiation": {
+        "version": "3.0.0"
     }
 }

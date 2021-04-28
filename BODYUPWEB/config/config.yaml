@@ -1,0 +1,6 @@
+framework:
+  http_method_override: true
+  translator: ~
+
+assetic:
+  bundles: [ "FOSCommentBundle" ]
