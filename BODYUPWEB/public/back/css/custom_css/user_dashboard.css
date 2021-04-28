@@ -1,0 +1,463 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+body {
+    background-color: #ffffff;
+    color: #070e17;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.content {
+    background-color: #faf6f6;
+}
+
+.content-block {
+    padding: 0 10px;
+}
+
+.right-side {
+    padding-bottom: 10px;
+}
+
+.item {
+    margin: 0;
+    border-spacing: 0;
+    border: 0;
+}
+
+.icon-color {
+    background-color: #F5F5F5;
+}
+
+.content-header h1 {
+    font-size: 40px;
+    line-height: 1.5;
+}
+
+h2 small {
+    color: #fff;
+}
+
+
+/*user-details*/
+
+.user_dash {
+    background-color: #ffffff;
+    color: #808b9c;
+    border: 1px solid #eeeffa;
+    padding: 0 10px;
+    padding-bottom: 10px;
+}
+
+.user_dash h5 {
+    display: inline;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 7px;
+}
+
+.user_box {
+    background: #ffffff;
+    margin-top: 20px;
+    border: 2px solid #ffffff;
+}
+
+.fit-user img {
+    width: 100%;
+}
+
+.symboll {
+    padding: 3px 8px;
+}
+
+.symboll .fa-venus {
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 19px;
+}
+
+.symboll h4 {
+    border-bottom: none !important;
+    margin-bottom: 0;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+}
+
+.symboll h5 {
+    border-bottom: none !important;
+    margin-bottom: 0;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    color: #fff !important;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.symboll h6 {
+    margin-top: 0;
+    padding-left: 25px;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+.symboll .col-lg-11 {
+    padding-left: 20px;
+}
+
+.box1 {
+    text-align: center;
+    margin-top: 25px;
+    height: 65px;
+    padding-top: 3px;
+}
+
+.box2 {
+    border-left: 1px solid #ddd;
+    margin-top: 25px;
+    height: 65px;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.health {
+    color: #070e17;
+    font-weight: 500;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid #eae7e8;
+    margin: 0 14px 6px 14px;
+    font-size: 14px;
+}
+
+.user_dash p {
+    color: #474747;
+    text-align: justify;
+    margin: 0 14px 10px 14px;
+}
+
+
+/*end*/
+
+
+/* progress bar */
+
+.bar-priamry {
+    background-color: #33a4d8;
+}
+
+.bar-success {
+    background-color: #65a800;
+}
+
+.bar-warning {
+    background-color: #ff931d;
+}
+
+.bar-danger {
+    background-color: #fc7070;
+}
+
+.pad0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.pad-left0 {
+    padding-left: 0;
+}
+
+.pad-top {
+    padding-top: 18px;
+}
+
+.mrg3 {
+    margin: 3px;
+}
+
+
+/*Progress Bar */
+
+.progress {
+    height: 12px;
+}
+
+
+/*end*/
+
+
+/* user dashboard box model*/
+
+.dash-box {
+    background-color: #fff !important;
+    margin-top: 20px;
+    padding: 8px;
+    height: auto;
+    width: 100%;
+}
+
+.prg-sec {
+    margin: 3px;
+    margin-top: 5px;
+    color: #070e17;
+}
+
+.dash-box h1 {
+    font-weight: bold;
+    padding-top: 5px;
+    color: #65a800;
+}
+
+.box-model {
+    background-color: #fff;
+    margin: 0;
+    padding: 8px;
+}
+
+
+/* user dashboard box model complete*/
+.row.circle{
+    padding:5px;
+}
+
+/* ----- recent users & events section ----- */
+
+.recent-user-img {
+    width: 35px;
+    margin-right: 10px;
+    float: left;
+    border-radius: 50%;
+}
+
+.recent-user-img ~ h5 {
+    margin-bottom: 5px;
+}
+
+.event {
+    padding-bottom: 26px;
+}
+
+.news-items {
+    width: 100%;
+}
+
+.user_box.event .row {
+    padding: 7px 20px;
+    font-size: 16px;
+    margin: 0;
+}
+
+thead {
+    color: #070e17;
+}
+
+th {
+    font-weight: 500;
+}
+
+.user_box.event .row:hover small {
+    color: #fff;
+}
+
+.user_box.event .row:hover h5 {
+    color: #fff;
+}
+
+.user_box.event .row:hover {
+    background: #33a4d8;
+}
+
+.user_box.event .row small {
+    color: #959595;
+}
+
+.user_box .row img {
+    margin-top: 12px;
+}
+
+.user_box h4,
+.dash-box h4 {
+    color: #070e17;
+    border-bottom: 1px solid #dae1e3;
+    font-size: 16px;
+}
+
+h4 {
+    font-weight: 500;
+}
+
+.user_box small {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+strong {
+    color: #070e17;
+}
+
+.box1 h5,
+.box2 h5 {
+    color: #070e17;
+    font-size: 14px;
+}
+
+.box1 h6,
+.box2 h6 {
+    color: #707070;
+    font-weight: normal;
+}
+
+.nopadmar {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.bg-default {
+    background-color: #f9f9f9;
+}
+
+.table {
+    font-weight: 500;
+    line-height: 20px;
+}
+
+
+/* ----- recent users & events section end ----- */
+
+
+/* ----- Payments section start ---- */
+
+.heading-number-size-font-size {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.liquidFillGaugeText {
+    display: none;
+}
+
+.payments h6 {
+    margin-top: 20px;
+    padding-left: 5px;
+    float: left;
+}
+
+.recent-payment table tbody tr th {
+    border-top: none;
+    font-weight: 300;
+}
+
+.mar-left-right {
+    margin: 0 15px;
+}
+
+.recent-payment th {
+    color: #fff;
+}
+
+.recent-payment td {
+    padding-top: 13px !important;
+}
+
+
+/* ----- //Payments section end ---- */
+
+/*-- line chart--*/
+
+canvas#myChart {
+    width: 100% !important;
+    min-width: 300px;
+    height: 200px;
+    padding: 0 20px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.weight {
+    margin: 13px;
+}
+
+.weight li {
+    font-weight: 500;
+    color: #070e17;
+    font-size: 13px;
+    padding-right: 4%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 14px;
+}
+
+.legendLabel {
+    font-size: 14px;
+    line-height: 20px;
+    color: #070e17;
+    font-weight: 500;
+}
+
+
+/*-- line chart end--*/
+
+.marg-top {
+    margin-top: 15px;
+}
+
+
+/*-- sleep analytics Section start --*/
+
+.sleep {
+    padding: 10px 4px;
+}
+
+.flotChart1 {
+    width: 100%;
+    height: 215px;
+}
+
+.flotChart1 canvas {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.flot-x-axis div.flot-tick-label {
+    margin-top: 10px;
+}
+
+.flot-y-axis div.flot-tick-label {
+    margin-right: 10px;
+}
+
+#basicFlotLegend {
+    float: left;
+    margin: 10px;
+}
+
+#basicFlotLegend td.legendColorBox {
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    padding-right: 3px;
+}
+
+#basicFlotLegend table tr {
+    float: left;
+    margin-left: 8px;
+}
+
+#basicFlotLegend td.legendColorBox>div {
+    border: none !important;
+    padding: 0;
+}
+
+#basicFlotLegend td.legendColorBox>div >div {
+    border-radius: 50%;
+    border-width: 4px !important;
+}
+
+.bar-primary {
+    background-color: #33a4d8;
+    border-color: #33a4d8;
+}
+
+
+/*-- sleep analytics Section start end --*/

@@ -1,0 +1,21 @@
+.pad-left {
+    padding-left: 10px;
+}
+
+.select2-container {
+    border-radius: 0;
+    width: 100% !important;
+}
+
+.select2-container--default .select2-selection--single {
+    border-radius: 0;
+}
+
+.img-flag {
+    height: 15px;
+    width: 18px;
+}
+
+.add_users_btn_align {
+    text-align: center;
+}

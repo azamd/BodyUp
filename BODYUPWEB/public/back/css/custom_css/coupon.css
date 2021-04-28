@@ -1,0 +1,13 @@
+/*Admin coupon start*/
+table.dataTable thead .sorting_asc:after {
+    opacity: 0.2;
+    content: "\e150";
+}
+
+.coupon_btn_align {
+    text-align: center;
+}
+
+
+
+/*Admin coupon end*/

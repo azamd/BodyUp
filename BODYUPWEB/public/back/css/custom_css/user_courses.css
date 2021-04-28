@@ -1,0 +1,108 @@
+/*============================================================
+PRICING STYLES
+==========================================================*/
+
+.box-btm {
+   padding: 0 15px;
+}
+
+.button-bg {
+    color: #fff;
+    background-color: #65a800;
+    border: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+
+.button-bg:hover {
+    color: #fff;
+    border-color: #5a9700;
+    background-color: #5a9700;
+}
+
+.headings {
+    margin-bottom: 30px;
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    color: #fff;
+    line-height: 30px;
+}
+
+.headings ul {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+    padding-left: 0px;
+}
+
+.headings ul li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+
+.headings ul li i {
+    margin-right: 5px;
+}
+
+.headings .price {
+    padding: 40px 20px 20px 20px;
+    font-size: 40px;
+    font-weight: 900;
+    color: #FFFFFF;
+}
+
+.headings .price small {
+    color: #ffffff;
+    display: block;
+    font-size: 18px;
+    margin-top: 22px;
+}
+
+.headings .type {
+    background-color: #65a800;
+    padding: 50px 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.headings .pricing-footer {
+    padding: 20px;
+}
+
+.box-attached > .col-lg-4,
+.box-attached > .col-lg-3,
+.dbboxdb-attached > .col-md-3,
+.box-attached > .col-sm-4,
+.box-attached > .col-sm-3 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.headings:hover {
+    margin-top: 10px;
+}
+
+.headings:hover .price {
+    padding-top: 80px;
+}
+
+.btn:hover,
+.btn:focus,
+.btn.focus {
+    color: #ffffff;
+}
+
+@media (max-width: 1400px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+.fa-angle-double-right {
+    font-size: 16px;
+}

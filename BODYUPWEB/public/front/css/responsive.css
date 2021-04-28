@@ -1,0 +1,327 @@
+/*============================================================================================*/
+/* Repsonsive  */
+/*============================================================================================*/
+
+@media (min-width: 992px) and (max-width: 1200px) {
+	#sub_content h1 {
+		font-size: 50px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.promo_full {
+		background-attachment: scroll;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+	a#view_all {
+		height: 288px;
+	}
+	.plan-tall + .plan {
+		border: solid #dddddd 1px;
+	}
+	.plan-tall {
+		margin-right: 0;
+	}
+	.col-md-4.plan:first-child {
+		margin-right: 0;
+		margin-left: 0;
+		border-right: solid #dddddd 1px;
+	}
+}
+
+@media (max-width: 991px) {
+	ul#access_top {
+		margin-right: 45px;
+	}
+	#sub_content {
+		padding: 0 60px;
+	}
+	#sub_content h1 {
+		font-size: 42px;
+	}
+	header {
+		padding: 5px 10px 15px 10px;
+	}
+}
+/* Tablet*/
+
+@media (max-width: 768px) {
+	#sub_content h1 {
+		font-size: 42px;
+	}
+	#hero_video {
+		background: #333 url(../img/sub_header_home.jpg);
+		background-size: cover;
+		background-position: center center;
+	}
+	.header-video {
+		background: none;
+	}
+	a#view_all {
+		height: 100px;
+	}
+	input.form-control#email_newsletter {
+		width: 80%;
+		margin: auto;
+		margin-bottom: 15px;
+	}
+	#feat {
+		padding: 60px 0 30px 0;
+		background-image: none;
+	}
+}
+/* Mobile Landscape */
+
+@media (max-width: 767px) {
+	/* Header */
+	
+	header {
+		padding: 5px 0 15px 0;
+	}
+	#logo img {
+		height: 22px;
+	}
+	h1.main_title,
+	h2.main_title {
+		font-size: 32px;
+	}
+	h1.main_title span,
+	h2.main_title span {
+		font-size: 18px;
+	}
+	h3.main_title {
+		font-size: 26px;
+		margin-bottom: 30px
+	}
+	h3.main_title span {
+		font-size: 16px;
+	}
+	p.lead.styled {
+		font-size: 16px;
+	}
+	.promo_full_wp div h3 {
+		font-size: 28px;
+	}
+	.promo_full_wp div h3 span {
+		font-size: 16px;
+	}
+	#hero_video > div {
+		padding: 60px 20px 0 20px;
+	}
+	#hero_video #sub_content .mobile_fix {
+		background-color: rgba(0, 0, 0, 0.8);
+		display: inline-block;
+		padding: 15px 20px;
+		font-size: 14px;
+	}
+	#hero_video #sub_content .mobile_fix h1 {
+		margin: 0;
+		font-size: 28px;
+	}
+	footer {
+		padding: 30px 0 0 0;
+	}
+	#newsletter_container h3 {
+		font-size: 26px;
+		margin: 0 0 20px 0;
+	}
+	#sub_content_in {
+		padding: 45px 30px 0 30px;
+	}
+	/* Responsive table cart */
+	
+	.table.cart-list,
+	.table.cart-list thead,
+	.table.cart-list tbody,
+	.table.cart-list th,
+	.table.cart-list td,
+	.table.cart-list tr {
+		display: block;
+		border: 0;
+	}
+	.table.cart-list thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	.table.cart-list tr {
+		border: 1px solid #ccc;
+	}
+	.table.cart-list td {
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+	.table.cart-list td:before {
+		position: absolute;
+		top: 12px;
+		left: 12px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+	.table.cart-list td:nth-of-type(1):before {
+		content: "Item";
+		font-weight: bold;
+		color: #111;
+	}
+	.table.cart-list td:nth-of-type(2):before {
+		content: "Discount";
+		font-weight: bold;
+		color: #111;
+	}
+	.table.cart-list td:nth-of-type(3):before {
+		content: "Total";
+		font-weight: bold;
+		color: #111;
+	}
+	.table.cart-list td:nth-of-type(4):before {
+		content: "Actions";
+		font-weight: bold;
+		color: #111;
+	}
+	.thumb_cart {
+		display: none;
+	}
+	.item_cart {
+		margin-top: 5px;
+	}
+	td.options {
+		text-align: left !important;
+	}
+	/* Margin tools */
+	
+	.margin_60 {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.margin_30 {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	.margin_60_35 {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.add_bottom_60 {
+		margin-bottom: 30px;
+	}
+	.promo_full_wp,
+	.promo_full_wp > div {
+		display: block;
+	}
+	.box_overlay {
+		padding: 25px;
+		text-align: center;
+	}
+	.pic {
+		position: static;
+		margin-bottom: 25px;
+		width: 100%;
+		display: block;
+	}
+	.pic h4 {
+		position: static;
+	}
+	.pic figure {
+		margin: auto;
+	}
+	.comment {
+		border-left: none;
+		padding-left: 0;
+		padding-top: 30px;
+	}
+	.col-md-4.plan:first-child,
+	.col-md-4.plan:last-child {
+		margin-right: 0px;
+		margin-left: 0px;
+		border-width: 1px 1px 1px 1px;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.plan-tall + .plan {
+		border-left: 1px;
+		border: solid #dddddd;
+	}
+	.plan-tall {
+		margin-right: 0;
+	}
+	.search-overlay-menu form {
+		width: 80%;
+		left: 10%;
+		height: 50px;
+		margin: -25px auto 0;
+	}
+	.search-overlay-menu input[type="search"] {
+		font-size: 26px;
+	}
+	.search-overlay-menu form button {
+		font-size: 2rem;
+		top: 10px;
+	}
+	ul#access_top li a.search-overlay-menu-btn {
+		margin-left: -5px;
+		top: 2px;
+		margin-right: -20px;
+	}
+}
+/* Mobile Landscape */
+
+@media (max-width: 480px) {
+	.header-video {
+		height: 320px !important;
+	}
+	h1.main_title,
+	h2.main_title {
+		font-size: 28px;
+	}
+	h1.main_title span,
+	h2.main_title span {
+		font-size: 18px;
+	}
+	footer {
+		padding: 30px 0 0 0;
+	}
+	#sub_content_in {
+		padding: 45px 20px 0 20px;
+	}
+	#sub_content_in h1 {
+		font-size: 26px;
+	}
+	#sub_content_in p,
+	#sub_content p {
+		font-size: 16px;
+	}
+	p.lead.styled {
+		font-size: 16px;
+	}
+	.popup-form {
+		width: 90%;
+		max-width: 375px;
+		margin: 0 auto;
+	}
+	ul#course_info li {
+		display: block;
+		margin-right: 0;
+		margin-bottom: 3px;
+	}
+	ul#course_info li:last-child {
+		float: none;
+	}
+	.indent_title_in {
+		padding-left: 0;
+		margin-bottom: 20px;
+	}
+	.indent_title_in i {
+		font-size: 35px;
+		position: static;
+		margin-bottom: 20px;
+		display: inline-block;
+	}
+	.wrapper_indent {
+		padding-left: 0;
+	}
+}

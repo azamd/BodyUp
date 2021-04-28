@@ -1,0 +1,132 @@
+/* Fonts Imported from Google */
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+/*   Core: General style
+----------------------------*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    padding-top: 8%;
+    background: url(../../img/login-bg1.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.box {
+    background-color: #2c404c;
+    margin: auto;
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    opacity: 0.9;
+}
+@media (min-width:320px) and (max-width:375px){
+    .full-content-center{
+        margin-left: -4px;
+    }
+}
+
+img.logo {
+    text-align: center;
+    margin: 5px auto;
+    padding: 0 3px;
+}
+
+h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+input {
+    border-radius: 0 !important;
+}
+
+input[type="submit"] {
+    margin-bottom: 10px;
+    border: none;
+    color: #143143;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.btn-warning {
+    background-color: #ff931d;
+    border-color: #ff931d;
+}
+.btn-warning:hover{
+    background-color: #ff931d;
+    border-color: #ff931d;
+}
+
+.bg-light {
+    background: #ddd;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.checkbox label {
+    padding-left: 0;
+    color: #ffffff;
+}
+
+.animated {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounceInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-2000px);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateX(30px);
+    }
+    80% {
+        -webkit-transform: translateX(-10px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes bounceInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-2000px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(30px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.bounceInLeft {
+    -webkit-animation-name: bounceInLeft;
+    animation-name: bounceInLeft;
+}
+.forgot_color
+{
+    color: #fff;
+    text-decoration: none;
+}
+.forgot_color:hover
+{
+    color: #fff;
+    text-decoration: none;
+}
