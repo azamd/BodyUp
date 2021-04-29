@@ -1,0 +1,75 @@
+{% extends 'baseMenu.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+<section class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="bug-list-search-content">
+                    <form method="get" action="">
+                        <div class="position-relative">
+                            <input type="search" id="search-contacts" name="search_input"
+                                value="{{ app.request.get('search_input')}}" class="form-control"
+                                placeholder="Recherche avancée...">
+                            <div class="form-control-position">
+                                <i class="fa fa-search text-size-base text-muted la-rotate-270"></i>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="card">
+    <div class="card-header">
+        <h4>Liste des utilisateurs <span
+                class="badge badge badge-info badge-pill mr-2">{{ users.getTotalItemCount }}</span></h4>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Adresse</th>
+                    <th>Is_admin</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.lastname }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.phone }}</td>
+                    <td>{{ user.adresse }}</td>
+                    <td>{{ user.isAdmin ? 'Yes' : 'No' }}</td>
+                    <td>
+                        <a class="btn btn-primary" href="{{ path('user_show', {'id': user.id}) }}">show</a>
+                        <a class="btn btn-success" href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="9">no records found</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="navigation pull-right">
+            {{ knp_pagination_render(users) }}
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}

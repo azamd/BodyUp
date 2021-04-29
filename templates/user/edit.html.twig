@@ -1,0 +1,88 @@
+{% extends 'baseMenu.html.twig' %}
+
+{% block title %}New User{% endblock %}
+
+{% block body %}
+<form action="{{ path('user_edit', {'id': user.id}) }}" method="post" novalidate>
+    <div class="example-wrapper">
+        <div class="card">
+            <div class="card-header">
+                <h1>Edit User</h1>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group m-b-40">
+
+                            <label>Nom</label> : <span class=" text-danger">*</span>
+
+                            <input type="text" class="form-control" value="{{ user.name }}" name="nom" autofocus>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group m-b-40">
+
+                            <label>Prénom</label> : <span class=" text-danger">*</span>
+
+                            <input type="text" class="form-control" value="{{ user.lastname }}" name="prenom" autofocus>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group m-b-40">
+
+                            <label>Email</label> : <span class=" text-danger">*</span>
+
+                            <input type="text" class="form-control" value="{{ user.email }}" name="email" autofocus>
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group m-b-40">
+
+                            <label>Télephone</label> : <span class=" text-danger">*</span>
+
+                            <input type="number" class="form-control" value="{{ user.phone }}" name="phone" autofocus>
+
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group m-b-40">
+
+                            <label>Adresse</label> : <span class=" text-danger">*</span>
+
+                            <input type="text" class="form-control" value="{{ user.adresse }}" name="adresse" autofocus>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row>
+        <input type=" hidden" name="_csrf_token" value="{{ csrf_token('edit-profil') }}" />
+    <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-1">
+        <button type="submit" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1">Sauvegarder</button>
+
+    </div>
+
+    </div>
+</form>
+
+{% endblock %}

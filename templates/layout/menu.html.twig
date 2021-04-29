@@ -1,0 +1,46 @@
+<!-- BEGIN: Main Menu-->
+    <!-- main menu-->
+    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow menu-border">
+        <!-- main menu header-->
+        <!-- include includes/menu-header-->
+        <!-- / main menu header-->
+        <!-- main menu content-->
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class=" navigation-header"><span>Menu de navigation</span><i class=" ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Menu de navigation"></i></li>
+
+                <div class="dropdown-divider"></div>
+
+                <li class=" nav-item {% if current_menu is defined and current_menu == 'accueil' %} active {% endif %} ">
+                    <a href="#" ><i class="fa fa-home"></i><span class="menu-title">Accueil</span></a>
+                </li>
+
+
+            
+
+
+                {# module action #}
+             
+                <li class=" nav-item  ">
+               
+                    <a href="{{ path('user_index')}}" ><i class="fa fa-desktop"></i>
+                        <span class="menu-title">Gestion des utilisateurs</span>
+                        <span class="badge badge-warning badge-pill float-right mr-2" id="count_action_menu"></span>
+                    </a>
+             
+                  
+             
+                </li>
+           
+                <li class=" nav-item"><a href="{{ path('app_logout')}}"><i class="fa fa-power-off"></i><span class="menu-title"> Déconnexion</span></a></li>
+
+
+            </ul>
+        </div>
+        <!-- /main menu content-->
+        <!-- main menu footer-->
+        <!-- include includes/menu-footer-->
+        <!-- main menu footer-->
+    </div>
+    <!-- / main menu-->
+<!-- END: Main Menu-->

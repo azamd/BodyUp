@@ -1,0 +1,133 @@
+
+
+.body_loading{
+	position:absolute;
+	z-index: 1;
+	left:45.8%;
+	top:40%;
+	opacity: 1;
+}
+body{
+	background-color: coral
+}
+
+
+marquee {
+	width: 100%;
+	padding: 10px 0;
+	background-color: #b0bec5;
+	margin-bottom:10px;
+}
+
+
+.popover-header {
+    background-color: #ebeee5;
+    border-bottom: 1px solid #2112f0;
+}
+
+
+.size-icon{
+	font-size:20px;
+}
+
+.modal-body tbody,
+.dtp-content tbody {
+	line-height: 20px;
+}
+.dtp-content .page-link:hover {
+	background: transparent;
+	border: none !important;
+	color: white;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+	padding: 0 0.4em;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+	background: #00b5b8;
+}
+.dataTables_paginate ul li {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.hide, .hidden {
+	display: none;
+}
+
+/**************
+*** Table
+**************/
+tbody{
+    line-height: 40px;
+	font-size: 13px !important;
+}
+td.action, td.actions {
+	white-space: nowrap;
+}
+tbody span{
+	font-size:12px !important;
+}
+thead{
+	font-size:13px !important;
+}
+.table th, .table td {
+    padding: 0.4rem 0.4rem;
+}
+/**************
+*** /Table
+**************/
+
+.nav-item a {
+	font-size:13px !important;
+}
+span{
+	font-size:13px !important;
+}
+
+.process_arptc{
+	font-size:13px !important;
+}
+
+.note-editor.note-frame {
+    border: 2px solid black !important;
+}
+
+
+/* grh - alert */
+.alert.text-white {
+	color: #fff !important;
+}
+
+.navigation > li > a .badge-lock {
+	background-color: var(--red);
+	float: right;
+	margin: 0;
+	margin-right: -12px;
+	position: absolute;
+	right: 24px;
+	top: 10px;
+}
+.navigation > li > a .badge-lock i.fa {
+	margin: 0;
+	position: relative;
+	top: 0 !important;
+}
+
+
+/* front */
+.navbar-nav.navbar-justified {
+	display: flex !important;
+	justify-content: center !important;
+	width: 100%;
+}
+.navbar-nav.navbar-justified .nav-item {
+	margin: 0 2rem;
+}
+.navbar-nav.navbar-justified .nav-item a {
+	padding: 1.4rem 2.4rem;
+}
+.navbar-nav.navbar-justified .nav-item a span {
+	font-size: 14px !important;
+}

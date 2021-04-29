@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="SFM">
+    <title class="title_app">{% block title %}Gestion des utilisateurs{% endblock %}</title>
+    <link rel="apple-touch-icon" href="{{ asset('template/app-assets/images/logo/logo.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('template/app-assets/images/logo/logo.png') }}">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- org chart -->
+    <link rel="stylesheet" href="{{ asset('template/app-assets/fonts/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('template/app-assets/fonts/themify-icons/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('template/app-assets/orgchart/css/jquery.orgchart.css') }}">
+    <link rel="stylesheet" href="{{ asset('template/app-assets/orgchart/css/style.css') }}">
+    <!-- org chart -->
+
+
+    {% block stylesheets %}
+    <!-- debut bloc stylesheets -->
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('template/app-assets/vendors/css/vendors.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('template/app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('template/app-assets/vendors/css/charts/morris.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('template/app-assets/vendors/css/extensions/unslider.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('template/app-assets/vendors/css/weather-icons/climacons.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('template/app-assets/vendors/css/forms/selects/select2.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('template/app-assets/vendors/css/forms/icheck/icheck.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('template/app-assets/vendors/css/forms/icheck/custom.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('template/app-assets/vendors/css/extensions/dragula.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('template/app-assets/vendors/css/extensions/toastr.css') }}">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('template/app-assets/css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('template/app-assets/css/bootstrap-extended.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('template/app-assets/css/colors.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('template/app-assets/css/components.css') }}">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Meteo icon -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('template/app-assets/fonts/meteocons/style.min.css') }}">
+    <!-- END: Meteo icon-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('template/app-assets/css/core/menu/menu-types/vertical-overlay-menu.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('template/app-assets/css/core/colors/palette-gradient.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('template/app-assets/fonts/simple-line-icons/style.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('template/app-assets/css/pages/app-todo.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('template/app-assets/css/plugins/forms/checkboxes-radios.css') }}">
+    <!--<link href="{#{ asset('template/app-assets/css/plugins/icheck/skins/all.css')}#}" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('template/app-assets/css/plugins/extensions/toastr.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('template/app-assets/css/pages/app-contacts.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('template/app-assets/css/plugins/forms/extended/form-extended.css') }}">
+    <!-- link(rel='stylesheet', type='text/css', href=app_assets_path+'/css'+rtl+'/pages/users.css')-->
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('template/app-assets/vendors/js/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('template/app-assets/vendors/js/toast-master/css/jquery.toast.css') }}">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('template/app-assets/vendors/css/tables/datatable/datatables.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('template/app-assets/vendors/css/tables/datatable/jquery.dataTables.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('template/assets/css/style.css') }}">
+    <!-- END: Custom CSS-->
+
+    {% endblock %}
+    <!-- end bloc stylesheets -->
+
+</head>
+
+
+<!--<body class="vertical-layout vertical-overlay-menu content-left-sidebar chat-application  fixed-navbar" data-open="click" data-menu="vertical-overlay-menu" data-col="content-left-sidebar"> -->
+
+<body class="vertical-layout vertical-overlay-menu content-left-sidebar app-contacts fixed-navbar" data-open="click"
+
+
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+
+    {{ include('layout/header.html.twig') }}
+
+    <!-- ============================================================== -->
+    <!-- End Topbar header -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- Left Sidebar  -->
+    <!-- ============================================================== -->
+
+  
+
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar  -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+
+    <img src="{{ asset('template/app-assets/images/icons/loading.gif')}}" class="body_loading d-none" />
+
+    <div class="app-content content">
+        <div class="content-wrapper">
+            <div class="content-header row"></div>
+            <div class="content-body">
+
+
+                {% block body %}
+                <!-- debut bloc body -->
+
+
+
+                {% endblock %}
+                <!-- end bloc body -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+
+    <!-- ============================================================== -->
+    <!-- footer  -->
+    <!-- ============================================================== -->
+
+    {{ include('layout/footer.html.twig') }}
+
+    <!-- ============================================================== -->
+    <!-- footer  -->
+    <!-- ============================================================== -->
+
+
+    {% block javascripts %}
+    <!-- debut bloc javascript -->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="{{ asset('template/app-assets/vendors/js/vendors.min.js') }}"></script>
+    <script src="{{ asset('template/app-assets/vendors/js/extensions/moment.min.js') }}"></script>
+    <script src="{{ asset('template/app-assets/vendors/js/toast-master/js/jquery.toast.js') }}"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- This is data table -->
+    <script src="{{ asset('template/app-assets/js/scripts/icheck/icheck.min.js') }}"></script>
+    <script src="{{ asset('template/app-assets/js/scripts/icheck/icheck.init.js') }}"></script>
+    <script src="{{ asset('template/app-assets/vendors/js/tables/jquery.dataTables.min.js') }}"></script>
+    <!-- END: data table -->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="{{ asset('template/app-assets/vendors/js/forms/select/select2.full.min.js') }}"></script>
+    <script src="{{ asset('template/app-assets/vendors/js/extensions/toastr.min.js') }}"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="{{ asset('template/app-assets/js/scripts/forms/select/form-select2.js') }}"></script>
+    <script src="{{ asset('template/app-assets/vendors/js/forms/icheck/icheck.min.js') }}"></script>
+    <script src="{{ asset('template/app-assets/vendors/js/extensions/dragula.min.js') }}"></script>
+    <script src="{{ asset('template/app-assets/js/scripts/forms/custom-file-input.js') }}"></script>
+    <script
+        src="{{ asset('template/app-assets/vendors/js/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js') }}">
+    </script>
+    <!-- END: Page JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="{{ asset('template/app-assets/js/scripts/extensions/toastr.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+    <!-- END: Page JS-->
+
+    <!-- debut orgchart -->
+    <script type="text/javascript" src="{{ asset('template/app-assets/orgchart/js/html2canvas.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('template/app-assets/orgchart/js/jquery.orgchart.js') }}"></script>
+    <!-- end orgchart -->
+
+    <!-- BEGIN: Page Vendor JS-->
+
+    <script src="{{ asset('template/app-assets/vendors/js/tables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('template/app-assets/vendors/js/extensions/jquery.raty.js') }}"></script>
+    <script src="{{ asset('template/app-assets/vendors/js/tables/datatable/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('template/app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js') }}"></script>
+    <script src="{{ asset('template/app-assets/vendors/js/tables/datatable/dataTables.rowReorder.min.js') }}"></script>
+    <script src="{{ asset('template/app-assets/vendors/js/forms/icheck/icheck.min.js') }}"></script>
+
+    <script src="{{ asset('template/app-assets/vendors/js/forms/extended/typeahead/typeahead.bundle.min.js') }}">
+    </script>
+    <script src="{{ asset('template/app-assets/vendors/js/forms/extended/inputmask/jquery.inputmask.bundle.min.js') }}">
+    </script>
+    <script src="{{ asset('template/app-assets/vendors/js/forms/extended/maxlength/bootstrap-maxlength.js') }}">
+    </script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- type mask page -->
+    <script src="{{ asset('template/app-assets/js/scripts/forms/extended/form-typeahead.js') }}"></script>
+    <script src="{{ asset('template/app-assets/js/scripts/forms/extended/form-inputmask.js') }}"></script>
+
+    <!-- BEGIN: Page style contact-->
+    <script src="{{ asset('template/app-assets/js/scripts/pages/app-contacts.js') }}"></script>
+
+    <!-- BEGIN: Page JS Popover-->
+    <script src="{{ asset('template/app-assets/js/scripts/popover/popover.js') }}"></script>
+
+
+    <!-- BEGIN: Theme JS-->
+    <script src="{{ asset('template/app-assets/js/core/app-menu.js') }}"></script>
+    <script src="{{ asset('template/app-assets/js/core/app.js') }}"></script>
+    <!-- END: Theme JS-->
+
+
+    <script type="text/javascript">
+    $('.form-disable').on('submit', function() {
+
+        var self = $(this);
+
+        var button = self.find('input[type="submit"], button');
+
+        button.attr('disabled', 'disabled');
+
+    });
+    </script>
+
+
+    {% endblock %}
+    <!-- fin bloc javascript -->
+
+
+
+</body>
+
+</html>

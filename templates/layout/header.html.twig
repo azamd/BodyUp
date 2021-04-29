@@ -1,0 +1,42 @@
+<!-- BEGIN: Header-->
+    <nav class="header-navbar navbar-expand-md navbar navbar-with-menu fixed-top navbar-light navbar-border navbar-shadow navbar-brand-center" data-nav="brand-center" style="border-top:solid 1px #E4E7ED;border-bottom:solid 1px #E4E7ED;">
+        <div class="navbar-wrapper">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav flex-row">
+                    <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                    <li class="nav-item d-md-none"><a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a></li>
+                </ul>
+            </div>
+            <div class="navbar-container content">
+                {#% if is_granted('IS_AUTHENTICATED_FULLY') %#}                <div class="collapse navbar-collapse" id="navbar-mobile">
+                    <ul class="nav navbar-nav mr-auto float-left">
+                        <li class="nav-item d-none d-md-block" title="Menu de navigation"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu color_menu_link"></i></a></li>
+                    
+
+                      
+                        <li class="nav-item d-none d-md-block" title="Passer en Plein Ecran"><a class="nav-link nav-link-expand" href="#"><i class="ficon ft-maximize"></i></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav float-right">
+                        <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link"  data-toggle="dropdown"><span class="avatar avatar-online"><img src="#" width="30" height="30" alt="avatar"><i></i></span><span class="user-name"> test</span></a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="="#"><"><i class="ft-user"></i> Modifier Profil</a>
+                                <div class="dropdown-divider"></div>
+                               
+                                <a class="dropdown-item" href="="#"><">Mes abonnements</a>
+                                <a class="dropdown-item" href="="#"><">Mes factures</a>
+                              
+                               
+                                <a class="dropdown-item" href="#"><i class="ft-user"></i> E-docs</a>
+                                <div class="dropdown-divider"></div>
+                              
+                                <a class="dropdown-item" href="="#"><"><i class="ft-power"></i> Déconnexion</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- end option -->
+                </div>
+           
+            </div>
+        </div>
+    </nav>
+    <!-- END: Header-->

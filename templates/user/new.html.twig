@@ -1,0 +1,186 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New User{% endblock %}
+
+{% block body %}
+{{ form_start(form, {'attr' :{'class' : 'form-disable'}}) }}
+<div class="example-wrapper">
+    <div class="card">
+        <div class="card-header">
+            <h1>Create new User</h1>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group m-b-40">
+
+                        <label>Nom</label> : <span class=" text-danger">*</span>
+
+                        <input type="text" class="form-control" name="{{ form.name.vars.full_name}}"
+                            value="{{ form.name.vars.value }}" autofocus>
+
+                        {% if not form.name.vars.valid %}
+
+                        {% for error in form.name.vars.errors  %}
+
+                        <span style="color:#f31313;"> {{ error.message }}</span>
+
+                        {% endfor %}
+
+                        {% endif %}
+
+                        {% do form.name.setRendered %}
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group m-b-40">
+
+                        <label>Prénom</label> : <span class=" text-danger">*</span>
+
+                        <input type="text" class="form-control" name="{{ form.lastname.vars.full_name}}"
+                            value="{{ form.lastname.vars.value }}" autofocus>
+
+                        {% if not form.lastname.vars.valid %}
+
+                        {% for error in form.lastname.vars.errors  %}
+
+                        <span style="color:#f31313;"> {{ error.message }}</span>
+
+                        {% endfor %}
+
+                        {% endif %}
+
+                        {% do form.lastname.setRendered %}
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group m-b-40">
+
+                        <label>Email</label> : <span class=" text-danger">*</span>
+
+                        <input type="text" class="form-control" name="{{ form.email.vars.full_name}}"
+                            value="{{ form.email.vars.value }}" autofocus>
+
+                        {% if not form.email.vars.valid %}
+
+                        {% for error in form.email.vars.errors  %}
+
+                        <span style="color:#f31313;"> {{ error.message }}</span>
+
+                        {% endfor %}
+
+                        {% endif %}
+
+                        {% do form.email.setRendered %}
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group m-b-40">
+
+                        <label>Mot de passe</label> : <span class=" text-danger">*</span>
+
+                        <input type="password" class="form-control" name="{{ form.password.vars.full_name}}"
+                            value="{{ form.password.vars.value }}" autofocus>
+
+                        {% if not form.password.vars.valid %}
+
+                        {% for error in form.password.vars.errors  %}
+
+                        <span style="color:#f31313;"> {{ error.message }}</span>
+
+                        {% endfor %}
+
+                        {% endif %}
+
+                        {% do form.password.setRendered %}
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group m-b-40">
+
+                        <label>Télephone</label> : <span class=" text-danger">*</span>
+
+                        <input type="text" class="form-control" name="{{ form.phone.vars.full_name}}"
+                            value="{{ form.phone.vars.value }}" autofocus>
+
+                        {% if not form.phone.vars.valid %}
+
+                        {% for error in form.phone.vars.errors  %}
+
+                        <span style="color:#f31313;"> {{ error.message }}</span>
+
+                        {% endfor %}
+
+                        {% endif %}
+
+                        {% do form.phone.setRendered %}
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group m-b-40">
+
+                        <label>Adresse</label> : <span class=" text-danger">*</span>
+
+                        <input type="text" class="form-control" name="{{ form.adresse.vars.full_name}}"
+                            value="{{ form.adresse.vars.value }}" autofocus>
+
+                        {% if not form.adresse.vars.valid %}
+
+                        {% for error in form.adresse.vars.errors  %}
+
+                        <span style="color:#f31313;"> {{ error.message }}</span>
+
+                        {% endfor %}
+
+                        {% endif %}
+
+                        {% do form.adresse.setRendered %}
+
+                    </div>
+                </div>
+                <div class="row" style="margin: 0px;margin-top: 35px;">
+
+                    <div class="form-check">
+                        <label>Is_admin</label> : <span class=" text-danger">*</span>
+                        <input type="checkbox" name="{{ form.is_admin.vars.full_name}}"
+                            value="{{ form.is_admin.vars.value }}">
+
+                        {% if not form.is_admin.vars.valid %}
+
+                        {% for error in form.is_admin.vars.errors  %}
+
+                        <span style="color:#f31313;"> {{ error.message }}</span>
+
+                        {% endfor %}
+
+                        {% endif %}
+
+                        {% do form.is_admin.setRendered %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row>
+        <div class=" col-md-12">
+
+    <a class="btn btn-danger waves-effect pull-left text-white" href="">Annuler
+    </a>
+    {{ form_widget(form.save, {'attr' :{'class':'btn btn-success pull-right'}})}}
+</div>
+
+
+{{ form_end(form) }}
+{% endblock %}
