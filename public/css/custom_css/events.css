@@ -1,0 +1,58 @@
+/* ----- Events Css Start ----- */
+
+h4 {
+    margin-top: 0;
+}
+
+p {
+    text-align: justify;
+}
+
+.mart {
+    margin-top: 20px;
+}
+
+.events_list_btn_align {
+    text-align: center;
+}
+
+.paragraph_text_color {
+    color: #333333;
+}
+
+.li_font {
+    line-height: 20px;
+}
+
+
+/* ----- Events Css Start End----- */
+
+
+/* ----- Event Item Css Start Start----- */
+
+.panel-body ol {
+    padding-left: 17px
+}
+
+.panel-body ol li {
+    padding-bottom: 7px;
+}
+
+@media screen and (max-width:768px) {
+    .img-thumbnail {
+        margin-top: 5%;
+    }
+    .event_img {
+        margin: 0 auto;
+    }
+}
+
+
+/* ----- Event Item Css Start End----- */
+
+@media screen and (max-width:400px) {
+    .nav-tabs > li {
+        float: inherit !important;
+        margin-bottom: -1px;
+    }
+}

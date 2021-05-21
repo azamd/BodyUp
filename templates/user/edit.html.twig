@@ -1,0 +1,663 @@
+{% if is_granted('ROLE_ADMIN')  %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Packages | Fit2Go Admin Template</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- global css -->
+    <link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet" />
+    <link type="text/css" href="../../css/custom_css/fitness.css" rel="stylesheet" />
+    <link type="text/css" href="../../css/custom_css/metisMenu.css" rel="stylesheet" />
+
+    <link type="text/css" href="../../css/custom_css/panel.css" rel="stylesheet" />
+    <link type="text/css" href="../../css/custom_css/coupon.css" rel="stylesheet">
+    <!-- end of global css -->
+    <!--page level css -->
+    <link type="text/css" href="../../vendors/summernote/summernote.css" rel="stylesheet" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../vendors/jasny-bootstrap/css/jasny-bootstrap.css">
+    <link type="text/css" href="../../vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link type="text/css" href="../../vendors/bootstrapvalidator/dist/css/bootstrapValidator.css" rel="stylesheet" />
+    <link type="text/css" href="../../vendors/datatables/css/dataTables.bootstrap.css" rel="stylesheet" />
+    <link type="text/css" href="../../vendors/fancyBox/source/jquery.fancybox.css?v=2.1.5" media="screen" rel="stylesheet" />
+    <link type="text/css" href="../../vendors/sweetalert/dist/sweetalert2.css" rel="stylesheet" />
+    <link type="text/css" href="../../css/custom_css/timings.css" rel="stylesheet" />
+    <!--end of page level css-->
+</head>
+
+<body>
+    <div class="se-pre-con"></div>
+    <!-- header logo: style can be found in header-->
+    <header class="header">
+        <nav class="navbar navbar-static-top">
+            <a href="{{path('dashboard')}}" class="logo">
+                <!-- Add the class icon to your logo image or logo icon to add the margining -->
+                <img src="../../img/logo.png" alt="image not found">
+            </a>
+            <!-- Header Navbar: style can be found in header-->
+            <!-- Sidebar toggle button-->
+            <!-- Sidebar toggle button-->
+            <div>
+                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button"> <i class="fa fa-fw fa-navicon"></i>
+                </a>
+            </div>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    
+                   
+                    
+                    <!-- User Account: style can be found in dropdown-->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle padding-user" data-toggle="dropdown">
+                            <img src="../../img/authors/avatar1.jpg" width="35" class="img-circle img-responsive pull-left" height="35" alt="User Image">
+                            <div class="riot">
+                                <div>
+                                    Natali
+                                    <span>
+                                        <i class="caret"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <img src="../../img/authors/avatar1.jpg" class="img-circle" alt="User Image">
+                                <p>Nataliapery</p>
+                            </li>
+                            <!-- Menu Body -->
+                            <li class="pad-3">
+                                <a href="{{ path('user_profile') }}">
+                                    <i class="fa fa-fw fa-user"></i> My Profile
+                                </a>
+                            </li>
+                            <li role="presentation"></li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-fw fa-gear"></i> Account Settings
+                                </a>
+                            </li>
+                            <li role="presentation" class="divider"></li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#">
+                                        <i class="fa fa-fw fa-lock"></i> Lock
+                                    </a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="login.html">
+                                        <i class="fa fa-fw fa-sign-out"></i> Logout
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="left-side sidebar-offcanvas">
+            <!-- sidebar: style can be found in sidebar-->
+            <section class="sidebar">
+                <div id="menu" role="navigation">
+                    <div class="nav_profile">
+                        <div class="media profile-left">
+                            <a class="pull-left profile-thumb" href="#">
+                                <img src="../../img/authors/avatar1.jpg" class="img-circle" alt="User Image">
+                            </a>
+                            <div class="content-profile">
+                                <h4 class="media-heading">Nataliapery</h4>
+                                <span class="text-default">User</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="navigation">
+                        <li>
+                            <a href="{{path('dashboard')}}">
+                                <i class="text-primary menu-icon fa fa-fw fa-dashboard"></i>
+                                <span class="mm-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{path('static')}}">
+                                <i class="text-primary menu-icon fa fa-fw fa-dashboard"></i>
+                                <span class="mm-text">statistique</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- / .navigation -->
+                </div>
+                <!-- menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <aside class="right-side right-padding">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <!--section starts-->
+                <h2>User Packages</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="/dashboard">
+                            <i class="fa fa-fw fa-home"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">User Packages</a>
+                    </li>
+                </ol>
+            </section>
+            <!--section ends-->
+          <div class="container-fluid">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="panel-title">User Profile</div>
+                    </div>
+                    <div class="panel-body">
+                        <!--main content-->
+                        <div class="row">
+                            
+                            <div class="col-md-9">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                    <form action="{{ path('user_edit', {'id': user.id}) }}" method="POST" novalidate>
+                                    <tr>
+                                        <td>firstName</td>
+                                         
+                <td><input value="{{ user.firstName }}" name="firstname"/>
+                <input type="hidden" value="{{ user.id }}" name="id"/>
+                </td>
+               
+                                    </tr>
+                                    <tr>
+                                        <td>level</td>
+                                         <td><input value="{{ user.level }}" name="level"/></td>
+               
+                                    </tr>
+                                    <tr>
+                                        <td>city:</td>
+                                        <td><input value="{{ user.city }}" name="city"/></td>
+               
+                                    </tr>
+                                    <tr>
+                                        <td>Phone:</td>
+                                        <td><input value="{{ user.phone }}" name="phone"/></td>
+               
+                                    </tr>
+                                    <tr>
+                                        <td>Zip:</td>
+                                        <td><input value="{{ user.zip }}" name="zip"/></td>
+              
+                                    </tr>
+                                    <tr>
+                                        <td>State:</td>
+                                         <td><input value="{{ user.state }}" name="state"/></td>
+              
+                                    </tr>
+                                    <tr>
+                                        <td>gender:</td>
+                                         <td><input value="{{ user.gender }}" name="gender"/></td>
+               
+                                    </tr>
+                                     <tr>
+                                        <td>adress:</td>
+                                        <td><input value="{{ user.adress }}" name="adress"/></td>
+               
+                                    </tr>
+                                     <tr>
+                                        <td>Username:</td>
+                                        <td><input value="{{ user.username }}" name="username"/></td>
+               
+                                    </tr>
+                                     <tr>
+                                        <td>email:</td>
+                                        <td><input value="{{ user.email }}" name="email"/></td>
+                                    </tr>
+                                   <tr><td></td>
+                                   <td><button class="btn btn-success"type="submit">Valider</button>
+                                   </form>
+                                </tbody></table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content -->
+        </aside>
+        <!-- /.right-side -->
+    </div>
+    <!-- /.right-side -->
+    <!-- ./wrapper -->
+    <!-- global js -->
+    <script src="../../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../../js/custom_js/app.js" type="text/javascript"></script>
+    <script src="../../js/custom_js/metisMenu.js" type="text/javascript"></script>
+    <script src="../../vendors/holder/holder.js" type="text/javascript"></script>
+    <!-- end of page level js -->
+    <!-- begining of page level js -->
+    <script src="../../vendors/summernote/summernote.min.js" type="text/javascript"></script>
+    <script src="../../vendors/jasny-bootstrap/js/jasny-bootstrap.js" type="text/javascript"></script>
+    <script src="../../vendors/moment/moment.js" type="text/javascript"></script>
+    <script src="../../vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    <script src="../../vendors/bootstrapvalidator/dist/js/bootstrapValidator.js" type="text/javascript"></script>
+    <script src="../../vendors/fancyBox/source/jquery.fancybox.js?v=2.1.5" type="text/javascript"></script>
+    <script src="../../vendors/datatables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="../../vendors/datatables/js/dataTables.bootstrap.js" type="text/javascript"></script>
+    <script src="../../vendors/sweetalert/dist/sweetalert2.js" type="text/javascript"></script>
+    <script src="../../js/custom_js/timings.js" type="text/javascript"></script>
+    <!-- end of page level js -->
+</body>
+
+</html>
+{% else %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="LOVEFIT - Video Fitness Workout">
+	<meta name="author" content="Ansonika">
+	<title>LOVEFIT - Video Fitness Workout</title>
+
+	<!-- Favicons-->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+	<!-- GOOGLE WEB FONT -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700|Kalam:400,700" rel="stylesheet">
+
+	<!-- BASE CSS -->
+	<link href="../../user/css/animate.min.css" rel="stylesheet">
+	<link href="../../user/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../user/css/menu.css" rel="stylesheet">
+	<link href="../../user/css/style.css" rel="stylesheet">
+	<link href="../../user/css/responsive.css" rel="stylesheet">
+	<link href="../../user/css/icon_fonts/../../user/css/all_icons.min.css" rel="stylesheet">
+	<link href="../../user/css/magnific-popup.min.css" rel="stylesheet">
+
+	<!-- YOUR CUSTOM CSS -->
+	<link href="../../user/css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="layer"></div>
+	<!-- Mobile menu overlay mask -->
+
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div>
+	<!-- End Preload -->
+
+	<!-- Header ================================================== -->
+	<header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-3">
+					<a href="{{path('dashboard')}}" id="logo">
+						<img src="../../user/img/logo.png" width="95" height="27" alt="" data-retina="true" class="logo_normal">
+						<img src="../../user/img/logo_sticky.png" width="95" height="27" alt="" data-retina="true" class="logo_sticky">
+					</a>
+				</div>
+				<nav class="col-xs-9">
+					<ul id="access_top">
+						<li><a href="#" class="search-overlay-menu-btn"><i class="icon-search-6"></i></a>
+						</li>
+												<li><a href="#"  >{{app.user.username}}</a>
+
+					</ul>
+					<a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
+					<div class="main-menu">
+						<div id="header_menu">
+							<img src="img/logo.png" width="95" height="27" alt="Lovefit" data-retina="true">
+						</div>
+						<a href="#" class="open_close" id="close_in"><i class="icon_close"></i></a>
+						<ul>
+							<li><a href="explore-1.html">Explore</a>
+							</li>
+							<li class="submenu">
+								<a href="javascript:void(0);" class="show-submenu">Pages<i class="icon-down-open-mini"></i></a>
+								<ul>
+									<li><a href="#0">Home versions</a>
+										<ul>
+											<li><a href="index.html">Home Video Bg</a>
+											</li>
+											<li><a href="index_2.html">Home Layer Slider</a>
+											</li>
+											<li><a href="index_3.html">Home Cookie Bar</a>
+											</li>
+											<li><a href="index_4.html">Home Pop Up</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="fitness-course-1.html">Workout page</a>
+									</li>
+									<li><a href="fitness-course-2.html">Workout page 2</a>
+									</li>
+									<li><a href="about.html">About Us</a>
+									</li>
+									<li><a href="subscribe-working.html">Subscribe working</a>
+									</li>
+									<li><a href="#0">Cart section</a>
+										<ul>
+											<li><a href="cart-page-1.html">Cart section 1</a>
+											</li>
+											<li><a href="cart-page-2.html">Cart section 2</a>
+											</li>
+											<li><a href="cart-page-3.html">Cart section 3</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="faq.html">Faq</a>
+									</li>
+									<li><a href="blog.html">Blog</a>
+									</li>
+									<li><a href="gallery.html">Gallery</a>
+									</li>
+									<li><a href="trainer-profile.html">Trainer profile</a>
+									</li>
+									<li><a href="contacts.html">Contacts</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#0">Other elements<i class="icon-down-open-mini"></i></a>
+								<ul>
+									<li><a href="shortcodes.html">Shortcodes</a>
+									</li>
+									<li><a href="pricing-tables.html">Pricing tables</a>
+									</li>
+									<li><a href="coming_soon/index.html">Site launch</a>
+									</li>
+									<li><a href="icon_pack_1.html">Icon pack 1</a>
+									</li>
+									<li><a href="icon_pack_2.html">Icon pack 2</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#0">Purchase this template</a>
+							</li>
+							<li><a href="#" data-toggle="modal" data-target="#login" class="visible-xs">Login</a>
+							</li>
+							<li><a href="#" data-toggle="modal" data-target="#register" class="visible-xs">Register</a>
+							</li>
+						</ul>
+					</div>
+					<!-- End main-menu -->
+				</nav>
+			</div>
+			<!-- End row -->
+		</div>
+		<!-- End container -->
+	</header>
+	<!-- End Header =============================================== -->
+
+	<!-- SubHeader =============================================== -->
+	<section class="parallax_window_in" data-parallax="scroll" data-image-src="img/sub_header_general.jpg" data-natural-width="1400" data-natural-height="470">
+		<div id="sub_content_in">
+			<h1>PROFILE</h1>
+			<p>"Usu habeo equidem sanctus no ex melius labitur conceptam eos"</p>
+		</div>
+	</section>
+	<!-- End section -->
+	<!-- End SubHeader ============================================ -->
+
+	<div class="container margin_60_35">
+		<div class="row">
+
+			<div class="col-md-9">
+				<h3>EDIT PROFIL</h3>
+				<p>
+					
+				</p>
+				<div>
+					<div id="message-contact"></div>
+					<form method="post" action="" method="post">
+						<div class="row">
+							<div class="col-md-6 col-sm-6">
+								<div class="form-group">
+									<label>First name </label>
+									<input type="text" class="form-control styled"  name="firstname" value="{{user.firstname}}">
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<div class="form-group">
+									<label>City</label>
+									<input type="text" class="form-control styled"  name="city" value="{{user.city}}">
+								</div>
+							</div>
+						</div>
+                        <div class="row">
+							<div class="col-md-6 col-sm-6">
+								<div class="form-group">
+									<label>Zip</label>
+									<input type="text" class="form-control styled"  name="zip" value="{{user.zip}}">
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<div class="form-group">
+									<label>Level</label>
+									<input type="text" class="form-control styled"  name="level" value="{{user.level}}">
+								</div>
+							</div>
+						</div>
+                        <div class="row">
+							<div class="col-md-6 col-sm-6">
+								<div class="form-group">
+									<label>UserName</label>
+									<input type="text" class="form-control styled"  name="username" value="{{user.username}}">
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<div class="form-group">
+									<label>Password</label>
+									<input type="password" class="form-control styled"  name="password" value="{{user.password}}">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6">
+								<div class="form-group">
+									<label>Email:</label>
+									<input type="email"  name="email" class="form-control styled" value="{{user.email}}">
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<div class="form-group">
+									<label>Phone number:</label>
+									<input type="text"  name="phone" class="form-control styled" value="{{user.phone}}">
+								</div>
+							</div>
+                            <div class="col-md-6 col-sm-6">
+								<div class="form-group">
+									<label>Gender:</label>
+									<input type="text"  name="gender" class="form-control styled" value="{{user.gender}}">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label>Adress:</label>
+									<textarea rows="5"  name="adress" class="form-control styled" style="height:100px;" placeholder="Hello world!">{{user.adress}}</textarea>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								
+								<p><input type="submit" value="Submit" class="btn_1" ></p>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- End col lg 9 -->
+		
+		</div>
+		<!-- End row -->
+	</div>
+	<!-- End container -->
+
+	<!-- end map-->
+
+	<footer>
+		<div class="container">
+			<div class="row ">
+				<div class="col-md-3 col-sm-12">
+					<p>
+						<img src="img/logo.png" width="95" height="27" alt="Lovefit" data-retina="true">
+					</p>
+					<div id="social">
+						<ul>
+							<li><a href="#"><i class="icon-facebook"></i></a>
+							</li>
+							<li><a href="#"><i class="icon-twitter"></i></a>
+							</li>
+							<li><a href="#"><i class="icon-google"></i></a>
+							</li>
+							<li><a href="#"><i class="icon-linkedin"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<h4>About</h4>
+					<ul>
+						<li><a href="#">About us</a>
+						</li>
+						<li><a href="#">Blog</a>
+						</li>
+						<li><a href="#">Login</a>
+						</li>
+						<li><a href="#">Register</a>
+						</li>
+						<li><a href="#">Contact us</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<h4>Discover</h4>
+					<ul>
+						<li><a href="#">Explore</a>
+						</li>
+						<li><a href="#">Terms and condition</a>
+						</li>
+						<li><a href="#">Privacy</a>
+						</li>
+						<li><a href="#">Cookie Policy</a>
+						</li>
+						<li><a href="#">Faq</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3 hidden-sm hidden-xs">
+					<img src="img/footer_img.png" width="257" height="302" alt="Image" class="footer_pic">
+				</div>
+			</div>
+			<!-- End row -->
+		</div>
+		<!-- End container -->
+	</footer>
+	<!-- End footer -->
+	<div id="copy">
+		<div class="container">
+			© LoveFit 2016 - All rights reserved.
+		</div>
+	</div>
+	<!-- End copy -->
+
+	<div id="toTop"></div>
+	<!-- Back to top button -->
+
+	<!-- Login modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myLogin" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+				<form action="#" class="popup-form" id="myLogin">
+					<input type="text" class="form-control form-white" placeholder="Username">
+					<input type="text" class="form-control form-white" placeholder="Password">
+					<div class="checkbox-holder text-left">
+						<div class="checkbox">
+							<input type="checkbox" value="accept_1" id="check_1" name="check_1" />
+							<label for="check_1"><span>I Agree to the <strong>Terms &amp; Conditions</strong></span>
+							</label>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-submit">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Register modal -->
+	<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myRegister" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+				<form action="#" class="popup-form" id="myRegister">
+					<input type="text" class="form-control form-white" placeholder="Name">
+					<input type="text" class="form-control form-white" placeholder="Last Name">
+					<input type="email" class="form-control form-white" placeholder="Email">
+					<input type="text" class="form-control form-white" placeholder="Password">
+					<div class="checkbox-holder text-left">
+						<div class="checkbox">
+							<input type="checkbox" value="accept_2" id="check_2" name="check_2" />
+							<label for="check_2"><span>I Agree to the <strong>Terms &amp; Conditions</strong></span>
+							</label>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-submit">Register</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Search Menu -->
+	<div class="search-overlay-menu">
+		<span class="search-overlay-close"><i class="icon_close"></i></span>
+		<form role="search" id="searchform" method="get">
+			<input value="" name="q" type="search" placeholder="Search..." />
+			<button type="submit"><i class="icon-search-6"></i>
+			</button>
+		</form>
+	</div>
+	<!-- End Search Menu -->
+
+	<!-- COMMON SCRIPTS -->
+	<script src="../../user/js/jquery-2.2.4.min.js"></script>
+	<script src="../../user/js/common_scripts_min.js"></script>
+	<script src="../../user/assets/validate.js"></script>
+	<script src="../../user/js/functions.js"></script>
+
+	<!-- GOOGLE map -->
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="../../user/js/mapmarker.jquery.js"></script>
+	<script type="text/javascript" src="../../user/js/mapmarker_func.jquery.js"></script>
+
+</body>
+
+</html>
+{% endif %}

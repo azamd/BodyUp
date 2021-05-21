@@ -1,0 +1,30 @@
+.bootstrap-tagsinput,
+.label {
+    border-radius: 0px;
+}
+
+.label-info {
+    background-color: #ffa31d;
+}
+
+.edi-css {
+    width: 100%;
+    height: 200px;
+    font-size: 13px;
+    border: 1px solid #dddddd;
+    padding: 10px;
+}
+
+.bootstrap-tagsinput {
+    width: 100%;
+}
+
+.add_faq_btn_align {
+    text-align: center;
+}
+.cancel-button-styles{
+    margin-left: 7px;
+}
+.cancel-button-margins, .reset-button-margins{
+    margin-left: 6px;
+}
